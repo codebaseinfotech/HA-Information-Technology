@@ -60,8 +60,8 @@ const LocationMapSection = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-4">CONTACT US</span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-[#1a2332]">
-                        Get <span className="text-blue-600">in Touch</span> With Us. We are<br />
+                    <h2 className="text-3xl md:text-5xl font-bold text-black">
+                        Get <span className="text-[#1A3C8B]">in Touch</span> With Us. We are<br />
                         Happy Help.
                     </h2>
                 </div>
@@ -96,7 +96,7 @@ const LocationMapSection = () => {
                                             {loc.name}
                                         </div>
 
-                                        <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${selectedLocation.id === loc.id ? 'bg-blue-600 scale-110 ring-4 ring-blue-100' : 'bg-[#1a2332] hover:bg-blue-600'}`}>
+                                        <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${selectedLocation.id === loc.id ? 'bg-[#1A3C8B] scale-110 ring-4 ring-blue-100' : 'bg-[#1a2332] hover:bg-[#1A3C8B]/80'}`}>
                                             <div className="w-3 h-3 md:w-4 md:h-4 bg-white rounded-full"></div>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@ const LocationMapSection = () => {
                         <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-[95%] bg-white rounded-3xl shadow-sm rotate-2 z-0 border border-gray-100"></div>
                         <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] h-[98%] bg-white rounded-3xl shadow-md rotate-1 z-10 border border-gray-100"></div>
 
-                        <div className="relative w-full bg-white rounded-3xl shadow-2xl p-6 md:p-10 z-20 border-t-[6px] border-blue-600 min-h-[400px] md:min-h-[450px] flex flex-col items-center">
+                        <div className="relative w-full bg-white rounded-3xl shadow-2xl p-6 md:p-10 z-20 border-t-[6px] border-[#1A3C8B] min-h-[400px] md:min-h-[450px] flex flex-col items-center">
                             <h3 className="text-3xl md:text-4xl font-extrabold text-[#1a2332] mb-4 md:mb-6 text-center">
                                 Location in <span className="text-green-600">{selectedLocation.name.split(',')[0]}</span>
                             </h3>
@@ -118,8 +118,8 @@ const LocationMapSection = () => {
                             <div className="w-full space-y-4 md:space-y-2 flex flex-col items-center">
                                 {selectedLocation.phones.map((phone, idx) => (
                                     <div key={idx} className="flex items-center gap-3 md:gap-4 text-lg md:text-xl font-bold text-[#1a2332]">
-                                        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
-                                            <Phone className="w-6 h-6 md:w-8 md:h-8 transform rotate-12 text-blue-600" />
+                                        <div className="w-6 h-6 flex items-center justify-center">
+                                            <Phone className="w-6 h-6 transform rotate-12 text-[#1A3C8B]" />
                                         </div>
                                         <span>{phone}</span>
                                     </div>
@@ -128,7 +128,7 @@ const LocationMapSection = () => {
                                 {selectedLocation.emails.map((email, idx) => (
                                     <div key={idx} className="flex items-center gap-3 md:gap-4 text-base md:text-lg font-semibold text-gray-700">
                                         <div className="w-6 h-6 flex items-center justify-center">
-                                            <Mail className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
+                                            <Mail className="w-6 h-6 text-[#1A3C8B]" />
                                         </div>
                                         <span className="truncate max-w-[200px] md:max-w-full text-wrap">{email}</span>
                                     </div>

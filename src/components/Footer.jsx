@@ -49,11 +49,8 @@ const Footer = () => {
     ];
 
     const contacts = [
-        { country: 'U.A.E.', phones: ['+974-44762301', '+974-66285558'] },
-        { country: 'Oman', phones: [] },
-        { country: 'Qatar', phones: [] },
-        { country: 'Bahrain', phones: [] },
-        { country: 'India', phones: [] }
+        { country: 'U.A.E.', phones: ['+971 523003423'] },
+        { country: 'India', phones: ['+91-7096859504'] },
     ];
 
     const socialLinks = [
@@ -66,9 +63,9 @@ const Footer = () => {
     ];
 
     const resources = [
-        { name: 'Our partners', href: '#partners' },
-        { name: 'Affiliates', href: '#affiliates' },
-        { name: 'Careers', href: '#careers' }
+        { name: 'Our partners', href: '/our-partner' },
+        { name: 'Affiliates', href: '/affiliates' },
+        { name: 'Careers', href: '/careers' }
     ];
 
     return (
@@ -148,7 +145,7 @@ const Footer = () => {
                                         onChange={(e) => setNewsletter(e.target.value)}
                                         className="flex-1 px-4 py-2.5 bg-white text-gray-800 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
                                     />
-                                    <button className="bg-blue-600 absolute right-0 top-0 bottom-0 hover:bg-blue-700 text-white px-4 py-2.5 rounded-r-md transition-colors duration-300">
+                                    <button className="bg-[#1A3C8B] absolute right-0 top-0 bottom-0 hover:bg-[#1A3C8B]/80 text-white px-4 py-2.5 rounded-r-md transition-colors duration-300">
                                         <span className="text-lg"><FaChevronRight className='text-white text-[10px]' /></span>
                                     </button>
                                 </div>
@@ -164,7 +161,7 @@ const Footer = () => {
                                 {services.map((service, index) => (
                                     <li key={index}>
                                         <Link to={`/services/${service.id}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group">
-                                            <FaChevronRight className="text-secondary text-xs group-hover:translate-x-1 transition-transform duration-300" />
+                                            <FaChevronRight className="text-[#1A3C8B] text-xs group-hover:translate-x-1 transition-transform duration-300" />
                                             <span>{service.title}</span>
                                         </Link>
                                     </li>
@@ -176,10 +173,10 @@ const Footer = () => {
                         <ul className="space-y-2.5 mb-8">
                             {resources.map((resource, index) => (
                                 <li key={index}>
-                                    <a href={resource.href} className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
-                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#333f4d] text-[10px]' /></span>
+                                    <Link to={resource.href} className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
+                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
                                         {resource.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -191,10 +188,10 @@ const Footer = () => {
                         <ul className="space-y-2.5">
                             {solutions.map((solution, index) => (
                                 <li key={index}>
-                                    <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-start">
-                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#333f4d] text-[10px]' /></span>
+                                    <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-start">
+                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
                                         <span>{solution}</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -206,18 +203,17 @@ const Footer = () => {
                         <ul className="space-y-4">
                             {contacts.map((contact, index) => (
                                 <li key={index}>
-                                    <a href="#" className="text-white hover:text-blue-400 text-sm font-medium transition-colors flex items-center">
+                                    <Link to="#" className="text-white hover:text-blue-400 text-sm font-medium transition-colors flex items-center">
                                         Contact {contact.country}
-                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#333f4d] text-[10px]' /></span>
-                                    </a>
+                                    </Link>
                                     {contact.phones.length > 0 && (
                                         <div className="mt-2 space-y-1">
                                             {contact.phones.map((phone, pIndex) => (
-                                                <a key={pIndex} href={`tel:${phone}`} className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
+                                                <Link key={pIndex} to={`tel:${phone}`} className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
                                                     <FaPhone className="w-3 h-3" />
                                                     <FaWhatsapp className="w-3 h-3" />
                                                     <span>{phone}</span>
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     )}
@@ -230,14 +226,14 @@ const Footer = () => {
                             {socialLinks.map((social, index) => {
                                 const Icon = social.icon;
                                 return (
-                                    <a
+                                    <Link
                                         key={index}
-                                        href={social.href}
+                                        to={social.href}
                                         className="w-8 h-8 bg-gray-700 hover:bg-blue-600 rounded flex items-center justify-center transition-colors duration-300"
                                         aria-label={social.label}
                                     >
                                         <Icon className="w-4 h-4 text-white" />
-                                    </a>
+                                    </Link>
                                 );
                             })}
                         </div>
@@ -248,10 +244,10 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {['Home', 'Contact Us', 'Support'].map((link, index) => (
                                     <li key={index}>
-                                        <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
-                                            <span className="mr-2 mt-1"><FaChevronRight className='text-[#333f4d] text-[10px]' /></span>
+                                        <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
+                                            <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
                                             {link}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -268,9 +264,9 @@ const Footer = () => {
                             © 2006 - {currentYear} Vision Technologies | All Rights Reserved
                         </p>
                         <div className="flex gap-6">
-                            <a href="#terms" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a>
-                            <a href="#privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+                            <Link to="#terms" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</Link>
+                            <Link to="#privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
+                            <Link to="#cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</Link>
                         </div>
                     </div>
                 </div>

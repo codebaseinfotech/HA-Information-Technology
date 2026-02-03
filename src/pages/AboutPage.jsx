@@ -4,86 +4,100 @@ import { Play, Lightbulb, Users, Target, Eye, Shield, ArrowRight, CheckCircle2, 
 
 const MissionVisionSection = ({ qualityStandards }) => {
     const [activeTab, setActiveTab] = useState('mission');
+    const [imageKey, setImageKey] = useState(0);
+
+    // Trigger image animation when tab changes
+    useEffect(() => {
+        setImageKey(prev => prev + 1);
+    }, [activeTab]);
 
     return (
-        <section className="mb-24">
-            {/* Tabs Header */}
-            <div className="flex border-b border-gray-200 mb-12">
+        <section className="mb-16 md:mb-24">
+            <div className="flex flex-col sm:flex-row border-b border-gray-200 mb-8 md:mb-12 gap-4 sm:gap-0">
                 <button
                     onClick={() => setActiveTab('mission')}
-                    className={`pb-4 px-8 text-xl font-bold transition-all duration-300 relative ${activeTab === 'mission'
-                        ? 'text-blue-600'
-                        : 'text-gray-400 hover:text-gray-600'
+                    className={`pb-3 md:pb-4 px-4 md:px-8 text-lg md:text-xl font-bold transition-all duration-300 relative ${activeTab === 'mission'
+                        ? 'text-[#1A3C8B]'
+                        : 'text-gray-400 hover:text-[#1A3C8B]/60'
                         }`}
                 >
                     Our Mission
                     {activeTab === 'mission' && (
-                        <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-t-full"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-1 bg-[#1A3C8B] rounded-t-full animate-slide-in"></div>
                     )}
                 </button>
                 <button
                     onClick={() => setActiveTab('vision')}
-                    className={`pb-4 px-8 text-xl font-bold transition-all duration-300 relative ${activeTab === 'vision'
-                        ? 'text-blue-600'
-                        : 'text-gray-400 hover:text-gray-600'
+                    className={`pb-3 md:pb-4 px-4 md:px-8 text-lg md:text-xl font-bold transition-all duration-300 relative ${activeTab === 'vision'
+                        ? 'text-[#1A3C8B]'
+                        : 'text-gray-400 hover:text-[#1A3C8B]/60'
                         }`}
                 >
                     Our Vision
                     {activeTab === 'vision' && (
-                        <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 rounded-t-full"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-1 bg-[#1A3C8B] rounded-t-full animate-slide-in"></div>
                     )}
                 </button>
             </div>
 
-            {/* Tab Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start animate-fade-in">
-                {/* Image Side */}
-                <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px] lg:h-[500px]">
-                    <img
-                        src={activeTab === 'mission'
-                            ? "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            : "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
-                        alt={activeTab === 'mission' ? "Our Mission" : "Our Vision"}
-                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                    />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+                <div
+                    key={imageKey}
+                    className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl h-[300px] md:h-[400px] lg:h-[500px] group animate-fade-in-scale"
+                >
+                    <div className="absolute -inset-2 bg-gradient-to-r from-[#1A3C8B]/20 to-blue-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 animate-pulse"></div>
+
+                    <div className="relative h-full rounded-2xl md:rounded-3xl overflow-hidden">
+                        <img
+                            src={activeTab === 'mission'
+                                ? "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                : "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
+                            alt={activeTab === 'mission' ? "Our Mission" : "Our Vision"}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#1A3C8B]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
                 </div>
 
-                {/* Text Side */}
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6 animate-fade-in-right">
                     {activeTab === 'mission' ? (
                         <>
-                            <h3 className="text-2xl font-bold text-[#1a2332]">
-                                <span className="text-gray-500">HA Information Technology</span> To consistently create value for our stakeholders
+                            <h3 className="text-xl md:text-2xl font-bold text-[#1a2332] leading-tight">
+                                <span className="text-[#1A3C8B]">HA Information Technology</span> To consistently create value for our stakeholders
                             </h3>
-                            <p className="text-gray-600 text-lg leading-relaxed text-justify">
+                            <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
                                 by providing solutions which enable our customers to achieve excellence and sustainable competitive edge.
                             </p>
-                            <div className="space-y-4 pt-4">
+                            <div className="space-y-3 md:space-y-4 pt-4">
                                 {qualityStandards.map((item, idx) => (
-                                    <div key={idx} className="flex gap-3">
-                                        <div className="mt-1 flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                                            <CheckCircle2 size={14} strokeWidth={3} />
+                                    <div
+                                        key={idx}
+                                        className="flex gap-3 group hover:bg-gray-50 p-2 md:p-3 rounded-lg transition-all duration-300 hover:translate-x-2"
+                                        style={{ animationDelay: `${idx * 100}ms` }}
+                                    >
+                                        <div className="mt-1 flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                            <CheckCircle2 size={14} color="#1A3C8B" strokeWidth={3} />
                                         </div>
-                                        <p className="text-gray-700 font-medium">{item}</p>
+                                        <p className="text-gray-700 font-medium text-sm md:text-base group-hover:text-[#1A3C8B] transition-colors">{item}</p>
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-gray-500 italic mt-6 border-l-4 border-gray-200 pl-4 py-2">
+                            <p className="text-gray-500 italic mt-4 md:mt-6 border-l-4 border-[#1A3C8B]/30 pl-4 py-2 text-sm md:text-base bg-gray-50 rounded-r-lg">
                                 In order to achieve the above all the staff are committed to follow the Quality Management System developed based on ISO 9001:2000 requirements.
                             </p>
                         </>
                     ) : (
                         <>
-                            <h3 className="text-2xl font-bold text-[#1a2332] mb-4">
+                            <h3 className="text-xl md:text-2xl font-bold text-[#1a2332] mb-4 leading-tight">
                                 A One Stop Professional IT Solutions Provider & Trusted Local IT Partner
                             </h3>
-                            <p className="text-gray-600 leading-relaxed mb-6 text-justify">
+                            <p className="text-gray-600 leading-relaxed mb-6 text-justify text-sm md:text-base">
                                 The idea behind HA Information Technology is very simple - "A One Stop Professional IT Solutions Provider & Trusted Local IT Partner". We strive to provide a wide range of Customize Software Development, Web Design, Network Solutions, Access Controls, Security Solutions, PABX Solutions, IT Infrastructure, for you, our valued client, to cover even the most demanding technical needs.
                             </p>
 
-                            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
-                                <h4 className="font-bold text-[#1a2332] mb-4">We offer our clients :</h4>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 p-4 md:p-6 rounded-xl border border-gray-100 mb-6 hover:shadow-lg transition-shadow duration-300">
+                                <h4 className="font-bold text-[#1a2332] mb-4 text-base md:text-lg">We offer our clients :</h4>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                                     {[
                                         "Detailed Free Proposals",
                                         "Expert Management",
@@ -92,11 +106,15 @@ const MissionVisionSection = ({ qualityStandards }) => {
                                         "Latest Technologies",
                                         "Responsive Support"
                                     ].map((item, idx) => (
-                                        <div key={idx} className="flex gap-2 items-center">
-                                            <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
-                                                <CheckCircle2 size={12} strokeWidth={3} />
+                                        <div
+                                            key={idx}
+                                            className="flex gap-2 items-center group hover:translate-x-1 transition-transform duration-200"
+                                            style={{ animationDelay: `${idx * 50}ms` }}
+                                        >
+                                            <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                                                <CheckCircle2 size={12} color="#1A3C8B" strokeWidth={3} />
                                             </div>
-                                            <span className="text-sm font-semibold text-gray-700">{item}</span>
+                                            <span className="text-xs md:text-sm font-semibold text-gray-700 group-hover:text-[#1A3C8B] transition-colors">{item}</span>
                                         </div>
                                     ))}
 
@@ -106,6 +124,52 @@ const MissionVisionSection = ({ qualityStandards }) => {
                     )}
                 </div>
             </div>
+
+            <style jsx>{`
+                @keyframes slide-in {
+                    from {
+                        transform: scaleX(0);
+                    }
+                    to {
+                        transform: scaleX(1);
+                    }
+                }
+
+                @keyframes fade-in-scale {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.95);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+
+                @keyframes fade-in-right {
+                    from {
+                        opacity: 0;
+                        transform: translateX(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                .animate-slide-in {
+                    animation: slide-in 0.3s ease-out;
+                    transform-origin: left;
+                }
+
+                .animate-fade-in-scale {
+                    animation: fade-in-scale 0.6s ease-out;
+                }
+
+                .animate-fade-in-right {
+                    animation: fade-in-right 0.6s ease-out;
+                }
+            `}</style>
         </section>
     );
 };
@@ -191,27 +255,24 @@ const AboutPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Hero Section */}
-            <section className="relative h-[400px] bg-cover bg-center" style={{
+            <section className="relative h-[300px] md:h-[400px] bg-cover bg-center overflow-hidden" style={{
                 backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
             }}>
-                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 animate-fade-in"></div>
+                <div className="absolute inset-0 bg-[#1A3C8B]/10"></div>
                 <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-start">
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">About Us</h1>
-                    <div className="flex items-center gap-2 text-white text-lg">
-                        <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 animate-slide-up">About Us</h1>
+                    <div className="flex items-center gap-2 text-white text-base md:text-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                        <Link to="/" className="hover:text-blue-400 transition-colors hover:underline">Home</Link>
                         <span>/</span>
-                        <span className="text-green-400">About Us</span>
+                        <span className="text-green-400 font-semibold">About Us</span>
                     </div>
                 </div>
             </section>
 
             <div className="container mx-auto px-4 md:px-6">
-                {/* Main Content Section */}
-                {/* Main Content Section - Simple and Fast */}
                 <section className="py-16 md:py-24" ref={sectionRef}>
                     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                        {/* Left - Image with Play Button */}
                         <div className="relative group">
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                                 <img
@@ -219,41 +280,42 @@ const AboutPage = () => {
                                     alt="Business Professional"
                                     className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                                 />
-                                {/* Play Button Overlay */}
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <button className="w-20 h-20 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-2xl animate-pulse">
+                                    <button className="w-20 h-20 bg-[#1A3C8B] hover:bg-[#1A3C8B]/80 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-2xl animate-pulse">
                                         <Play className="w-8 h-8 text-white ml-1" fill="white" />
                                     </button>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Right - Content */}
-                        <div className="space-y-8">
+                        <div className="space-y-6 md:space-y-8">
                             <div>
-                                <span className="text-green-600 font-bold text-sm tracking-wider inline-block mb-4 uppercase">About Us</span>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a2332] leading-tight mb-6">
-                                    Simple and the <span className="text-blue-600">Fast</span> for your Business.
+                                <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider inline-block mb-3 md:mb-4 uppercase bg-green-50 px-3 py-1.5 rounded-full">About Us</span>
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#1a2332] leading-tight mb-4 md:mb-6">
+                                    Simple and the <span className="text-[#1A3C8B] relative inline-block">
+                                        Fast
+                                        <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#1A3C8B] to-blue-400 opacity-30"></span>
+                                    </span> for your Business.
                                 </h2>
-                                <p className="text-gray-600 leading-relaxed text-lg mb-6 text-justify">
+                                <p className="text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg mb-4 md:mb-6 text-justify">
                                     HA Information Technology is a Software and Web Development Company focused on creating custom applications and laying special emphasis on the unique business needs of its corporate clients. HA Information Technology infrastructure and processes are concentrated at designing and implementing solutions for middle & large-sized companies.
                                 </p>
                             </div>
 
-                            {/* Feature Cards */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                                 {features.map((feature, index) => {
                                     const Icon = feature.icon;
                                     return (
                                         <div
                                             key={index}
-                                            className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-blue-200 transition-colors duration-300"
+                                            className="bg-gradient-to-br from-gray-50 to-blue-50/20 p-4 md:p-6 rounded-xl border border-gray-100 hover:border-[#1A3C8B]/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
+                                            style={{ animationDelay: `${index * 150}ms` }}
                                         >
-                                            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm text-blue-600">
-                                                <Icon className="w-6 h-6" />
+                                            <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg flex items-center justify-center mb-3 md:mb-4 shadow-sm text-[#1A3C8B] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                                                <Icon className="w-5 h-5 md:w-6 md:h-6" />
                                             </div>
-                                            <h3 className="text-lg font-bold text-[#1a2332] mb-2">{feature.title}</h3>
-                                            <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                                            <h3 className="text-base md:text-lg font-bold text-black mb-2 group-hover:text-[#1A3C8B] transition-colors">{feature.title}</h3>
+                                            <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{feature.description}</p>
                                         </div>
                                     );
                                 })}
@@ -262,11 +324,15 @@ const AboutPage = () => {
                     </div>
                 </section>
 
-                {/* Inside HA Information Technology Header */}
-                <div className="text-center mb-12 pt-12 border-t border-gray-100">
-                    <span className="text-green-600 font-bold text-sm tracking-wider inline-block mb-4 uppercase">INSIDE HA Information Technology</span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a2332] leading-tight">
-                        The Power Of <span className="text-blue-600">Software</span><br />
+                <div className="text-center mb-8 md:mb-12 pt-8 md:pt-12 border-t border-gray-100">
+                    <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider inline-block mb-3 md:mb-4 uppercase bg-green-50 px-4 py-2 rounded-full">INSIDE HA Information Technology</span>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight px-4">
+                        The Power Of <span className="text-[#1A3C8B] relative inline-block">
+                            Software
+                            <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 100 8" preserveAspectRatio="none">
+                                <path d="M0,4 Q25,0 50,4 T100,4" fill="none" stroke="#1A3C8B" strokeWidth="2" opacity="0.3" />
+                            </svg>
+                        </span><br className="hidden md:block" />
                         The Simplicity Of Solutions
                     </h2>
                 </div>
@@ -274,29 +340,29 @@ const AboutPage = () => {
                 {/* Mission & Vision Tabs Section (Replaces generic text) */}
                 <MissionVisionSection qualityStandards={qualityStandards} />
 
-                {/* Values Section */}
-                <section className="py-16 md:py-24 bg-gray-50 -mx-4 md:-mx-6 px-4 md:px-6">
+                <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white -mx-4 md:-mx-6 px-4 md:px-6">
                     <div className="container mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="text-green-600 font-bold text-sm tracking-wider inline-block mb-4 uppercase">Our Values</span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a2332] leading-tight">
-                                The Values We <span className="text-blue-600">Stand</span> For
+                        <div className="text-center mb-10 md:mb-16">
+                            <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider inline-block mb-3 md:mb-4 uppercase bg-green-50 px-4 py-2 rounded-full">Our Values</span>
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#1a2332] leading-tight px-4">
+                                The Values We <span className="text-[#1A3C8B]">Stand</span> For
                             </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                             {values.map((value, index) => {
                                 const Icon = value.icon;
                                 return (
                                     <div
                                         key={index}
-                                        className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center group hover:-translate-y-2 transition-transform duration-300"
+                                        className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500"
+                                        style={{ animationDelay: `${index * 150}ms` }}
                                     >
-                                        <div className="w-20 h-20 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-50 transition-colors">
-                                            <Icon className="w-8 h-8 text-[#1a2332] stroke-[1.5]" />
+                                        <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-gray-100 to-blue-50 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                                            <Icon className="w-7 h-7 md:w-8 md:h-8 text-[#1A3C8B] stroke-[1.5]" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-[#1a2332] mb-4 uppercase tracking-wide">{value.title}</h3>
-                                        <p className="text-gray-600 leading-relaxed">
+                                        <h3 className="text-lg md:text-xl font-bold text-[#1a2332] mb-3 md:mb-4 uppercase tracking-wide group-hover:text-[#1A3C8B] transition-colors">{value.title}</h3>
+                                        <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                                             {value.description}
                                         </p>
                                     </div>
@@ -311,7 +377,7 @@ const AboutPage = () => {
                     <div className="mb-12">
                         <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-2">Services Technology</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-[#1a2332] mb-8">
-                            Advancing <span className="text-blue-600">Beyond</span> Your Expectations
+                            Advancing <span className="text-[#1A3C8B]">Beyond</span> Your Expectations
                         </h2>
 
                         <p className="text-gray-600 text-lg mb-12 max-w-4xl text-justify">

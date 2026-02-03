@@ -4,6 +4,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const slides = [
@@ -62,7 +63,7 @@ const Hero = () => {
                             <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex items-center">
                                 <div className="max-w-xl flex flex-col gap-9">
                                     <div className='flex flex-col gap-3'>
-                                        <h1 className="text-[40px] whitespace-pre-line md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-[1.2]">
+                                        <h1 className="text-[34px] whitespace-pre-line md:text-5xl lg:text-6xl font-bold text-white leading-[1.2]">
                                             {slide.title}
                                         </h1>
                                         <p className="text-base md:text-lg !leading-6 font-medium text-[#f2f2f2] mb-8">
@@ -70,34 +71,30 @@ const Hero = () => {
                                         </p>
                                     </div>
                                     <div className="flex flex-col sm:flex-row gap-4">
-                                        <a
-                                            href="#about"
+                                        <Link
+                                            to="/about"
                                             className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
                                         >
                                             Learn More
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                                             </svg>
-                                        </a>
-                                        <a
-                                            href="#services"
+                                        </Link>
+                                        <Link
+                                            to="/services"
                                             className="inline-flex items-center justify-center gap-2 bg-[#1A3C8B] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1A3C8B]/80 transition-all duration-300"
                                         >
                                             Explore Services
                                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                                             </svg>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </SwiperSlide>
                 ))}
-
-                {/* Custom Navigation Arrows */}
-                <div className="swiper-button-prev !text-white !w-4 !h-4 !bg-white/10 hover:!bg-white/20 rounded-full !left-4 md:!left-8 backdrop-blur-sm transition-all"></div>
-                <div className="swiper-button-next !text-white !w-4 !h-4 !bg-white/10 hover:!bg-white/20 rounded-full !right-4 md:!right-8 backdrop-blur-sm transition-all"></div>
             </Swiper>
         </section>
     );

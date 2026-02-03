@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from "../assets/Icon.png";
+import logo from "../assets/logo.png";
 import { Menu, X, ChevronDown } from 'lucide-react';
 import {
     Drawer,
@@ -28,6 +28,13 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const navItems = [
+        { label: 'Services', path: '/services' },
+        { label: 'Solutions', path: '/solutions' },
+        { label: 'Resources', path: '/our-partner' },
+        { label: 'Contact', path: '/contact' },
+    ];
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? 'bg-[#ffffff] shadow-lg py-3' : 'bg-[#ffffff]/80 backdrop-blur-sm py-4'
             } `}>
@@ -35,7 +42,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex gap-3 items-center">
                         <Link to="/">
-                            <img src={logo} alt="HA IT Logo" className=" w-56 lg:w-72 h-auto object-contain" />
+                            <img src={logo} alt="HA IT Logo" className=" w-56 lg:w-72 h-auto object-contain cursor-pointer" />
                         </Link>
                     </div>
 
@@ -46,13 +53,13 @@ const Navbar = () => {
                         <Link to="/about" className={`font-medium text-sm transition-all duration-300 ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'} `}>
                             About
                         </Link>
-                        {['Services', 'Solutions', 'Resources', 'Contact'].map((item) => (
+                        {navItems.map((item) => (
                             <Link
-                                key={item}
-                                to={`/${item.toLowerCase()}`}
+                                key={item.label}
+                                to={item.path}
                                 className={`font-medium text-sm transition-all duration-300 ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'} `}
                             >
-                                {item}
+                                {item.label}
                             </Link>
                         ))}
                         <Link to="/contact"
@@ -93,13 +100,13 @@ const Navbar = () => {
                         <DrawerBody p={0}>
                             <VStack align="stretch" spacing={0} px={6} py={8}>
                                 <Box py={3}>
-                                    <a
-                                        href="/"
+                                    <Link
+                                        to="/"
                                         className="text-gray-800 hover:text-blue-600 text-lg font-medium transition-colors block"
                                         onClick={handleMobileClose}
                                     >
                                         Home
-                                    </a>
+                                    </Link>
                                 </Box>
 
                                 <Box borderBottom="1px solid" borderColor="gray.200" py={3}>
@@ -125,54 +132,54 @@ const Navbar = () => {
                                 </Box>
 
                                 <Box borderBottom="1px solid" borderColor="gray.200" py={3}>
-                                    <a
-                                        href="#solutions"
+                                    <Link
+                                        to="/solutions"
                                         className="text-gray-800 hover:text-blue-600 text-lg font-medium transition-colors flex items-center justify-between"
                                         onClick={handleMobileClose}
                                     >
                                         Solutions
                                         <ChevronDown size={20} className="text-gray-600" />
-                                    </a>
+                                    </Link>
                                 </Box>
 
                                 <Box borderBottom="1px solid" borderColor="gray.200" py={3}>
-                                    <a
-                                        href="#resources"
+                                    <Link
+                                        to="/our-partner"
                                         className="text-gray-800 hover:text-blue-600 text-lg font-medium transition-colors flex items-center justify-between"
                                         onClick={handleMobileClose}
                                     >
                                         Resources
                                         <ChevronDown size={20} className="text-gray-600" />
-                                    </a>
+                                    </Link>
                                 </Box>
 
                                 <Box py={3}>
-                                    <a
-                                        href="#contact"
+                                    <Link
+                                        to="/contact"
                                         className="text-gray-800 hover:text-blue-600 text-lg font-medium transition-colors block"
                                         onClick={handleMobileClose}
                                     >
                                         Contact Us
-                                    </a>
+                                    </Link>
                                 </Box>
 
                                 <Box py={3}>
-                                    <a
-                                        href="#support"
+                                    <Link
+                                        to="/support"
                                         className="text-gray-800 hover:text-blue-600 text-lg font-medium transition-colors block"
                                         onClick={handleMobileClose}
                                     >
                                         Support
-                                    </a>
+                                    </Link>
                                 </Box>
 
                                 <Box mt={6} display="flex" alignItems="center" p={4} width="fit-content">
-                                    <a
-                                        href="#contact"
+                                    <Link
+                                        to="/contact"
                                         className="bg-[#1A3C8B] text-sm text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#1A3C8B]/80 transform hover:scale-105 transition-all duration-300 shadow-lg"
                                     >
                                         Get Started
-                                    </a>
+                                    </Link>
                                 </Box>
                             </VStack>
                         </DrawerBody>

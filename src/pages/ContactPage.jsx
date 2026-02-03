@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Contact from '../components/Contact';
+import Contact, { SupportSection } from '../components/Contact';
+import LocationMapSection from '../components/LocationMapSection';
 
 const ContactPage = () => {
     useEffect(() => {
@@ -31,6 +32,12 @@ const ContactPage = () => {
                 </div>
                 <div className="absolute -right-20 -bottom-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
             </div>
+
+            {/* Support Section - Only on Contact Page */}
+            <SupportSection />
+
+            {/* Location Map Section - Only on Contact Page */}
+            <LocationMapSection />
 
             {/* Reuse Existing Contact Section but remove its padding if needed or let it be */}
             <Contact />

@@ -83,13 +83,13 @@ const ServicesPage = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="bg-[#1a2332] py-16">
+            <div className="bg-[#1A3C8B] py-16">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-                    <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
+                    <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
                         Contact us today to discuss how our services can help you achieve your business goals.
                     </p>
-                    <Link to="/contact" className="inline-block bg-[#10B981] hover:bg-[#059669] text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                    <Link to="/contact" className="inline-block bg-white text-[#1A3C8B] font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
                         Get a Quote
                     </Link>
                 </div>

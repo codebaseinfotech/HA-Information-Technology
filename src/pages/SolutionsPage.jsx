@@ -83,13 +83,17 @@ const SolutionsPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {solutions.map((item) => (
-                        <div key={item.id} className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition-all duration-300 border-t-4 border-blue-600 group">
-                            <div className="mb-6 bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <div key={item.id} className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
+                        >
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-[#10B981] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                            <div className="mb-6 inline-flex p-4 rounded-xl bg-blue-50 text-[#1A3C8B] group-hover:bg-[#1A3C8B] group-hover:text-white transition-colors duration-300">
                                 <item.icon size={32} />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1A3C8B] transition-colors">
+                                {item.title}
+                            </h3>
                             <p className="text-gray-600 mb-6">{item.description}</p>
-                            <Link to={`/contact?interest=${item.id}`} className="inline-flex items-center text-[#1A3C8B] font-semibold hover:gap-2 transition-all">
+                            <Link to={`/contact?interest=${item.id}`} className="flex items-center text-[#1A3C8B] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
                                 Request Demo <ChevronRight size={16} className="ml-1" />
                             </Link>
                         </div>

@@ -37,12 +37,6 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Support Section - Added dynamically */}
-            <SupportSection />
-
-            {/* Location Map Section */}
-            <LocationMapSection />
-
             <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -51,8 +45,8 @@ const Contact = () => {
                                 <div className="inline-block mb-4">
                                     <span className="text-green-600 font-bold text-sm tracking-wider uppercase">GET IN TOUCH</span>
                                 </div>
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                    Your Business To <span className="text-blue-600">Growth</span><br />
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight">
+                                    Your Business To <span className="text-[#1A3C8B]">Growth</span><br />
                                     Please Touch ?
                                 </h2>
                                 <p className="text-gray-600 mt-4 leading-relaxed">
@@ -173,8 +167,8 @@ const SupportSection = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10 md:mb-16">
                     <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-4">SUPPORT US</span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a2332] mb-6 leading-tight">
-                        Get <span className="text-blue-600">in Touch</span> With Us. We are<br className="hidden md:block" />
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
+                        Get <span className="text-[#1A3C8B]">in Touch</span> With Us. We are<br className="hidden md:block" />
                         Happy Help.
                     </h2>
                     <p className="text-gray-500 text-base md:text-lg max-w-4xl mx-auto leading-relaxed text-center px-2">
@@ -186,11 +180,11 @@ const SupportSection = () => {
                     {/* Contact Us Card */}
                     <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 hover:border-blue-200 transition-all duration-300 group">
                         <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
-                            <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <div className="w-12 h-12 md:w-16 md:h-16 bg-[#1A3C8B] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <Phone className="w-6 h-6 md:w-8 md:h-8 text-white" />
                             </div>
                             <div className="space-y-4">
-                                <h3 className="text-xl font-bold text-[#1a2332]">Contacts us</h3>
+                                <h3 className="text-xl font-bold text-black">Contacts us</h3>
                                 <div className="space-y-3 text-gray-600 font-medium text-sm md:text-base">
                                     <div className="flex items-center gap-2">
                                         <Printer className="w-4 h-4 text-blue-600" />
@@ -229,11 +223,11 @@ const SupportSection = () => {
                     {/* Your Email Card */}
                     <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 hover:border-blue-200 transition-all duration-300 group">
                         <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
-                            <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <div className="w-12 h-12 md:w-16 md:h-16 bg-[#1A3C8B] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                                 <Mail className="w-6 h-6 md:w-8 md:h-8 text-white" />
                             </div>
                             <div className="space-y-4">
-                                <h3 className="text-xl font-bold text-[#1a2332]">Your Email</h3>
+                                <h3 className="text-xl font-bold text-black">Your Email</h3>
                                 <p className="text-gray-600 font-medium text-sm md:text-base">Get Instant Support & Maintenance Updates.</p>
                                 <div className="pt-2 space-y-3">
                                     <a href="mailto:info@hainfotech.com" className="flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors text-sm md:text-base break-all">
@@ -254,4 +248,5 @@ const SupportSection = () => {
     );
 };
 
+export { SupportSection };
 export default Contact;

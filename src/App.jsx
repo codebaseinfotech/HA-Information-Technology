@@ -13,6 +13,8 @@ import ServicesPage from './pages/ServicesPage';
 import SolutionsPage from './pages/SolutionsPage';
 import ResourcesPage from './pages/ResourcesPage';
 import ContactPage from './pages/ContactPage';
+import CareersPage from './pages/CareersPage';
+import AffiliatesPage from './pages/AffiliatesPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -35,8 +37,10 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/solutions" element={<SolutionsPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/our-partner" element={<ResourcesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/affiliates" element={<AffiliatesPage />} />
         </Routes>
         <Footer />
       </div>
