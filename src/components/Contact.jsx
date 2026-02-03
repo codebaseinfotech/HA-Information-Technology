@@ -96,7 +96,7 @@ const Contact = () => {
         <div className="min-h-screen bg-white">
             <Toaster />
             <section id="contact" className="py-16 md:py-24 px-4 xl:px-12 bg-gradient-to-b from-gray-50 to-white">
-                <div className="container mx-auto">
+                <div className="container mx-auto px-4 xl:px-12">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         <div>
                             <div className="mb-8">
