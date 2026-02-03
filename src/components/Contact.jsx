@@ -37,7 +37,7 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <section id="contact" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+            <section id="contact" className="py-16 md:py-24 px-10 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         <div>

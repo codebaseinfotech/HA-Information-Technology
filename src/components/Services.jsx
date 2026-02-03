@@ -181,7 +181,7 @@ const Services = () => {
     ];
 
     return (
-        <section id="services" className="py-16 md:py-24 bg-white" ref={sectionRef}>
+        <section id="services" className="py-16 md:py-24 px-10 bg-white" ref={sectionRef}>
             <div className="container mx-auto px-4 md:px-6">
                 {/* Header */}
                 <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

@@ -270,8 +270,8 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 md:px-6">
-                <section className="py-16 md:py-24" ref={sectionRef}>
+            <div className="container mx-auto px-4 md:px-12">
+                <section className="py-16 md:py-20" ref={sectionRef}>
                     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <div className="relative group">
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
