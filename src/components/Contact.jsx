@@ -265,32 +265,11 @@ const SupportSection = () => {
                                 <div className="space-y-3 text-gray-600 font-medium text-sm md:text-base">
                                     <div className="flex items-center gap-2">
                                         <Printer className="w-4 h-4 text-blue-600" />
-                                        <span>06-5664688</span>
+                                        <span>+971 523003423</span>
                                     </div>
                                     <div className="flex items-center gap-2 text-green-600">
                                         <Printer className="w-4 h-4" />
-                                        <span>06-8828607 (24/7)</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Phone className="w-4 h-4 text-blue-600" />
-                                        <div className="flex flex-wrap items-center gap-2">
-                                            <span>056-8005510</span>
-                                            <span className="text-green-600 text-[10px] md:text-sm font-bold uppercase">(24/7)</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Phone className="w-4 h-4 text-blue-600" />
-                                        <div className="flex flex-wrap items-center gap-2">
-                                            <span>056-7777433</span>
-                                            <span className="text-green-600 text-[10px] md:text-sm font-bold uppercase">(24/7)</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Phone className="w-4 h-4 text-blue-600" />
-                                        <div className="flex flex-wrap items-center gap-2">
-                                            <span>056-8105510</span>
-                                            <span className="text-green-600 text-[10px] md:text-sm font-bold uppercase">(24/7)</span>
-                                        </div>
+                                        <span>+91-7096859504</span>
                                     </div>
                                 </div>
                             </div>
