@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Send, Printer, HardHat } from 'lucide-react';
+import toast, { Toaster } from 'react-hot-toast';
 import LocationMapSection from './LocationMapSection';
 
 const Contact = () => {
@@ -11,6 +12,8 @@ const Contact = () => {
         message: ''
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -18,10 +21,64 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission
-        console.log('Form submitted:', formData);
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                toast.success('Thank you! Your message has been sent successfully. We will get back to you soon!', {
+                    duration: 5000,
+                    position: 'top-center',
+                    style: {
+                        background: '#10B981',
+                        color: '#fff',
+                        padding: '16px',
+                        borderRadius: '10px',
+                    },
+                    icon: '✅',
+                });
+
+                // Reset form
+                setFormData({
+                    name: '',
+                    contact: '',
+                    email: '',
+                    service: '',
+                    message: ''
+                });
+
+                // Reset checkbox
+                document.getElementById('notRobot').checked = false;
+            } else {
+                throw new Error(data.message || 'Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            toast.error('Oops! Something went wrong. Please try again or contact us directly.', {
+                duration: 5000,
+                position: 'top-center',
+                style: {
+                    background: '#EF4444',
+                    color: '#fff',
+                    padding: '16px',
+                    borderRadius: '10px',
+                },
+                icon: '❌',
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const services = [
@@ -37,6 +94,7 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <Toaster />
             <section id="contact" className="py-16 md:py-24 px-4 xl:px-12 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -64,6 +122,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                     <input
                                         type="text"
@@ -73,6 +132,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                 </div>
 
@@ -85,6 +145,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                     <select
                                         name="service"
@@ -92,6 +153,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-gray-600"
                                         required
+                                        disabled={isSubmitting}
                                     >
                                         <option value="">Select a Product or Service</option>
                                         {services.map((service, index) => (
@@ -108,6 +170,7 @@ const Contact = () => {
                                     rows="5"
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors resize-none"
                                     required
+                                    disabled={isSubmitting}
                                 ></textarea>
 
                                 <div className="flex items-center gap-3 mb-4">
@@ -116,6 +179,7 @@ const Contact = () => {
                                         id="notRobot"
                                         className="w-4 h-4"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                     <label htmlFor="notRobot" className="text-sm text-gray-600">
                                         I'm not a robot
@@ -124,10 +188,23 @@ const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    className="bg-[#1A3C8B] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1A3C8B]/80 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2"
+                                    disabled={isSubmitting}
+                                    className={`bg-[#1A3C8B] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1A3C8B]/80 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                                 >
-                                    Contact Us
-                                    <Send size={18} />
+                                    {isSubmitting ? (
+                                        <>
+                                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Sending...
+                                        </>
+                                    ) : (
+                                        <>
+                                            Contact Us
+                                            <Send size={18} />
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
