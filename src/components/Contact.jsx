@@ -39,7 +39,7 @@ const Contact = () => {
             if (response.ok && data.success) {
                 toast.success('Thank you! Your message has been sent successfully. We will get back to you soon!', {
                     duration: 5000,
-                    position: 'top-center',
+                    position: 'top-right',
                     style: {
                         background: '#10B981',
                         color: '#fff',
@@ -67,7 +67,7 @@ const Contact = () => {
             console.error('Error:', error);
             toast.error('Oops! Something went wrong. Please try again or contact us directly.', {
                 duration: 5000,
-                position: 'top-center',
+                position: 'top-right',
                 style: {
                     background: '#EF4444',
                     color: '#fff',
