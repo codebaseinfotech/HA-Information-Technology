@@ -57,7 +57,7 @@ const LocationMapSection = () => {
                     .mapboxgl-ctrl-bottom-left { display: none !important; }
                 `}
             </style>
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 xl:px-12">
                 <div className="text-center mb-12">
                     <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-4">CONTACT US</span>
                     <h2 className="text-3xl md:text-5xl font-bold text-black">

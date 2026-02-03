@@ -37,8 +37,8 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <section id="contact" className="py-16 md:py-24 px-10 bg-gradient-to-b from-gray-50 to-white">
-                <div className="container mx-auto px-4 md:px-6">
+            <section id="contact" className="py-16 md:py-24 px-4 xl:px-12 bg-gradient-to-b from-gray-50 to-white">
+                <div className="container mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         <div>
                             <div className="mb-8">
@@ -164,7 +164,7 @@ const Contact = () => {
 const SupportSection = () => {
     return (
         <section className="py-10 md:py-16 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 xl:px-12">
                 <div className="text-center mb-10 md:mb-16">
                     <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-4">SUPPORT US</span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">

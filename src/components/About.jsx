@@ -103,8 +103,8 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="py-12 md:py-20 lg:py-24 px-10 bg-gradient-to-b from-white to-gray-50 overflow-hidden" ref={sectionRef}>
-            <div className="container mx-auto px-4 md:px-6">
+        <section id="about" className="py-12 md:py-20 lg:py-24 px-4 xl:px-12 bg-gradient-to-b from-white to-gray-50 overflow-hidden" ref={sectionRef}>
+            <div className="container mx-auto">
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16 md:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
                     <div className="relative group order-2 lg:order-1">
                         <div className="absolute -inset-4 bg-gradient-to-br from-[#1A3C8B]/20 via-blue-400/10 to-purple-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700 animate-pulse"></div>

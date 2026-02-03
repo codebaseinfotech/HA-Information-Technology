@@ -260,17 +260,19 @@ const AboutPage = () => {
             }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 animate-fade-in"></div>
                 <div className="absolute inset-0 bg-[#1A3C8B]/10"></div>
-                <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-start">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-4 animate-slide-up">About Us</h1>
-                    <div className="flex items-center gap-2 text-white text-base md:text-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                <div className="relative container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center items-start">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
+                        About Us
+                    </h1>
+                    <div className="flex items-center text-gray-300 text-sm md:text-base">
                         <Link to="/" className="hover:text-blue-400 transition-colors hover:underline">Home</Link>
-                        <span>/</span>
-                        <span className="text-green-400 font-semibold">About Us</span>
+                        <span className="mx-2">/</span>
+                        <span className="text-[#10B981] font-medium">About Us</span>
                     </div>
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 md:px-12">
+            <div className="container mx-auto px-4 xl:px-12">
                 <section className="py-16 md:py-20" ref={sectionRef}>
                     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <div className="relative group">

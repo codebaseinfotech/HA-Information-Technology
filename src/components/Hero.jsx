@@ -60,7 +60,7 @@ const Hero = () => {
                             <div className="absolute inset-0 bg-black/70" />
 
                             {/* Content */}
-                            <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex items-center">
+                            <div className="relative z-10 container mx-auto px-4 xl:px-12 h-full flex items-center">
                                 <div className="max-w-xl flex flex-col gap-9">
                                     <div className='flex flex-col gap-3'>
                                         <h1 className="text-[34px] whitespace-pre-line md:text-5xl lg:text-6xl font-bold text-white leading-[1.2]">

@@ -37,7 +37,7 @@ const ServiceDetail = () => {
                 </div>
 
                 {/* Content */}
-                <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-10">
+                <div className="container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
                         {service.title}
                     </h1>
@@ -61,7 +61,7 @@ const ServiceDetail = () => {
             </div>
 
             {/* Main Content Area */}
-            <div className="container mx-auto px-4 md:px-12 py-16 md:py-20">
+            <div className="container mx-auto px-4 xl:px-12 py-16 md:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Left Column - Service Content */}
                     <div className="lg:col-span-2 space-y-12">

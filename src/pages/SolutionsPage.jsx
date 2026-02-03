@@ -57,7 +57,7 @@ const SolutionsPage = () => {
                     }}></div>
                 </div>
 
-                <div className="container mx-auto px-4 h-full flex flex-col justify-center relative z-10">
+                <div className="container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
                         Our Solutions
                     </h1>
@@ -72,7 +72,7 @@ const SolutionsPage = () => {
             </div>
 
             {/* Content Section */}
-            <div className="container mx-auto px-4 md:px-12 py-16 md:py-20">
+            <div className="container mx-auto px-4 xl:px-12 py-16 md:py-20">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
                     <span className="text-[#1A3C8B] font-bold tracking-wider uppercase text-sm mb-2 block">Enterprise Solutions</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Industry-Specific Software Solutions</h2>
