@@ -177,6 +177,7 @@ const Navbar = () => {
                                     <Link
                                         to="/contact"
                                         className="bg-[#1A3C8B] text-sm text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#1A3C8B]/80 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                                        onClick={handleMobileClose}
                                     >
                                         Get Started
                                     </Link>

@@ -38,7 +38,7 @@ const ServiceDetail = () => {
 
                 {/* Content */}
                 <div className="container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mt-14 my-3 animate-fade-in-up">
                         {service.title}
                     </h1>
 

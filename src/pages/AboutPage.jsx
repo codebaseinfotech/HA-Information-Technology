@@ -261,7 +261,7 @@ const AboutPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 animate-fade-in"></div>
                 <div className="absolute inset-0 bg-[#1A3C8B]/10"></div>
                 <div className="relative container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center items-start">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mt-14 mb-3 animate-fade-in-up">
                         About Us
                     </h1>
                     <div className="flex items-center text-gray-300 text-sm md:text-base">
