@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import solutions from '../data/solutions';
@@ -6,8 +6,11 @@ import SEO from '../components/SEO';
 import { getOrganizationSchema } from '../utils/seo';
 
 const SolutionsPage = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
     useEffect(() => {
         window.scrollTo(0, 0);
+        setTimeout(() => setIsVisible(true), 100);
     }, []);
 
     return (
@@ -28,7 +31,7 @@ const SolutionsPage = () => {
                     }}></div>
                 </div>
 
-                <div className="container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10">
+                <div className={`container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mt-14 mb-3 animate-fade-in-up">
                         Our Solutions
                     </h1>

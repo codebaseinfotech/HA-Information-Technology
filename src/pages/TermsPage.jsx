@@ -8,7 +8,6 @@ const TermsPage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        // Trigger animations after component mounts
         setTimeout(() => setIsVisible(true), 100);
     }, []);
 

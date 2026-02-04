@@ -164,7 +164,6 @@ select {
 /* Allow text selection in specific content areas */
 p,
 span,
-h1,
 h2,
 h3,
 h4,
@@ -175,4 +174,26 @@ li {
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
+}
+
+h1 {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Allow text selection in input fields and textareas */
+input,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="search"] {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
 }
