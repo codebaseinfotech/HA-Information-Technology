@@ -220,8 +220,8 @@ const Footer = () => {
                                 {services.map((service, index) => (
                                     <li key={index}>
                                         <Link to={`/services/${service.id}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group">
-                                            <FaChevronRight className="text-[#1A3C8B] text-xs group-hover:translate-x-1 transition-transform duration-300" />
-                                            <span>{service.title}</span>
+                                            <FaChevronRight className="text-[#1A3C8B] text-xs cursor-pointer group-hover:translate-x-1 transition-transform duration-300" />
+                                            <span className='cursor-pointer'>{service.title}</span>
                                         </Link>
                                     </li>
                                 ))}
@@ -232,9 +232,9 @@ const Footer = () => {
                         <ul className="space-y-2.5 mb-8">
                             {resources.map((resource, index) => (
                                 <li key={index}>
-                                    <Link to={resource.href} className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
-                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
-                                        {resource.name}
+                                    <Link to={resource.href} className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors duration-300 group">
+                                        <FaChevronRight className="text-[#1A3C8B] text-xs cursor-pointer group-hover:translate-x-1 transition-transform duration-300" />
+                                        <span className='cursor-pointer'>{resource.name}</span>
                                     </Link>
                                 </li>
                             ))}
@@ -248,8 +248,8 @@ const Footer = () => {
                             {solutionsData.map((solution) => (
                                 <li key={solution.id}>
                                     <Link to={`/solutions/${solution.id}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group">
-                                        <FaChevronRight className="text-[#1A3C8B] text-xs group-hover:translate-x-1 transition-transform duration-300" />
-                                        <span>{solution.title}</span>
+                                        <FaChevronRight className="text-[#1A3C8B] text-xs cursor-pointer group-hover:translate-x-1 transition-transform duration-300" />
+                                        <span className='cursor-pointer'>{solution.title}</span>
                                     </Link>
                                 </li>
                             ))}
