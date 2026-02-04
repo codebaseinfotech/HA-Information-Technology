@@ -493,14 +493,15 @@ const AboutPage = () => {
             </div>
 
             {/* Scroll to Top Button (Floating) */}
-            <div className="fixed bottom-8 right-8 z-50">
-                <button
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="w-12 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center border border-gray-100 text-blue-600 hover:-translate-y-1 transition-transform"
-                >
-                    <ArrowRight className="w-6 h-6 -rotate-90" />
-                </button>
-            </div>
+            <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+                aria-label="Back to top"
+            >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </button>
         </div>
     );
 };
