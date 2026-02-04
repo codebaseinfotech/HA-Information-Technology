@@ -286,13 +286,9 @@ const SupportSection = () => {
                                 <h3 className="text-xl font-bold text-black">Your Email</h3>
                                 <p className="text-gray-600 font-medium text-sm md:text-base">Get Instant Support & Maintenance Updates.</p>
                                 <div className="pt-2 space-y-3">
-                                    <a href="mailto:info@hainfotech.com" className="flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors text-sm md:text-base break-all">
+                                    <a href="mailto:info@alattastech.com" className="flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors text-sm md:text-base break-all">
                                         <Mail size={16} />
-                                        info@hainfotech.com
-                                    </a>
-                                    <a href="mailto:Support@hainfotech.com" className="flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors text-sm md:text-base break-all">
-                                        <Mail size={16} />
-                                        Support@hainfotech.com
+                                        info@alattastech.com
                                     </a>
                                 </div>
                             </div>

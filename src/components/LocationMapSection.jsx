@@ -12,7 +12,7 @@ const locations = [
         coordinates: { lat: 24.9745, lng: 55.1983 },
         address: '274 Street - Dubai Investment Park - 2, Dubai - U.A.E.',
         phones: ['+971 523003423'],
-        emails: ['waqas@alattastech.com']
+        emails: ['info@alattastech.com']
     },
     {
         id: 'india',

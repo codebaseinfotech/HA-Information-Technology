@@ -55,25 +55,25 @@ const About = () => {
     const stats = [
         {
             icon: '🏢',
-            number: '8',
+            number: '2',
             label: 'Branches',
             color: 'from-blue-400 to-blue-600'
         },
         {
             icon: '📅',
-            number: '19 +',
+            number: '7 +',
             label: 'Years Services',
             color: 'from-purple-400 to-purple-600'
         },
         {
             icon: '👥',
-            number: '100 +',
+            number: '35 +',
             label: 'Employees',
             color: 'from-green-400 to-green-600'
         },
         {
             icon: '🤝',
-            number: '5,000 +',
+            number: '1500 +',
             label: 'Customers',
             color: 'from-pink-400 to-pink-600'
         }

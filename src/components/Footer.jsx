@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllServices } from '../data/services';
+import solutionsData from '../data/solutions';
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaYoutube, FaInstagram, FaTwitter, FaPhone, FaChevronRight } from 'react-icons/fa';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -12,6 +14,8 @@ const Footer = () => {
         message: ''
     });
     const [newsletter, setNewsletter] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -20,33 +24,76 @@ const Footer = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch('/api/send-footer-contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                toast.success('Message sent successfully! We will contact you soon.');
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: ''
+                });
+            } else {
+                toast.error(data.message || 'Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            toast.error('Something went wrong. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleNewsletterSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!newsletter) {
+            toast.error('Please enter your email address');
+            return;
+        }
+
+        setIsNewsletterSubmitting(true);
+
+        try {
+            const response = await fetch('/api/send-newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: newsletter }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                toast.success('Successfully subscribed to newsletter!');
+                setNewsletter('');
+            } else {
+                toast.error(data.message || 'Failed to subscribe. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            toast.error('Something went wrong. Please try again later.');
+        } finally {
+            setIsNewsletterSubmitting(false);
+        }
     };
 
     const services = getAllServices();
-
-    const solutions = [
-        'Medical Center Software',
-        'Dental Center Software',
-        'Home Care Center Software',
-        'IVF Software',
-        'Laboratory Software',
-        'Pharmacy Software',
-        'Recruitment Software',
-        'Real Estate / Property Software',
-        'Auto Garage / Workshop Software',
-        'HR & Payroll Software',
-        'Accounting & Inventory Software',
-        'Cheque Printing Software',
-        'Bulk SMS Software',
-        'Call Monitoring Software',
-        'Time Attendance Software',
-        'Cleaning Software',
-        'School / Nursery Software',
-        'RCM Software'
-    ];
 
     const contacts = [
         { country: 'U.A.E.', phones: ['+971 523003423'] },
@@ -70,6 +117,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-[#0f172a] text-gray-300 pt-16  pb-8 px-4 xl:px-12">
+            <Toaster position="top-right" />
             <div className="container mx-auto">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols- md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12 px-4">
@@ -123,9 +171,10 @@ const Footer = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-[#1A3C8B] hover:bg-[#1A3C8B]/60 text-white font-medium py-3 px-6 rounded transition-colors duration-300"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-[#1A3C8B] hover:bg-[#1A3C8B]/60 text-white font-medium py-3 px-6 rounded transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    Send Message
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </button>
                             </form>
                         </div>
@@ -137,18 +186,28 @@ const Footer = () => {
                                 <p className="text-gray-400 text-sm mb-4">
                                     Subscribe to our newsletter and be the first to know about our latest updates
                                 </p>
-                                <div className="flex relative">
+                                <form onSubmit={handleNewsletterSubmit} className="flex relative">
                                     <input
                                         type="email"
                                         placeholder="E-mail"
                                         value={newsletter}
                                         onChange={(e) => setNewsletter(e.target.value)}
-                                        className="flex-1 px-4 py-2.5 bg-white text-gray-800 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                        disabled={isNewsletterSubmitting}
+                                        required
+                                        className="flex-1 px-4 py-2.5 bg-white text-gray-800 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50"
                                     />
-                                    <button className="bg-[#1A3C8B] absolute right-0 top-0 bottom-0 hover:bg-[#1A3C8B]/80 text-white px-4 py-2.5 rounded-r-md transition-colors duration-300">
-                                        <span className="text-lg"><FaChevronRight className='text-white text-[10px]' /></span>
+                                    <button
+                                        type="submit"
+                                        disabled={isNewsletterSubmitting}
+                                        className="bg-[#1A3C8B] absolute right-0 top-0 bottom-0 hover:bg-[#1A3C8B]/80 text-white px-4 py-2.5 rounded-r-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        {isNewsletterSubmitting ? (
+                                            <span className="text-xs">...</span>
+                                        ) : (
+                                            <span className="text-lg"><FaChevronRight className='text-white text-[10px]' /></span>
+                                        )}
                                     </button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -186,11 +245,11 @@ const Footer = () => {
                     <div>
                         <h3 className="text-white text-lg font-semibold mb-6">Solutions</h3>
                         <ul className="space-y-2.5">
-                            {solutions.map((solution, index) => (
-                                <li key={index}>
-                                    <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-start">
-                                        <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
-                                        <span>{solution}</span>
+                            {solutionsData.map((solution) => (
+                                <li key={solution.id}>
+                                    <Link to={`/solutions/${solution.id}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300 group">
+                                        <FaChevronRight className="text-[#1A3C8B] text-xs group-hover:translate-x-1 transition-transform duration-300" />
+                                        <span>{solution.title}</span>
                                     </Link>
                                 </li>
                             ))}
@@ -242,7 +301,7 @@ const Footer = () => {
                         <div className="mt-8">
                             <h4 className="text-white text-base font-semibold mb-4">Quick Links</h4>
                             <ul className="space-y-2">
-                                {['Home', 'Contact Us', 'Support'].map((link, index) => (
+                                {['Home', 'Contact Us'].map((link, index) => (
                                     <li key={index}>
                                         <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
                                             <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
@@ -261,13 +320,35 @@ const Footer = () => {
                 <div className="border-t border-gray-700 pt-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
                         <p className="text-gray-400">
-                            © 2006 - {currentYear} Vision Technologies | All Rights Reserved
+                            © 2020 - {currentYear} HA Information Technology | All Rights Reserved
                         </p>
-                        <div className="flex gap-6">
-                            <Link to="#terms" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</Link>
-                            <Link to="#privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
-                            <Link to="#cookies" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</Link>
+                        <div className="flex items-center gap-2 text-sm whitespace-nowrap">
+                            <Link
+                                to="/terms-conditions"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                Terms & Conditions
+                            </Link>
+
+                            <span className="text-gray-500">|</span>
+
+                            <Link
+                                to="/privacy-policy"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                Privacy Policy
+                            </Link>
+
+                            <span className="text-gray-500">|</span>
+
+                            <Link
+                                to="/cookie-policy"
+                                className="text-gray-400 hover:text-white transition-colors"
+                            >
+                                Cookie Policy
+                            </Link>
                         </div>
+
                     </div>
                 </div>
             </div>

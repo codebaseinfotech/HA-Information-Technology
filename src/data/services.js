@@ -9,7 +9,7 @@ export const services = [
         content: {
             introduction: `Custom Software Development is a complicated process. A lot of people think that good technical expertise in software development is sufficient for a project's success. However, this is not necessarily so. We at Vision Technologies understand development process, knowledge of the latest technologies, expert management, effective communication, and full-cycle quality assurance.
 
-At Vision Technologies, we specialize in delivering custom software solutions that are meticulously designed to meet the unique requirements of your business. Our team of expert developers and designers work collaboratively to create software that not only addresses your current needs but also scales with your business as it grows.`,
+At HA Information Technology, we specialize in delivering custom software solutions that are meticulously designed to meet the unique requirements of your business. Our team of expert developers and designers work collaboratively to create software that not only addresses your current needs but also scales with your business as it grows.`,
             approach: [
                 {
                     title: 'Comprehensive Project Understanding',
@@ -64,7 +64,7 @@ At Vision Technologies, we specialize in delivering custom software solutions th
                 {
                     type: 'text_header',
                     title: 'Our Comprehensive e-Commerce Solutions',
-                    content: `At Vision Technologies, we understand that building a successful e-commerce platform involves more than just technical expertise. That's why we offer a complete e-commerce package tailored to meet your business needs, ensuring a seamless and efficient online experience for your customers. Whether you are operating in a B2B or B2C market, we have the solutions to cater to your specific requirements.`
+                    content: `HA Information Technology, we understand that building a successful e-commerce platform involves more than just technical expertise. That's why we offer a complete e-commerce package tailored to meet your business needs, ensuring a seamless and efficient online experience for your customers. Whether you are operating in a B2B or B2C market, we have the solutions to cater to your specific requirements.`
                 },
                 {
                     type: 'check_list',
@@ -223,16 +223,6 @@ At Vision Technologies, we specialize in delivering custom software solutions th
         shortDescription: 'Scalable cloud hosting solutions.',
         content: {
             introduction: "Reliable cloud hosting services.",
-            approach: []
-        }
-    },
-    {
-        id: 'adhics',
-        title: 'ADHICS',
-        icon: Database,
-        shortDescription: 'Specialized ADHICS solutions.',
-        content: {
-            introduction: "Specialized solutions for ADHICS.",
             approach: []
         }
     }

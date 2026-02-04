@@ -1,45 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Database, Cloud, Lock, Server, Smartphone, Monitor, ChevronRight } from 'lucide-react';
-
-const solutions = [
-    {
-        id: 'medical-center',
-        title: 'Medical Center Software',
-        description: 'Comprehensive management capability for medical centers including patient records, appointments, and billing.',
-        icon: Shield
-    },
-    {
-        id: 'dental-center',
-        title: 'Dental Center Software',
-        description: 'Specialized tools for dental practices to manage charting, imaging, and patient scheduling efficiently.',
-        icon: Monitor
-    },
-    {
-        id: 'pharmacy',
-        title: 'Pharmacy Software',
-        description: 'Inventory management, prescription processing, and point-of-sale solutions for retail pharmacies.',
-        icon: Database
-    },
-    {
-        id: 'lab',
-        title: 'Laboratory Software',
-        description: 'Streamline lab operations with sample tracking, result reporting, and equipment integration.',
-        icon: Server
-    },
-    {
-        id: 'hr-payroll',
-        title: 'HR & Payroll Software',
-        description: 'Automate human resources processes and payroll calculations with compliance features.',
-        icon: Lock
-    },
-    {
-        id: 'accounting',
-        title: 'Accounting & Inventory',
-        description: 'Integrated financial management and stock control for businesses of all sizes.',
-        icon: Cloud
-    }
-];
+import { ChevronRight } from 'lucide-react';
+import solutions from '../data/solutions';
 
 const SolutionsPage = () => {
     useEffect(() => {
@@ -82,21 +44,24 @@ const SolutionsPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {solutions.map((item) => (
-                        <div key={item.id} className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
+                    {solutions.map((solution) => (
+                        <Link
+                            key={solution.id}
+                            to={`/solutions/${solution.id}`}
+                            className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden cursor-pointer"
                         >
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-[#10B981] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                             <div className="mb-6 inline-flex p-4 rounded-xl bg-blue-50 text-[#1A3C8B] group-hover:bg-[#1A3C8B] group-hover:text-white transition-colors duration-300">
-                                <item.icon size={32} />
+                                <solution.icon size={32} />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1A3C8B] transition-colors">
-                                {item.title}
+                                {solution.title}
                             </h3>
-                            <p className="text-gray-600 mb-6">{item.description}</p>
-                            <Link to={`/contact?interest=${item.id}`} className="flex items-center text-[#1A3C8B] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                                Request Demo <ChevronRight size={16} className="ml-1" />
-                            </Link>
-                        </div>
+                            <p className="text-gray-600 mb-6">{solution.shortDescription}</p>
+                            <div className="flex items-center text-[#1A3C8B] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More <ChevronRight size={16} className="ml-1" />
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>
