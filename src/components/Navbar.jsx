@@ -47,19 +47,22 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden lg:flex items-center space-x-8">
-                        <Link to="/" className={`font-medium text-sm transition-all duration-300 ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'} `}>
+                        <Link to="/" className={`font-medium text-base transition-all duration-300 relative group ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'}`}>
                             Home
+                            <span className="absolute left-0 bottom-0 w-0 h-[3px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                         </Link>
-                        <Link to="/about" className={`font-medium text-sm transition-all duration-300 ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'} `}>
+                        <Link to="/about" className={`font-medium text-base transition-all duration-300 relative group ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'}`}>
                             About
+                            <span className="absolute left-0 bottom-0 w-0 h-[3px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                         </Link>
                         {navItems.map((item) => (
                             <Link
                                 key={item.label}
                                 to={item.path}
-                                className={`font-medium text-sm transition-all duration-300 ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'} `}
+                                className={`font-medium text-base transition-all duration-300 relative group ${scrolled ? 'text-[#1A3C8B]' : 'text-[#1A3C8B]'}`}
                             >
                                 {item.label}
+                                <span className="absolute left-0 bottom-0 w-0 h-[3px] bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                             </Link>
                         ))}
                         {/* <Link to="/contact"
