@@ -13,7 +13,7 @@ const ContactPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Hero Section - Compact Version for Contact which often assumes header style */}
+            {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute inset-0" style={{
@@ -36,14 +36,14 @@ const ContactPage = () => {
                 <div className="absolute -right-20 -bottom-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
             </div>
 
-            {/* Support Section - Only on Contact Page */}
+            {/* Support Section */}
             <SupportSection />
 
-            {/* Location Map Section - Only on Contact Page */}
+            {/* Location Map Section */}
             <LocationMapSection />
 
-            {/* Reuse Existing Contact Section but remove its padding if needed or let it be */}
-            <Contact />
+            {/* Contact Form - WITHOUT Image */}
+            <Contact hideImage={true} />
         </div>
     );
 };

@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone, Send, Printer, HardHat } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import LocationMapSection from './LocationMapSection';
 
-const Contact = () => {
+const Contact = ({ hideImage = false }) => {
     const [formData, setFormData] = useState({
         name: '',
         contact: '',
@@ -83,6 +83,24 @@ const Contact = () => {
 
     const services = [
         'Software Development',
+        'Medical / Dental Software',
+        'Home Care Software',
+        'Laboratory Software',
+        'HR & Payroll Software',
+        'Accounting Software',
+        'Cheque Printing Software',
+        'Auto Garage / Workshop Software',
+        'Bulk SMS Software',
+        'Pharmacy Software',
+        'Recruitment Software',
+        'Retail(POS) Software',
+        'Real Estate / Property Software',
+        'School / Nursery Software',
+        'Cleaning Software',
+        'Time Attendance Software',
+        'CCTV Security System',
+        'Telephone PABX Solution',
+        'Call Monitoring Software',
         'Website Designing & Development',
         'Mobile App Development',
         'E-Commerce Solutions',
@@ -97,7 +115,7 @@ const Contact = () => {
             <Toaster />
             <section id="contact" className="py-16 md:py-24 px-4 xl:px-12 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto px-4 xl:px-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div className={`grid grid-cols-1 ${!hideImage ? 'lg:grid-cols-2' : ''} gap-12 lg:gap-16 items-center`}>
                         <div>
                             <div className="mb-8">
                                 <div className="inline-block mb-4">
@@ -210,7 +228,7 @@ const Contact = () => {
                         </div>
 
                         {/* Right - Image with Decoration */}
-                        <div className="relative">
+                        {!hideImage && <div className="relative">
                             <div className="absolute -top-8 -left-8 w-64 h-64 opacity-20">
                                 <svg viewBox="0 0 100 100" className="w-full h-full">
                                     {[...Array(10)].map((_, i) => (
@@ -230,7 +248,7 @@ const Contact = () => {
                                     className="w-full h-[300px] md:h-[500px] object-cover"
                                 />
                             </div>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </section>

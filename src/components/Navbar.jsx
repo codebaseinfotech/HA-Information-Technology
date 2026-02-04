@@ -62,11 +62,11 @@ const Navbar = () => {
                                 {item.label}
                             </Link>
                         ))}
-                        <Link to="/contact"
+                        {/* <Link to="/contact"
                             className="bg-[#1A3C8B] text-sm text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#1A3C8B]/80 transform hover:scale-105 transition-all duration-300 shadow-lg"
                         >
                             Get Started
-                        </Link>
+                        </Link> */}
                     </div>
 
                     <button
@@ -116,7 +116,7 @@ const Navbar = () => {
                                         onClick={handleMobileClose}
                                     >
                                         About Us
-                                        <ChevronDown size={20} className="text-gray-600" />
+                                        {/* <ChevronDown size={20} className="text-gray-600" /> */}
                                     </Link>
                                 </Box>
 
@@ -127,7 +127,7 @@ const Navbar = () => {
                                         onClick={handleMobileClose}
                                     >
                                         Services
-                                        <ChevronDown size={20} className="text-gray-600" />
+                                        {/* <ChevronDown size={20} className="text-gray-600" /> */}
                                     </Link>
                                 </Box>
 
@@ -138,7 +138,7 @@ const Navbar = () => {
                                         onClick={handleMobileClose}
                                     >
                                         Solutions
-                                        <ChevronDown size={20} className="text-gray-600" />
+                                        {/* <ChevronDown size={20} className="text-gray-600" /> */}
                                     </Link>
                                 </Box>
 
@@ -149,7 +149,7 @@ const Navbar = () => {
                                         onClick={handleMobileClose}
                                     >
                                         Resources
-                                        <ChevronDown size={20} className="text-gray-600" />
+                                        {/* <ChevronDown size={20} className="text-gray-600" /> */}
                                     </Link>
                                 </Box>
 
@@ -173,7 +173,7 @@ const Navbar = () => {
                                     </Link>
                                 </Box>
 
-                                <Box mt={6} display="flex" alignItems="center" p={4} width="fit-content">
+                                {/* <Box mt={6} display="flex" alignItems="center" p={4} width="fit-content">
                                     <Link
                                         to="/contact"
                                         className="bg-[#1A3C8B] text-sm text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#1A3C8B]/80 transform hover:scale-105 transition-all duration-300 shadow-lg"
@@ -181,7 +181,7 @@ const Navbar = () => {
                                     >
                                         Get Started
                                     </Link>
-                                </Box>
+                                </Box> */}
                             </VStack>
                         </DrawerBody>
                     </DrawerContent>
