@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Map, { Marker, NavigationControl } from 'react-map-gl/mapbox';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import Map, { Marker } from 'react-map-gl/mapbox';
+import { Phone, Mail } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiYm9kb200NzQ5MCIsImEiOiJjbWlkN2V2ZmEwMmlvMmtzaDM4Y2tnZWZvIn0.r82R70gj0Zu-8z1J8QLUjA';
@@ -116,14 +117,28 @@ const LocationMapSection = () => {
                             </h3>
 
                             <div className="w-full space-y-4 md:space-y-2 flex flex-col items-center">
-                                {selectedLocation.phones.map((phone, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 md:gap-4 text-lg md:text-xl font-bold text-[#1a2332]">
-                                        <div className="w-6 h-6 flex items-center justify-center">
-                                            <Phone className="w-6 h-6 transform rotate-12 text-[#1A3C8B]" />
+                                {selectedLocation.phones.map((phone, idx) => {
+                                    const cleanPhone = phone.replace(/[^0-9]/g, '');
+                                    const whatsappLink = `https://api.whatsapp.com/send/?phone=${cleanPhone}&text&type=phone_number&app_absent=0`;
+
+                                    return (
+                                        <div key={idx} className="flex items-center gap-3 md:gap-4 text-lg md:text-xl font-bold text-[#1a2332]">
+                                            <div className="w-6 h-6 flex items-center justify-center">
+                                                <Phone className="w-6 h-6 transform rotate-12 text-[#1A3C8B]" />
+                                            </div>
+                                            <a
+                                                href={whatsappLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 hover:text-green-600 transition-colors cursor-pointer"
+                                                title="Chat on WhatsApp"
+                                            >
+                                                <FaWhatsapp className="w-6 h-6 cursor-pointer" />
+                                                <span className="cursor-pointer">{phone}</span>
+                                            </a>
                                         </div>
-                                        <span>{phone}</span>
-                                    </div>
-                                ))}
+                                    );
+                                })}
 
                                 {selectedLocation.emails.map((email, idx) => (
                                     <div key={idx} className="flex items-center gap-3 md:gap-4 text-base md:text-lg font-semibold text-gray-700">

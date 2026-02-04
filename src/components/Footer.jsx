@@ -267,18 +267,31 @@ const Footer = () => {
                         <ul className="space-y-4">
                             {contacts.map((contact, index) => (
                                 <li key={index}>
-                                    <Link to="#" className="text-white hover:text-blue-400 text-sm font-medium transition-colors flex items-center">
+                                    <h1 className="text-white text-sm font-medium transition-colors flex items-center">
                                         Contact {contact.country}
-                                    </Link>
+                                    </h1>
                                     {contact.phones.length > 0 && (
                                         <div className="mt-2 space-y-1">
-                                            {contact.phones.map((phone, pIndex) => (
-                                                <Link key={pIndex} to={`tel:${phone}`} className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
-                                                    <FaPhone className="w-3 h-3" />
-                                                    <FaWhatsapp className="w-3 h-3" />
-                                                    <span>{phone}</span>
-                                                </Link>
-                                            ))}
+                                            {contact.phones.map((phone, pIndex) => {
+                                                const cleanPhone = phone.replace(/[^0-9]/g, '');
+                                                const whatsappLink = `https://api.whatsapp.com/send/?phone=${cleanPhone}&text&type=phone_number&app_absent=0`;
+
+                                                return (
+                                                    <div key={pIndex} className="flex items-center gap-2 text-gray-400 text-sm hover:text-green-400 transition-colors">
+                                                        <a
+                                                            href={whatsappLink}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex items-center !cursor-pointer gap-1"
+                                                            title="Chat on WhatsApp"
+                                                        >
+                                                            <FaPhone className="w-4 h-4 cursor-pointer" />
+                                                            <FaWhatsapp className="w-4 h-4 cursor-pointer" />
+                                                            <span className="cursor-pointer">{phone}</span>
+                                                        </a>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     )}
                                 </li>

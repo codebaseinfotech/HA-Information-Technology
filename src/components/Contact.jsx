@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Printer, HardHat } from 'lucide-react';
+import { Mail, Phone, Send } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
-import LocationMapSection from './LocationMapSection';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = ({ hideImage = false }) => {
     const [formData, setFormData] = useState({
@@ -281,14 +281,25 @@ const SupportSection = () => {
                             <div className="space-y-4">
                                 <h3 className="text-xl font-bold text-black">Contacts us</h3>
                                 <div className="space-y-3 text-gray-600 font-medium text-sm md:text-base">
-                                    <div className="flex items-center gap-2">
-                                        <Printer className="w-4 h-4 text-blue-600" />
-                                        <span>+971 523003423</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 text-green-600">
-                                        <Printer className="w-4 h-4" />
-                                        <span>+91-7096859504</span>
-                                    </div>
+                                    {['+971 523003423', '+91-7096859504'].map((phone, idx) => {
+                                        const cleanPhone = phone.replace(/[^0-9]/g, '');
+                                        const whatsappLink = `https://api.whatsapp.com/send/?phone=${cleanPhone}&text&type=phone_number&app_absent=0`;
+
+                                        return (
+                                            <a
+                                                key={idx}
+                                                href={whatsappLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`flex items-center gap-2 hover:text-green-600 transition-colors cursor-pointer`}
+                                                title="Chat on WhatsApp"
+                                            >
+                                                <Phone className="w-6 h-6 transform rotate-12 text-[#1A3C8B]" />
+                                                <FaWhatsapp className="w-6 h-6 cursor-pointer" />
+                                                <span className="cursor-pointer">{phone}</span>
+                                            </a>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
