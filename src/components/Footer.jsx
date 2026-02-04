@@ -115,6 +115,11 @@ const Footer = () => {
         { name: 'Careers', href: '/careers' }
     ];
 
+    const quickLinks = [
+        { name: 'Home', href: '/' },
+        { name: 'Contact Us', href: '/contact' },
+    ];
+
     return (
         <footer className="bg-[#0f172a] text-gray-300 pt-16  pb-8 px-4 xl:px-12">
             <Toaster position="top-right" />
@@ -301,11 +306,11 @@ const Footer = () => {
                         <div className="mt-8">
                             <h4 className="text-white text-base font-semibold mb-4">Quick Links</h4>
                             <ul className="space-y-2">
-                                {['Home', 'Contact Us'].map((link, index) => (
+                                {quickLinks.map((link, index) => (
                                     <li key={index}>
-                                        <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
+                                        <Link to={link.href} className="text-gray-400 hover:text-white text-sm transition-colors flex items-center">
                                             <span className="mr-2 mt-1"><FaChevronRight className='text-[#1A3C8B] text-[10px]' /></span>
-                                            {link}
+                                            {link.name}
                                         </Link>
                                     </li>
                                 ))}

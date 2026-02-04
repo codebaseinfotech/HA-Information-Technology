@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Hero = () => {
     const slides = [
@@ -24,6 +25,10 @@ const Hero = () => {
             image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
         }
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <section id="home" className="relative min-h-screen">
