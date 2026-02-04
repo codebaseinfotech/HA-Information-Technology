@@ -6,6 +6,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppWidget from './components/WhatsAppWidget';
 import SEO from './components/SEO';
 import AboutPage from './pages/AboutPage';
 import { getOrganizationSchema } from './utils/seo';
@@ -57,6 +58,7 @@ function App() {
           <Route path="/cookie-policy" element={<CookiePolicyPage />} />
         </Routes>
         <Footer />
+        <WhatsAppWidget />
       </div>
     </Router>
   );
