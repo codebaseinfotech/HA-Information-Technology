@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Lightbulb, Users, Target, Eye, Shield, ArrowRight, CheckCircle2, Plus } from 'lucide-react';
+import SEO from '../components/SEO';
+import { getOrganizationSchema } from '../utils/seo';
 
 const MissionVisionSection = ({ qualityStandards }) => {
     const [activeTab, setActiveTab] = useState('mission');
@@ -255,6 +257,13 @@ const AboutPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <SEO
+                title="About Us - HA Information Technology | IT Solutions Company UAE & India"
+                description="Learn about HA Information Technology, your trusted IT solutions partner in UAE and India. Discover our mission, vision, values, and commitment to delivering innovative software development and technology services."
+                keywords="IT company UAE, software development company Dubai, technology solutions India, IT consulting services, custom software development, web development company, mobile app development, about HA Information Technology, IT services provider, software company Dubai, technology partner UAE"
+                url="/about"
+                schema={getOrganizationSchema()}
+            />
             <section className="relative h-[300px] md:h-[400px] bg-cover bg-center overflow-hidden" style={{
                 backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
             }}>

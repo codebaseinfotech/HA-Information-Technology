@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const CareersPage = () => {
     useEffect(() => {
@@ -8,6 +9,12 @@ const CareersPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <SEO
+                title="Careers - Join Our Team | HA Information Technology"
+                description="Explore career opportunities at HA Information Technology. Join our innovative team of IT professionals and grow your career in software development, web development, and technology services."
+                keywords="IT jobs UAE, software developer jobs Dubai, web developer careers, IT careers India, technology jobs, software engineer positions, join IT company, careers in technology, IT job opportunities Dubai"
+                url="/careers"
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

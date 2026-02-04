@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Cookie, Settings, Eye, Shield, CheckCircle, ChevronRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const CookiePolicyPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -12,6 +13,13 @@ const CookiePolicyPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <SEO
+                title="Cookie Policy - How We Use Cookies | HA Information Technology"
+                description="Understand how HA Information Technology uses cookies to improve your experience. Learn about cookie types, third-party trackers, and how to manage your cookie preferences."
+                keywords="cookie policy, cookies, tracking cookies, browser cookies, cookie management, cookie consent, third-party cookies, website cookies"
+                url="/cookie-policy"
+                robots="index, follow"
+            />
             {/* Hero Section with Enhanced Animation */}
             <div className="relative h-[300px] md:h-[400px] bg-gradient-to-br from-[#1a2332] via-[#2a3a52] to-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

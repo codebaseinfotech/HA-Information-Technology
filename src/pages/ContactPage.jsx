@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Contact, { SupportSection } from '../components/Contact';
 import LocationMapSection from '../components/LocationMapSection';
+import SEO from '../components/SEO';
+import { getLocalBusinessSchema } from '../utils/seo';
 
 const ContactPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +15,13 @@ const ContactPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="Contact Us - HA Information Technology | Get in Touch"
+                description="Contact HA Information Technology for IT solutions and software development services. Reach us in UAE (+971 523003423) or India (+91-7096859504). Email: info@alattastech.com"
+                keywords="contact IT company UAE, software development inquiry Dubai, IT support contact, technology consultation UAE, contact HA Information Technology, IT services inquiry, get quote software development, contact web development company, IT company Dubai contact, software company contact India"
+                url="/contact"
+                schema={getLocalBusinessSchema()}
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

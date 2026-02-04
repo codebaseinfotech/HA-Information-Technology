@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getAllServices } from '../data/services';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
+import { getOrganizationSchema } from '../utils/seo';
 
 const ServicesPage = () => {
     const services = getAllServices();
@@ -12,6 +14,13 @@ const ServicesPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="Our Services - IT Solutions & Software Development | HA Information Technology"
+                description="Explore comprehensive IT services including software development, web design, mobile app development, cloud hosting, IT infrastructure, and security solutions. Professional IT services in UAE and India."
+                keywords="IT services UAE, software development services, web development company, mobile app development, e-commerce solutions, IT infrastructure management, security solutions, cloud hosting services, IT consulting Dubai, custom software development, enterprise software solutions, digital transformation services"
+                url="/services"
+                schema={getOrganizationSchema()}
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 {/* Background Pattern */}

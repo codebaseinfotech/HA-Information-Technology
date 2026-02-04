@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getServiceById, getAllServices } from '../data/services';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
+import { getServiceSchema } from '../utils/seo';
 
 const ServiceDetail = () => {
     const { slug } = useParams();
@@ -26,6 +28,13 @@ const ServiceDetail = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title={`${service.title} - IT Services | HA Information Technology`}
+                description={service.description}
+                keywords={`${service.title}, ${service.title} UAE, ${service.title} Dubai, IT services, technology solutions, ${service.title} India, professional IT services`}
+                url={`/services/${service.id}`}
+                schema={getServiceSchema(service)}
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 {/* Background Pattern */}
@@ -38,7 +47,7 @@ const ServiceDetail = () => {
 
                 {/* Content */}
                 <div className="container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mt-14 my-3 animate-fade-in-up">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mt-14 mb-3 animate-fade-in-up">
                         {service.title}
                     </h1>
 

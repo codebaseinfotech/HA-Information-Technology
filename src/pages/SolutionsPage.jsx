@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import solutions from '../data/solutions';
+import SEO from '../components/SEO';
+import { getOrganizationSchema } from '../utils/seo';
 
 const SolutionsPage = () => {
     useEffect(() => {
@@ -10,6 +12,13 @@ const SolutionsPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title="Software Solutions - Industry-Specific Applications | HA Information Technology"
+                description="Discover specialized software solutions for healthcare, education, retail, real estate, and more. Medical software, HR payroll, accounting, school management, and custom business applications in UAE and India."
+                keywords="software solutions UAE, medical software Dubai, hospital management system, school management software, HR payroll software, accounting software, real estate software, pharmacy management system, retail POS software, cleaning software, time attendance software, custom business software, industry-specific software solutions"
+                url="/solutions"
+                schema={getOrganizationSchema()}
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

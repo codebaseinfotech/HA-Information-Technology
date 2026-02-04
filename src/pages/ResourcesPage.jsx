@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Monitor, Settings, Users, CheckCircle2, Briefcase, Share2 } from 'lucide-react';
 import { useDisclosure } from '@chakra-ui/react';
 import PartnerModal from '../components/PartnerModal';
+import SEO from '../components/SEO';
 
 const ResourcesPage = () => {
     useEffect(() => {
@@ -48,6 +49,12 @@ const ResourcesPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <SEO
+                title="Our Partners - Technology Partnerships | HA Information Technology"
+                description="Meet our trusted technology partners and collaborators. Join HA Information Technology partnership program and help businesses grow with innovative IT solutions and software services."
+                keywords="technology partners, IT partnerships, software partners, business collaboration, technology alliance, IT partner network, strategic partnerships, technology collaboration Dubai"
+                url="/our-partner"
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

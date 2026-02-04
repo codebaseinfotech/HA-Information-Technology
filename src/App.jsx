@@ -6,7 +6,9 @@ import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
 import AboutPage from './pages/AboutPage';
+import { getOrganizationSchema } from './utils/seo';
 
 import ServiceDetail from './pages/ServiceDetail';
 import ServicesPage from './pages/ServicesPage';
@@ -23,6 +25,10 @@ import CookiePolicyPage from './pages/CookiePolicyPage';
 // Home Page Component
 const HomePage = () => (
   <>
+    <SEO
+      url="/"
+      schema={getOrganizationSchema()}
+    />
     <Hero />
     <About />
     <Services />

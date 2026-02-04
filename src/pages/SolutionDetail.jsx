@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, CheckCircle2, ArrowRight } from 'lucide-react';
 import solutions from '../data/solutions';
+import SEO from '../components/SEO';
+import { getSoftwareSchema } from '../utils/seo';
 
 const SolutionDetail = () => {
     const { slug } = useParams();
@@ -26,6 +28,13 @@ const SolutionDetail = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
+            <SEO
+                title={`${solution.title} - Software Solution | HA Information Technology`}
+                description={solution.content.introduction}
+                keywords={`${solution.title}, ${solution.title} UAE, ${solution.title} Dubai, ${solution.title} software, business software, industry software, ${solution.title} India, custom software solution`}
+                url={`/solutions/${solution.id}`}
+                schema={getSoftwareSchema(solution)}
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, Shield, Scale, ChevronRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const TermsPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +14,13 @@ const TermsPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <SEO
+                title="Terms & Conditions - HA Information Technology"
+                description="Read our terms and conditions for using HA Information Technology services. Learn about usage rights, intellectual property, warranties, and legal policies."
+                keywords="terms and conditions, user agreement, service terms, legal terms, website terms, IT services agreement, software terms, terms of use"
+                url="/terms-conditions"
+                robots="index, follow"
+            />
             {/* Hero Section with Enhanced Animation */}
             <div className="relative h-[300px] md:h-[400px] bg-gradient-to-br from-[#1a2332] via-[#2a3a52] to-[#1a2332] overflow-hidden">
                 {/* Animated Background Pattern */}

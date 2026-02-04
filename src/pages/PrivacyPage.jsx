@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, UserCheck, Database, FileCheck, ChevronRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const PrivacyPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -12,6 +13,13 @@ const PrivacyPage = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+            <SEO
+                title="Privacy Policy - Your Data Protection | HA Information Technology"
+                description="Learn how HA Information Technology protects your privacy and handles your data. Read our comprehensive privacy policy covering data collection, usage, security, and your rights."
+                keywords="privacy policy, data protection, personal information, data security, privacy rights, GDPR compliance, data privacy, information security"
+                url="/privacy-policy"
+                robots="index, follow"
+            />
             {/* Hero Section with Enhanced Animation */}
             <div className="relative h-[300px] md:h-[400px] bg-gradient-to-br from-[#1a2332] via-[#2a3a52] to-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">

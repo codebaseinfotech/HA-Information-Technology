@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Code, Share2, DollarSign } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const AffiliatesPage = () => {
     useEffect(() => {
@@ -28,6 +29,12 @@ const AffiliatesPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <SEO
+                title="Become a Partner - Affiliate Program | HA Information Technology"
+                description="Join HA Information Technology affiliate program and earn 30% commission for every referral. Partner with us and help businesses grow with our IT solutions and software services."
+                keywords="IT affiliate program, technology partner program, software referral program, IT partnership opportunities, earn commission IT services, become technology partner, affiliate marketing IT, partnership program Dubai"
+                url="/affiliates"
+            />
             {/* Hero Section */}
             <div className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
