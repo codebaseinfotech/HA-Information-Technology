@@ -70,14 +70,14 @@ const WhatsAppWidget = () => {
                 {/* Floating Button */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="bg-green-500 hover:bg-green-600 text-white w-11 h-11 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 group relative"
+                    className="bg-green-500 hover:bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 group relative"
                     aria-label="WhatsApp Chat"
                 >
                     {isOpen ? (
-                        <X className="w-6 h-6" />
+                        <X className="w-8 h-8" />
                     ) : (
                         <>
-                            <FaWhatsapp className="w-6 h-6 animate-pulse" />
+                            <FaWhatsapp className="w-8 h-8 animate-pulse" />
                         </>
                     )}
                 </button>
