@@ -7,39 +7,8 @@ export const services = [
         icon: Code,
         shortDescription: 'Custom software solutions tailored to your unique business needs.',
         content: {
-            introduction: `Custom Software Development is a complicated process. A lot of people think that good technical expertise in software development is sufficient for a project's success. However, this is not necessarily so. We at Vision Technologies understand development process, knowledge of the latest technologies, expert management, effective communication, and full-cycle quality assurance.
-
-At HA Information Technology, we specialize in delivering custom software solutions that are meticulously designed to meet the unique requirements of your business. Our team of expert developers and designers work collaboratively to create software that not only addresses your current needs but also scales with your business as it grows.`,
-            approach: [
-                {
-                    title: 'Comprehensive Project Understanding',
-                    description: 'We start by gaining a deep understanding of your project requirements, business goals, and specific challenges. This allows us to tailor our approach and deliver solutions that precisely meet your needs.'
-                },
-                {
-                    title: 'Leveraging Latest Technologies',
-                    description: 'Staying at the forefront of technology is crucial. We continuously update our knowledge and skills to leverage the latest technologies, tools, and frameworks in our development process, ensuring your software is cutting-edge and future-proof.'
-                },
-                {
-                    title: 'Expert Project Management',
-                    description: 'Effective project management is key to successful software development. Our experienced project managers oversee every aspect of the project, from planning and scheduling to execution and delivery, ensuring smooth progress and timely completion.'
-                },
-                {
-                    title: 'Transparent and Effective Communication',
-                    description: 'Clear and consistent communication is vital for project success. We maintain open lines of communication with our clients throughout the development process, providing regular updates, seeking feedback, and ensuring alignment with your expectations.'
-                },
-                {
-                    title: 'Full-Cycle Quality Assurance',
-                    description: 'Quality is at the core of our development process. We implement rigorous quality assurance practices at every stage of the project, from initial design to final deployment, to ensure the software is reliable, secure, and performs optimally.'
-                },
-                {
-                    title: 'Iterative Development and Feedback',
-                    description: 'We adopt an iterative development approach, allowing for continuous feedback and improvements. This ensures that the final product not only meets but exceeds your expectations, with the flexibility to adapt to any changes or new requirements.'
-                },
-                {
-                    title: 'Post-Deployment Support and Maintenance',
-                    description: 'Our commitment to your success extends beyond the deployment of the software. We offer comprehensive post-deployment support and maintenance services to ensure your software remains up-to-date, secure, and functioning flawlessly.'
-                }
-            ]
+            introduction: "",
+            approach: []
         }
     },
     {
@@ -48,7 +17,6 @@ At HA Information Technology, we specialize in delivering custom software soluti
         icon: Layout,
         shortDescription: 'Stunning, responsive websites that drive engagement and growth.',
         content: {
-            introduction: "We create professional, responsive, and SEO-friendly websites.",
             approach: []
         }
     },

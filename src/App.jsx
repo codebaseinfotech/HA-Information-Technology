@@ -13,6 +13,8 @@ import { getOrganizationSchema } from './utils/seo';
 
 import ServiceDetail from './pages/ServiceDetail';
 import ServicesPage from './pages/ServicesPage';
+import SoftwareDevelopmentPage from './pages/services/SoftwareDevelopmentPage';
+import WebsiteDevelopmentPage from './pages/services/WebsiteDevelopmentPage';
 import SolutionsPage from './pages/SolutionsPage';
 import SolutionDetail from './pages/SolutionDetail';
 import ResourcesPage from './pages/ResourcesPage';
@@ -46,6 +48,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
+          <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
