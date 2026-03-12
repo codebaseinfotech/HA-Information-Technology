@@ -27,7 +27,7 @@ import {
   Lock,
 } from "lucide-react";
 import SEO from "../../components/SEO";
-import { getOrganizationSchema } from "../../utils/seo";
+import { getServiceSchema, getFAQSchema } from "../../utils/seo";
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
@@ -408,7 +408,15 @@ const WebsiteDevelopmentPage = () => {
         description="Top-rated web development company in Dubai, UAE. We've built 100+ websites using React, Laravel & Node.js for businesses across the UAE. Get a free consultation today. AED 5,000 – AED 100,000+."
         keywords="Web Development Company, custom website development Dubai, ecommerce development UAE, React Laravel web development services"
         url="/services/website-development"
-        schema={getOrganizationSchema()}
+        schemas={[
+          getServiceSchema({
+            serviceType: "Web Development Services",
+            description: "Custom web development services in UAE including business websites, ecommerce stores, web applications, API integrations, and enterprise CMS development.",
+            minPrice: "5000",
+            maxPrice: "100000"
+          }),
+          getFAQSchema(faqs.map(f => ({ question: f.q, answer: f.a })))
+        ]}
       />
 
       {/* Hero Section */}

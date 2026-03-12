@@ -17,18 +17,14 @@ import {
   GraduationCap,
   Briefcase,
   Rocket,
-  Languages,
   Lock,
   Zap,
   Clock,
-  MonitorPlay,
-  FileCheck,
-  LifeBuoy,
   ChevronDown,
   Plus,
 } from "lucide-react";
 import SEO from "../../components/SEO";
-import { getOrganizationSchema } from "../../utils/seo";
+import { getServiceSchema, getFAQSchema } from "../../utils/seo";
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
@@ -187,7 +183,23 @@ const SoftwareDevelopmentPage = () => {
         description="Custom software development company serving healthcare, logistics, finance, retail, and real estate. Fixed-price projects, full code ownership, global delivery."
         keywords="Custom Software Development, MVP Development, Healthcare Software, Logistics Software, Fintech Development, Real Estate Software, SaaS Development"
         url="/services/software-development"
-        schema={getOrganizationSchema()}
+        schemas={[
+          getServiceSchema({
+            serviceType: "Custom Software Development",
+            description: "Custom software development services for healthcare, logistics, finance, retail, and real estate. Validated MVP and scalable SaaS solutions.",
+            minPrice: "15000",
+            maxPrice: "300000"
+          }),
+          getFAQSchema([
+            { question: "How much does custom software development cost?", answer: "Small business systems: $8,000–$25,000. Mid-size platforms: $25,000–$80,000. Enterprise solutions: $80,000–$300,000+. MVPs for startups: $15,000–$45,000." },
+            { question: "How long does development take?", answer: "MVP: 6–12 weeks. Small to mid-size system: 3–6 months. Enterprise platform: 6–12 months." },
+            { question: "Do you work with businesses in any country?", answer: "Yes. We serve clients across North America, Europe, the Middle East, Asia, and Australia." },
+            { question: "Can you integrate with our existing tools and platforms?", answer: "Yes — ERP systems, CRM platforms, accounting software, payment gateways, government APIs, shipping carriers, and third-party data feeds." },
+            { question: "What happens if we need changes after launch?", answer: "Bug fixes are covered under maintenance. New features are scoped and quoted before work starts. You get predictable costs, not open-ended invoices." },
+            { question: "Do you work with non-technical founders?", answer: "Yes. We handle all technology decisions, explain everything in plain language, and provide CTO-level guidance on architecture, team building, and technology strategy." },
+            { question: "Who owns the software?", answer: "You do. Full source code is delivered. You're not dependent on us to keep your system running." }
+          ])
+        ]}
       />
 
       {/* Hero Section */}
