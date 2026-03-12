@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { getCanonicalUrl, getSiteUrl, COMPANY_INFO, DEFAULT_SEO } from '../utils/seo';
+import { getCanonicalUrl, getSiteUrl, COMPANY_INFO, DEFAULT_SEO, getOrganizationSchema, getLocalBusinessSchema } from '../utils/seo';
 
 const SEO = ({
     title = DEFAULT_SEO.title,
@@ -10,11 +10,34 @@ const SEO = ({
     url = '',
     type = DEFAULT_SEO.type,
     schema = null,
+    schemas = [],
     robots = 'index, follow',
-    author = COMPANY_INFO.name
+    author = COMPANY_INFO.name,
+    language = 'en_US',
+    availableLanguage = DEFAULT_SEO.availableLanguage    
 }) => {
     const canonicalUrl = getCanonicalUrl(url);
-    const fullImage = image.startsWith('http') ? image : `${getSiteUrl()}${image}`;
+    const fullImage = image && image.startsWith('http') ? image : `${getSiteUrl()}${image || ''}`;
+
+    // Default schemas that apply to all pages
+    const pageSchemas = [
+        getOrganizationSchema(),
+        getLocalBusinessSchema()
+    ];
+
+    // Add dynamically provided schema if any
+    if (schema) {
+        if (Array.isArray(schema)) {
+            pageSchemas.push(...schema);
+        } else {
+            pageSchemas.push(schema);
+        }
+    }
+    
+    // Support multiple varied schemas additionally
+    if (schemas && schemas.length > 0) {
+        pageSchemas.push(...schemas);
+    }
 
     return (
         <Helmet>
@@ -33,7 +56,7 @@ const SEO = ({
             <meta property="og:url" content={canonicalUrl} />
             <meta property="og:type" content={type} />
             <meta property="og:site_name" content={COMPANY_INFO.name} />
-            <meta property="og:locale" content="en_US" />
+            <meta property="og:locale" content={language} />
 
             {/* Twitter Card Tags */}
             <meta name="twitter:card" content="summary_large_image" />
@@ -50,11 +73,11 @@ const SEO = ({
             <meta name="revisit-after" content="7 days" />
 
             {/* Schema.org JSON-LD */}
-            {schema && (
-                <script type="application/ld+json">
-                    {JSON.stringify(schema)}
+            {pageSchemas.map((s, index) => (
+                <script key={index} type="application/ld+json">
+                    {JSON.stringify(s)}
                 </script>
-            )}
+            ))}
         </Helmet>
     );
 };
