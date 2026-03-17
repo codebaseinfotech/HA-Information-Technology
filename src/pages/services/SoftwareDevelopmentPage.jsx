@@ -28,7 +28,9 @@ import { getServiceSchema, getFAQSchema } from "../../utils/seo";
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className={`border rounded-xl mb-4 overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300 ${isOpen ? 'border-[#1A3C8B]/30' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl mb-4 overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300 ${isOpen ? "border-[#1A3C8B]/30" : "border-gray-200"}`}
+    >
       <button
         onClick={onClick}
         className="w-full px-6 py-5 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors text-left"
@@ -83,7 +85,7 @@ const SoftwareDevelopmentPage = () => {
         "Full property lifecycle management — listings, tenancies, renewals, maintenance, financials",
         "Agent CRM with pipeline tracking, lead management, and commission calculation",
         "Tenant portals with self-service maintenance requests, payment history, document access",
-        "Integration with land registry systems, property portals, and tenancy compliance platforms",
+        "Integration with land registry systems, property portals, and tenancy compliance platforms commonly used in property markets like Dubai and Abu Dhabi",
         "Multi-property, multi-unit, multi-owner architectures for agencies and large portfolios",
       ],
     },
@@ -95,7 +97,7 @@ const SoftwareDevelopmentPage = () => {
         "Electronic health records with appropriate access controls and audit trails",
         "Telemedicine platforms built to the standard patients and regulators actually expect",
         "Insurance provider integrations — eligibility checks, pre-authorizations, claims submission",
-        "Compliance with healthcare data protection standards relevant to your country and region",
+        "Compliance with healthcare data protection standards relevant to your country and region including healthcare authorities across the UAE",
       ],
     },
     {
@@ -104,7 +106,7 @@ const SoftwareDevelopmentPage = () => {
       features: [
         "Investment and portfolio management platforms with real-time data and reporting",
         "Payment processing systems with full audit trails and fraud detection logic",
-        "AML/KYC workflows that satisfy regulators without creating friction for legitimate customers",
+        "AML/KYC workflows that satisfy regulators without creating friction for legitimate customers critical in regulated financial environments like the UAE",
         "Digital banking features, wealth management tools, transaction monitoring",
         "Security architecture meeting financial sector cybersecurity frameworks",
       ],
@@ -116,7 +118,7 @@ const SoftwareDevelopmentPage = () => {
         "Fleet management systems with live GPS tracking, driver management, and route optimization",
         "Warehouse management covering receiving, picking, packing, dispatch, and inventory accuracy",
         "Last-mile delivery tracking with real-time customer notifications",
-        "Integration with major shipping carriers and customs systems",
+        "Integration with major shipping carriers and customs systems used across the UAE and regional logistics hubs",
         "Fuel and maintenance cost tracking with reporting that actually surfaces actionable data",
       ],
     },
@@ -127,7 +129,7 @@ const SoftwareDevelopmentPage = () => {
         "Omnichannel platforms connecting physical locations with online channels seamlessly",
         "Inventory management across multiple locations with automatic reorder triggers",
         "POS integration, loyalty programs, promotions engine, customer segmentation",
-        "Integration with major marketplaces and payment gateways relevant to your market",
+        "Integration with major marketplaces and payment gateways relevant to your market including platforms widely used across the UAE and Middle East",
         "Returns management, supplier portals, demand forecasting",
       ],
     },
@@ -156,6 +158,8 @@ const SoftwareDevelopmentPage = () => {
     {
       icon: Briefcase,
       title: "Professional Services",
+      subTitle:
+        "Custom business systems for law firms, consultancies, and accounting practices serving clients across Dubai and the wider UAE.",
       features: [
         "Practice management for law firms, consultancies, and accounting practices",
         "Matter or project tracking with time recording, billing, and profitability reporting",
@@ -186,19 +190,49 @@ const SoftwareDevelopmentPage = () => {
         schemas={[
           getServiceSchema({
             serviceType: "Custom Software Development",
-            description: "Custom software development services for healthcare, logistics, finance, retail, and real estate. Validated MVP and scalable SaaS solutions.",
+            description:
+              "Custom software development services for healthcare, logistics, finance, retail, and real estate. Validated MVP and scalable SaaS solutions.",
             minPrice: "15000",
-            maxPrice: "300000"
+            maxPrice: "300000",
           }),
           getFAQSchema([
-            { question: "How much does custom software development cost?", answer: "Small business systems: $8,000–$25,000. Mid-size platforms: $25,000–$80,000. Enterprise solutions: $80,000–$300,000+. MVPs for startups: $15,000–$45,000." },
-            { question: "How long does development take?", answer: "MVP: 6–12 weeks. Small to mid-size system: 3–6 months. Enterprise platform: 6–12 months." },
-            { question: "Do you work with businesses in any country?", answer: "Yes. We serve clients across North America, Europe, the Middle East, Asia, and Australia." },
-            { question: "Can you integrate with our existing tools and platforms?", answer: "Yes — ERP systems, CRM platforms, accounting software, payment gateways, government APIs, shipping carriers, and third-party data feeds." },
-            { question: "What happens if we need changes after launch?", answer: "Bug fixes are covered under maintenance. New features are scoped and quoted before work starts. You get predictable costs, not open-ended invoices." },
-            { question: "Do you work with non-technical founders?", answer: "Yes. We handle all technology decisions, explain everything in plain language, and provide CTO-level guidance on architecture, team building, and technology strategy." },
-            { question: "Who owns the software?", answer: "You do. Full source code is delivered. You're not dependent on us to keep your system running." }
-          ])
+            {
+              question: "How much does custom software development cost?",
+              answer:
+                "Small business systems: $8,000–$25,000. Mid-size platforms: $25,000–$80,000. Enterprise solutions: $80,000–$300,000+. MVPs for startups: $15,000–$45,000.",
+            },
+            {
+              question: "How long does development take?",
+              answer:
+                "MVP: 6–12 weeks. Small to mid-size system: 3–6 months. Enterprise platform: 6–12 months.",
+            },
+            {
+              question: "Do you work with businesses in any country?",
+              answer:
+                "Yes. We serve clients across North America, Europe, the Middle East, Asia, and Australia.",
+            },
+            {
+              question:
+                "Can you integrate with our existing tools and platforms?",
+              answer:
+                "Yes — ERP systems, CRM platforms, accounting software, payment gateways, government APIs, shipping carriers, and third-party data feeds.",
+            },
+            {
+              question: "What happens if we need changes after launch?",
+              answer:
+                "Bug fixes are covered under maintenance. New features are scoped and quoted before work starts. You get predictable costs, not open-ended invoices.",
+            },
+            {
+              question: "Do you work with non-technical founders?",
+              answer:
+                "Yes. We handle all technology decisions, explain everything in plain language, and provide CTO-level guidance on architecture, team building, and technology strategy.",
+            },
+            {
+              question: "Who owns the software?",
+              answer:
+                "You do. Full source code is delivered. You're not dependent on us to keep your system running.",
+            },
+          ]),
         ]}
       />
 
@@ -216,18 +250,18 @@ const SoftwareDevelopmentPage = () => {
           className={`container mx-auto px-4 xl:px-12 relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1A3C8B]/40 border border-[#1A3C8B] text-blue-200 text-sm font-semibold mb-6">
-              <Code size={16} /> Custom Software Development
-            </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-              Built Around How Your Business{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A3C8B] to-[#10B981]">
-                Actually Works
-              </span>
+              Custom Software Development In UAE
             </h1>
-            <p className="text-xl text-gray-300 leading-relaxed mb-8 max-w-3xl">
-              Most software is built for the average business. If yours isn't
-              average, that's a problem.
+            <p className="text-xl text-gray-300 leading-relaxed mb-4 max-w-3xl">
+              For many growing businesses across the UAE — from Dubai and Abu
+              Dhabi to Sharjah — this frustration is surprisingly common.
+            </p>
+            <p className="text-xl text-gray-300 font-semibold leading-relaxed mb-4 max-w-3xl">
+              Hamed Al Attas Information Technology builds custom software that
+              removes those limitations, giving your business the systems it
+              needs to operate smoothly, scale confidently, and grow without
+              technical barriers.
             </p>
             {/* Breadcrumb */}
             <div className="flex flex-wrap items-center text-gray-300 text-sm md:text-base mb-4">
@@ -269,20 +303,24 @@ const SoftwareDevelopmentPage = () => {
             <div
               className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-[#1A3C8B] font-bold text-sm mb-6">
-                <Building size={16} /> Why Custom Software?
-              </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-[#1a2332] mb-6 leading-tight">
-                Custom{" "}
-                <span className="text-[#1A3C8B]">Software Development</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2332] mb-6 leading-tight">
+                Built Around How Your Business Actually Works
               </h2>
+
+              <p className="text-base text-gray-600  leading-relaxed mb-4">
+                Most software is built for the average business. If yours isn't
+                average, that's a problem. - a challenge many ambitious
+                companies across the UAE face as they scale.
+              </p>
               <div className="space-y-6 text-gray-600 text-base leading-relaxed">
                 <p>
                   You've probably been through it — trialling platforms that
                   almost work, paying for features you'll never use, manually
                   bridging gaps between systems that don't talk to each other,
                   and watching your team spend real time on workarounds instead
-                  of actual work.
+                  of actual work. For many growing businesses across the UAE —
+                  from Dubai and Abu Dhabi to Sharjah and the wider GCC region —
+                  this frustration is surprisingly common.
                 </p>
                 <p>
                   Off-the-shelf software is designed to serve the widest
@@ -297,20 +335,40 @@ const SoftwareDevelopmentPage = () => {
                   Custom software removes those compromises. It's built around
                   your actual workflows, your team's real processes, your
                   customers' expectations, and the regulations that apply to
-                  your specific industry. Nothing unnecessary. Nothing missing.
+                  your specific industry. For companies operating in the UAE and
+                  across the Middle East, those regulatory and operational
+                  details matter even more.Nothing unnecessary. Nothing missing.
                 </p>
                 <div className="mt-8 p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                  <p className="text-[#1a2332] font-semibold text-base leading-relaxed flex items-center gap-3">
-                    <div className="w-1.5 h-12 bg-gradient-to-b from-[#1A3C8B] to-[#10B981] rounded-full"></div>
+                  <p className="text-[#1a2332] font-semibold text-sm leading-relaxed flex items-center gap-3">
+                    <div className="w-1.5 h-48 bg-gradient-to-b from-[#1A3C8B] to-[#10B981] rounded-full"></div>
                     <span>
-                      <strong className="text-[#1A3C8B]">
+                      <strong className="text-[#1A3C8B] text-base">
                         Hamed Al Attas Information Technology
                       </strong>{" "}
-                      builds custom software for businesses that have outgrown
-                      generic platforms — or never found one that fit in the
-                      first place.
+                      is a leading{" "}
+                      <a
+                        href="https://ha-information-technology.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#1A3C8B] hover:underline"
+                      >
+                        website design and development agency
+                      </a>{" "}
+                      that delivers custom software and digital solutions for
+                      businesses across the UAE and internationally. They
+                      specialize in building platforms tailored to each
+                      company's unique needs — for organizations that have
+                      outgrown generic software or never found one that truly
+                      fits.
                     </span>
                   </p>
+                  <Link
+                    to="/contact"
+                    className="inline-flex mt-4 items-center justify-center gap-2 bg-[#1A3C8B] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#1A3C8B]/80 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-[#1A3C8B]/30"
+                  >
+                    Talk to Our Experts <ArrowRight size={16} />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -344,7 +402,7 @@ const SoftwareDevelopmentPage = () => {
                     },
                     {
                       t: "Compliance gaps",
-                      d: "Generic software rarely keeps pace with your industry's specific regulatory requirements.",
+                      d: "Generic software rarely keeps pace with your industry's specific regulatory requirements. something businesses in the UAE and GCC often face when using software built for completely different markets",
                     },
                     {
                       t: "Scaling ceilings",
@@ -377,6 +435,17 @@ const SoftwareDevelopmentPage = () => {
                     make because the data isn't where you need it.
                   </p>
                 </div>
+                <div>
+                  <h1 className="text-gray-800 text-sm font-medium leading-relaxed italic mt-4">
+                    Custom software addresses all of them at the source.
+                  </h1>
+                  <Link
+                    href="/contact"
+                    className="inline-block mt-4 px-6 py-3 bg-[#1A3C8B] text-white font-bold rounded-full hover:bg-[#10B981] transition-colors"
+                  >
+                    Request a Free Consultation
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -404,7 +473,8 @@ const SoftwareDevelopmentPage = () => {
               project and start learning your industry. We already understand
               the workflows, the compliance frameworks, the integrations, and
               the operational realities that define how businesses in your
-              sector run.
+              sector run. including industries rapidly growing across the UAE
+              and wider Middle East.
             </p>
           </div>
 
@@ -421,6 +491,9 @@ const SoftwareDevelopmentPage = () => {
                 <h3 className="text-2xl font-bold text-[#1a2332] mb-6 group-hover:text-[#1A3C8B] transition-colors">
                   {ind.title}
                 </h3>
+                <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                  {ind.subTitle}
+                </p>
                 <ul className="space-y-4 flex-grow">
                   {ind.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-3">
@@ -457,6 +530,12 @@ const SoftwareDevelopmentPage = () => {
                   business operates across markets where language expectations
                   differ, this is an area where generic platforms consistently
                   fall short.
+                </p>
+                <p className="text-gray-400 mb-6 text-base leading-relaxed">
+                  For many companies in the{" "}
+                  <strong>UAE's multicultural business environment,</strong>{" "}
+                  multilingual capability isn't optional — it's operational
+                  infrastructure.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -510,8 +589,8 @@ const SoftwareDevelopmentPage = () => {
                   "OWASP Top 10 vulnerability prevention across every application we build",
                   "SQL injection protection, XSS prevention, CSRF tokens, rate limiting",
                   "Web Application Firewall, DDoS protection, intrusion detection",
-                  "Compliance-ready architecture for GDPR (Europe), HIPAA (US healthcare), PCI DSS (payment processing), ISO 27001 (international information security standard)",
-                  "Data residency options — your data hosted in the region your regulations require",
+                  "Compliance-ready architecture for GDPR (Europe), HIPAA (US healthcare), PCI DSS (payment processing), ISO 27001 (international information security standard) and regional regulatory expectations across the Middle East",
+                  "Data residency options — including hosting within the UAE or other required jurisdictions when regulations demand it",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -542,7 +621,9 @@ const SoftwareDevelopmentPage = () => {
             <p className="text-gray-400 mb-6 text-base leading-relaxed">
               One of the most expensive mistakes in software development is
               building for your current size. We design every system to handle
-              ten times your current requirements from day one.
+              ten times your current requirements from day one. especially
+              important for companies scaling quickly in markets like the UAE
+              and the broader GCC.
             </p>
 
             <div className="mb-6">
@@ -618,7 +699,10 @@ const SoftwareDevelopmentPage = () => {
               MVP Development — Validate Before You Build Everything
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              For startups and new product lines, an MVP is the most sensible path forward. Build only the core features that prove your concept, put it in front of real users, collect feedback, and then invest in the full product once you've confirmed demand.
+              For startups and new product lines, an MVP is the most sensible
+              path forward. Build only the core features that prove your
+              concept, put it in front of real users, collect feedback, and then
+              invest in the full product once you've confirmed demand.
             </p>
           </div>
 
@@ -744,8 +828,9 @@ const SoftwareDevelopmentPage = () => {
                   Post-Launch: What Happens After You Go Live
                 </h2>
                 <p className="text-blue-100 text-lg leading-relaxed">
-                  We don't just build and walk away. We ensure your system stays
-                  robust and relevant.
+                  Whether you're operating in Dubai, Abu Dhabi, or anywhere
+                  across the UAE, software support doesn’t stop after launch.
+                  Ongoing reliability and improvement are part of the process.
                 </p>
               </div>
               <div className="lg:col-span-3 p-8 md:p-12 bg-white">
@@ -812,13 +897,18 @@ const SoftwareDevelopmentPage = () => {
                     <li>Small business systems: $8,000–$25,000</li>
                     <li>Mid-size platforms: $25,000–$80,000</li>
                     <li>Enterprise solutions: $80,000–$300,000+</li>
-                    <li>MVPs for startups: $15,000–$45,000</li>
+                    <li>
+                      MVPs for startups: $15,000–$45,000+ Every project receives
+                      a fixed-price quote after a detailed discovery session. No
+                      hourly surprises.
+                    </li>
                     <li className="list-none mt-4 font-semibold text-gray-800">
-                      Every project receives a fixed-price quote after a detailed
-                      discovery session. No hourly surprises.
+                      For businesses in the UAE, pricing may vary slightly
+                      depending on integrations, compliance requirements, and
+                      infrastructure needs.
                     </li>
                   </ul>
-                )
+                ),
               },
               {
                 question: "How long does development take?",
@@ -826,34 +916,42 @@ const SoftwareDevelopmentPage = () => {
                   <ul className="list-disc pl-5 mt-2 space-y-2">
                     <li>MVP: 6–12 weeks</li>
                     <li>Small to mid-size system: 3–6 months</li>
-                    <li>Enterprise platform: 6–12 months</li>
-                    <li className="list-none mt-4 font-semibold text-gray-800">
-                      Timeline is agreed before development starts, with
-                      fortnightly demo sessions throughout.
+                    <li>
+                      Enterprise platform: 6–12 months Timeline is agreed before
+                      development starts, with fortnightly demo sessions
+                      throughout. Many of our clients across the UAE and GCC
+                      prefer this staged approach so they can see progress and
+                      provide feedback during development.
                     </li>
                   </ul>
-                )
+                ),
               },
               {
                 question: "Do you work with businesses in any country?",
-                answer: "Yes. We serve clients across North America, Europe, the Middle East, Asia, and Australia. All client communication is handled in English, with project management adapted to your time zone."
+                answer:
+                  "Yes. We serve clients across North America, Europe, the Middle East, Asia, and Australia. Many of our projects come from businesses in Dubai and across the UAE, All client communication is handled in English, with project management adapted to your time zone.",
               },
               {
-                question: "Can you integrate with our existing tools and platforms?",
-                answer: "Yes — ERP systems, CRM platforms, accounting software, payment gateways, government APIs, shipping carriers, and third-party data feeds. If an API exists, we can integrate with it."
+                question:
+                  "Can you integrate with our existing tools and platforms?",
+                answer:
+                  "Yes — ERP systems, CRM platforms, accounting software, payment gateways, government APIs, shipping carriers, and third-party data feeds. If an API exists, we can integrate with it.",
               },
               {
                 question: "What happens if we need changes after launch?",
-                answer: "Bug fixes are covered under maintenance. New features are scoped and quoted before work starts. You get predictable costs, not open-ended invoices."
+                answer:
+                  "Bug fixes are covered under maintenance. New features are scoped and quoted before work starts. You get predictable costs, not open-ended invoices.",
               },
               {
                 question: "Do you work with non-technical founders?",
-                answer: "Yes. We handle all technology decisions, explain everything in plain language, and provide CTO-level guidance on architecture, team building, and technology strategy."
+                answer:
+                  "Yes. We handle all technology decisions, explain everything in plain language, and provide CTO-level guidance on architecture, team building, and technology strategy. This approach works especially well for startup founders in Dubai and across the UAE who need technical leadership without building an in-house team immediately.",
               },
               {
                 question: "Who owns the software?",
-                answer: "You do. Full source code is delivered. You're not dependent on us to keep your system running — though most clients choose to stay for ongoing development and support."
-              }
+                answer:
+                  "You do. Full source code is delivered. You're not dependent on us to keep your system running — though most clients choose to stay for ongoing development and support.",
+              },
             ].map((faq, i) => (
               <FAQItem
                 key={i}
@@ -876,10 +974,14 @@ const SoftwareDevelopmentPage = () => {
 
         <div className="container mx-auto px-4 xl:px-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-500/10 text-blue-300 font-bold tracking-wider text-sm uppercase mb-4 border border-blue-500/20">The Roadmap</span>
+            <span className="inline-block py-1.5 px-4 rounded-full bg-blue-500/10 text-blue-300 font-bold tracking-wider text-sm uppercase mb-4 border border-blue-500/20">
+              The Roadmap
+            </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Getting Started — <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#10B981]">Three Steps, No Pressure</span>
+              Getting Started — <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#10B981]">
+                Three Steps, No Pressure
+              </span>
             </h2>
           </div>
 
@@ -892,36 +994,43 @@ const SoftwareDevelopmentPage = () => {
                 step: "1",
                 time: "30–60 minutes",
                 title: "Free consultation",
-                desc: "We talk through your current challenges, existing systems, business goals, and timeline. Video call, phone, or in person. No sales pitch — just an honest conversation about whether custom software is the right move for your situation."
+                desc: "We talk through your current challenges, existing systems, business goals, and timeline. Video call, phone, or in person meetings for businesses in the Dubai, Abudhabi or Sharjah when required.. No sales pitch — just an honest conversation about whether custom software is the right move for your situation.",
               },
               {
                 step: "2",
                 time: "3–5 business days",
                 title: "Detailed proposal",
-                desc: "Full project scope, fixed-price quote, technology recommendations, timeline with milestones, team composition, and post-launch support plan."
+                desc: "Full project scope, fixed-price quote, technology recommendations, timeline with milestones, team composition, and post-launch support plan.",
               },
               {
                 step: "3",
                 time: "Ongoing transparent process",
                 title: "Development begins",
-                desc: "Fortnightly demos, staging environment access for real-time testing, and transparent progress tracking throughout. You always know exactly where your project stands."
-              }
+                desc: "Fortnightly demos, staging environment access for real-time testing, and transparent progress tracking throughout. You always know exactly where your project stands.",
+              },
             ].map((s, i) => (
-              <div key={i} className="relative z-10 flex flex-col items-center md:text-center h-full">
+              <div
+                key={i}
+                className="relative z-10 flex flex-col items-center md:text-center h-full"
+              >
                 <div className="w-20 h-20 bg-[#1a2332] border-4 border-[#10B981]/20 rounded-full flex items-center justify-center font-black text-3xl text-white mb-8 shadow-[0_0_30px_rgba(16,185,129,0.15)] relative backdrop-blur-sm group hover:border-[#10B981]/50 hover:shadow-[#10B981]/30 transition-all duration-300">
                   <div className="absolute inset-1 rounded-full bg-gradient-to-b from-[#1A3C8B] to-blue-600 flex items-center justify-center">
-                     {s.step}
+                    {s.step}
                   </div>
                 </div>
-                
+
                 <div className="bg-white/5 p-8 rounded-[2rem] border border-white/10 flex-grow w-full flex flex-col hover:bg-white/10 transition-colors shadow-2xl relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-2xl rounded-full group-hover:bg-blue-500/20 transition-colors pointer-events-none"></div>
-                  
+
                   <div className="inline-flex items-center justify-center md:justify-start gap-2 px-3 py-1 rounded-full bg-[#10B981]/10 text-[#10B981] font-bold text-xs uppercase tracking-wider w-max md:mx-auto mb-5 border border-[#10B981]/20">
                     <Clock size={12} /> {s.time}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">{s.title}</h3>
-                  <p className="text-gray-300 leading-relaxed text-sm md:text-center text-left flex-grow">{s.desc}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-sm md:text-center text-left flex-grow">
+                    {s.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -930,7 +1039,7 @@ const SoftwareDevelopmentPage = () => {
           <div className="flex justify-center mb-20 relative z-20">
             <Link
               to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#1A3C8B] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#1A3C8B]/80 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-[#1A3C8B]/30"
+              className="inline-flex items-center justify-center gap-2 bg-[#1A3C8B] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#1A3C8B]/80 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-[#1A3C8B]/30"
             >
               Book Your Free Consultation <ArrowRight size={24} />
             </Link>
@@ -938,36 +1047,50 @@ const SoftwareDevelopmentPage = () => {
 
           {/* Banner Stats Bottom */}
           <div className="bg-gradient-to-r from-[#10B981]/10 via-blue-500/10 to-[#10B981]/10 rounded-[2.5rem] p-8 md:p-12 lg:p-16 border border-white/10 flex flex-col items-center text-center shadow-2xl backdrop-blur-sm relative z-10 overflow-hidden">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
-             
-             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 mb-12 pb-10 border-b border-white/10 w-full justify-center">
-                <h4 className="text-xl md:text-2xl font-extrabold text-white tracking-wide">
-                   Hamed Al Attas Information Technology
-                </h4>
-                <span className="hidden lg:block text-gray-500/50 text-3xl font-light">|</span>
-                <p className="text-blue-300 font-semibold md:text-lg">Custom Software Development — Serving Businesses Globally</p>
-             </div>
-             
-             <div className="grid md:grid-cols-3 gap-10 w-full max-w-5xl items-center">
-               <div className="flex flex-col items-center">
-                 <div className="text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-2">100+</div>
-                 <p className="text-gray-400 font-bold uppercase tracking-wider text-sm md:text-base">Businesses Served</p>
-               </div>
-               <div className="flex flex-col items-center">
-                 <div className="text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-2">85%+</div>
-                 <p className="text-gray-400 font-bold uppercase tracking-wider text-sm md:text-base">Client Retention</p>
-               </div>
-               <div className="flex flex-col items-center p-6 bg-white/5 rounded-3xl border border-white/10">
-                 <Shield className="text-[#10B981] mb-3" size={48} />
-                 <p className="text-[#10B981] font-extrabold text-xl lg:text-2xl tracking-tight">Built right. Built to last.</p>
-               </div>
-             </div>
-             
-             <div className="mt-12 pt-8 border-t border-white/10 w-full text-center">
-                <a href="https://ha-information-technology.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-medium text-lg">
-                  <Globe size={20} className="text-blue-400" /> ha-information-technology.vercel.app
-                </a>
-             </div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-3xl rounded-full pointer-events-none"></div>
+
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 mb-12 pb-10 border-b border-white/10 w-full justify-center">
+              <h4 className="text-xl  font-extrabold text-white tracking-wide">
+                Hamed Al Attas Information Technology — Custom Software Development Supporting Businesses Across Dubai, the UAE, and International Markets.
+              </h4>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-10 w-full max-w-5xl items-center">
+              <div className="flex flex-col items-center">
+                <div className="text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-2">
+                  100+
+                </div>
+                <p className="text-gray-400 font-bold uppercase tracking-wider text-sm md:text-base">
+                  Businesses Served
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400 mb-2">
+                  85%+
+                </div>
+                <p className="text-gray-400 font-bold uppercase tracking-wider text-sm md:text-base">
+                  Client Retention
+                </p>
+              </div>
+              <div className="flex flex-col items-center p-6 bg-white/5 rounded-3xl border border-white/10">
+                <Shield className="text-[#10B981] mb-3" size={48} />
+                <p className="text-[#10B981] font-extrabold text-xl lg:text-2xl tracking-tight">
+                  Built right. Built to last.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/10 w-full text-center">
+              <a
+                href="https://ha-information-technology.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-medium text-lg"
+              >
+                <Globe size={20} className="text-blue-400" />{" "}
+                ha-information-technology.vercel.app
+              </a>
+            </div>
           </div>
         </div>
       </section>
