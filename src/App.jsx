@@ -15,6 +15,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import ServicesPage from './pages/ServicesPage';
 import SoftwareDevelopmentPage from './pages/services/SoftwareDevelopmentPage';
 import WebsiteDevelopmentPage from './pages/services/WebsiteDevelopmentPage';
+import MobileAppDevelopmentDubai from './pages/services/MobileAppDevelopmentDubai';
 import SolutionsPage from './pages/SolutionsPage';
 import SolutionDetail from './pages/SolutionDetail';
 import ResourcesPage from './pages/ResourcesPage';
@@ -50,6 +51,8 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
           <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
+          <Route path="/services/mobile-app" element={<MobileAppDevelopmentDubai />} />
+          <Route path="/services/mobile-app-development-dubai" element={<MobileAppDevelopmentDubai />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
