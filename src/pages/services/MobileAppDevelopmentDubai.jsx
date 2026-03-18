@@ -232,7 +232,7 @@ const MobileAppDevelopmentDubai = () => {
               <strong> Hamed Al Attas a </strong>{" "}
               <Link
                 to="https://ha-information-technology.vercel.app/"
-                className="hover:text-[#1A3C8B]/80 transition-colors text-[#1A3C8B]"
+                className="hover:text-[#10B981]/80 transition-colors text-[#10B981]"
               >
                 leading mobile app development Company in UAE
               </Link>{" "}
