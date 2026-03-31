@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import JobApplicationForm from '../components/JobApplicationForm';
 
 const CareersPage = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [showApplicationForm, setShowApplicationForm] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -73,16 +75,30 @@ const CareersPage = () => {
                             <p className="text-gray-600 leading-relaxed text-base md:text-lg">
                                 Finally, more people worldwide can get jobs they want without moving countries, and companies can make dream hires faster by opening up their hiring borders. It's better, smarter, faster hiring for businesses everywhere and the freedom and mobility for team members to move, live, and work anywhere without a worry.
                             </p>
-                            <Link
-                                to="/contact"
-                                className="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                            <button
+                                onClick={() => {
+                                    setShowApplicationForm(true);
+                                    // Smooth scroll down to form after a short delay for state to update
+                                    setTimeout(() => {
+                                        document.getElementById('application-form-wrapper')?.scrollIntoView({ behavior: 'smooth' });
+                                    }, 100);
+                                }}
+                                className="inline-block bg-[#1A3C8B] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mt-4"
                             >
-                                Contact Us
-                            </Link>
+                                Apply Now
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Application Form Section (Animated Expansion) */}
+            <div 
+                id="application-form-wrapper"
+                className={`w-full transition-all duration-1000 ease-in-out overflow-hidden ${showApplicationForm ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}
+            >
+                <JobApplicationForm />
+            </div>
         </div>
     );
 };

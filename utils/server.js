@@ -1,14 +1,27 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import multer from 'multer';
 import sendEmailHandler from '../api/send-email.js';
 import sendPartnerEmailHandler from '../api/send-partner-email.js';
 import sendFooterContactHandler from '../api/send-footer-contact.js';
 import sendNewsletterHandler from '../api/send-newsletter.js';
+import sendJobApplicationHandler from '../api/send-job-application.js';
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+
+// Configure multer for memory storage
+const upload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 5 * 1024 * 1024 } // 5MB limit
+});
+
+// Job application endpoint
+app.post('/api/send-job-application', upload.single('resume'), async (req, res) => {
+    await sendJobApplicationHandler(req, res);
+});
 
 // Contact form email endpoint
 app.post('/api/send-email', async (req, res) => {

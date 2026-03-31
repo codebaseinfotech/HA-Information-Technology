@@ -54,27 +54,27 @@ const About = () => {
 
     const stats = [
         {
-            icon: '🏢',
-            number: '2',
-            label: 'Branches',
+            icon: '👥',
+            number: '35 +',
+            label: 'Certified Engineers',
             color: 'from-blue-400 to-blue-600'
         },
         {
             icon: '📅',
-            number: '7 +',
-            label: 'Years Services',
+            number: '200 +',
+            label: 'Projects Delivered',
             color: 'from-purple-400 to-purple-600'
         },
         {
-            icon: '👥',
-            number: '35 +',
-            label: 'Employees',
+            icon: '🏢   ',
+            number: '7 +',
+            label: 'Years in UAE Market',
             color: 'from-green-400 to-green-600'
         },
         {
             icon: '🤝',
-            number: '1500 +',
-            label: 'Customers',
+            number: '95 %',
+            label: 'Client Retention Rate',
             color: 'from-pink-400 to-pink-600'
         }
     ];
@@ -126,18 +126,21 @@ const About = () => {
                             <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider uppercase bg-green-50 px-4 py-2 rounded-full">WHO WE ARE ?</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
-                            Transforming Businesses Through <br className="hidden md:block" />
+                            Hamed Al Attas — UAE's Trusted Partner for <br className="hidden md:block" />
                             <span className="text-[#1A3C8B] relative inline-block">
-                                Software
+                                Custom Software,
                                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#1A3C8B] to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
-                            </span> Innovation
+                            </span> AI & Digital Innovation
                         </h2>
                         <div className="space-y-3 md:space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
                             <p className="transform hover:translate-x-2 transition-transform duration-300">
-                                We are a leading software development company dedicated to delivering innovative solutions that drive business growth and digital transformation.
+                                Every day your business runs on outdated systems, disconnected tools, or a website that fails to convert —
                             </p>
                             <p className="transform hover:translate-x-2 transition-transform duration-300 delay-75">
-                                Our team of expert developers and designers work collaboratively to create custom software solutions tailored to your unique business needs.
+                                you are losing revenue you should already have. We design and build custom software, intelligent AI-powered automation, enterprise-grade e-commerce platforms, and high-performance digital infrastructure specifically engineered for UAE businesses
+                            </p>
+                            <p className="transform hover:translate-x-2 transition-transform duration-300 delay-75">
+                                Our team of certified engineers delivers solutions that are measurably faster, more secure, and more scalable than anything off-the-shelf can offer.
                             </p>
                         </div>
                     </div>
