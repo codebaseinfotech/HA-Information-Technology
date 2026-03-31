@@ -50,12 +50,31 @@ const JobApplicationForm = () => {
         e.preventDefault();
         setIsDragging(false);
         const droppedFile = e.dataTransfer.files[0];
-        if (droppedFile) setFile(droppedFile);
+        if (droppedFile) {
+            const fileName = droppedFile.name.toLowerCase();
+            const isValidType = fileName.endsWith('.pdf') || fileName.endsWith('.doc') || fileName.endsWith('.docx');
+            
+            if (!isValidType) {
+                toast.error("Images are not allowed. Please upload a PDF or Word document (.doc, .docx).");
+                return;
+            }
+            setFile(droppedFile);
+        }
     };
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
-        if (selectedFile) setFile(selectedFile);
+        if (selectedFile) {
+            const fileName = selectedFile.name.toLowerCase();
+            const isValidType = fileName.endsWith('.pdf') || fileName.endsWith('.doc') || fileName.endsWith('.docx');
+            
+            if (!isValidType) {
+                toast.error("Images are not allowed. Please upload a PDF or Word document (.doc, .docx).");
+                if (fileInputRef.current) fileInputRef.current.value = ""; // clear input
+                return;
+            }
+            setFile(selectedFile);
+        }
     };
 
     const handleSubmit = async (e) => {

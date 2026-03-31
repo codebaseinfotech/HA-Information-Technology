@@ -1,4 +1,36 @@
 import nodemailer from 'nodemailer';
+import multer from 'multer';
+
+// Disable Vercel's default body parser to allow multer to consume the raw multipart stream
+export const config = {
+    api: {
+        bodyParser: false,
+    },
+};
+
+const upload = multer({
+    storage: multer.memoryStorage(),
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+    fileFilter: (req, file, cb) => {
+        const fileName = file.originalname.toLowerCase();
+        if (fileName.endsWith('.pdf') || fileName.endsWith('.doc') || fileName.endsWith('.docx')) {
+            cb(null, true);
+        } else {
+            cb(new Error('Invalid file type. Only PDF and Word documents are allowed.'), false);
+        }
+    }
+});
+
+function runMiddleware(req, res, fn) {
+    return new Promise((resolve, reject) => {
+        fn(req, res, (result) => {
+            if (result instanceof Error) {
+                return reject(result);
+            }
+            return resolve(result);
+        });
+    });
+}
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -6,6 +38,9 @@ export default async function handler(req, res) {
     }
 
     try {
+        // Run multer middleware to parse the multipart/form-data request
+        await runMiddleware(req, res, upload.single('resume'));
+
         const { fullName, email, contactNo, location, source, coverLetter, jobRole, gender, experience } = req.body;
         const file = req.file;
 
