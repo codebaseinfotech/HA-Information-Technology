@@ -28,6 +28,7 @@ import ECommerceDevelopmentPage from './pages/services/eCommerceDevelopmentPage'
 import ITInfrastructurePage from './pages/services/itInfrastructurePage';
 import AccessControlPage from './pages/services/AccessControlPage';
 import BusinessCommunicationPage from './pages/services/BusinessCommunicationPage';
+import DigitalMarketingPage from './pages/services/DigitalMarketingPage';
 import SolutionsPage from './pages/SolutionsPage';
 import SolutionDetail from './pages/SolutionDetail';
 import ResourcesPage from './pages/ResourcesPage';
@@ -76,6 +77,7 @@ function App() {
           <Route path="/services/it-infrastructure" element={<ITInfrastructurePage />} />
           <Route path="/services/access-control" element={<AccessControlPage />} />
           <Route path="/services/pabx" element={<BusinessCommunicationPage />} />
+          <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />

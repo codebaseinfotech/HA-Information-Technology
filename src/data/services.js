@@ -166,7 +166,7 @@ export const services = [
     },
     {
         id: 'digital-marketing',
-        title: 'SEO, Social & Digital Media',
+        title: 'Digital Marketing Services',
         icon: Search,
         shortDescription: 'Data-driven digital marketing strategies.',
         content: {
