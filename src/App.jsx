@@ -33,7 +33,6 @@ import AffiliatesPage from './pages/AffiliatesPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
-import HireDeveloperPage from './pages/hire-developers/HireDeveloperPage';
 
 // Home Page Component
 const HomePage = () => (
