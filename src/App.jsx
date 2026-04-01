@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import TrustSection from './components/TrustSection';
+import ValuePropSection from './components/ValuePropSection';
+import CoreServicesSection from './components/CoreServicesSection';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,6 +30,7 @@ import AffiliatesPage from './pages/AffiliatesPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
+import HireDeveloperPage from './pages/hire-developers/HireDeveloperPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -37,7 +41,9 @@ const HomePage = () => (
     />
     <Hero />
     <About />
-    <Services />
+    <TrustSection />
+    <ValuePropSection />
+    <CoreServicesSection />
     <Contact />
   </>
 );
@@ -67,6 +73,10 @@ function App() {
           <Route path="/terms-conditions" element={<TermsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPage />} />
           <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+          <Route
+            path="/hire-dedicated-developers-48-hours-witarist-experts/:devType"
+            element={<HireDeveloperPage />}
+          />
         </Routes>
         <Footer />
         <WhatsAppWidget />
