@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ha-information-technology.vercel.app/sitemap.xml
+Sitemap: https://alattastech.com/sitemap.xml
