@@ -200,44 +200,44 @@ const AccessControlPage = () => {
 
   const faqs = [
     {
-      question: "What is an access control system?",
-      answer: "A system that manages who can enter specific areas using biometrics, RFID cards, mobile apps, or digital codes, controlled from a central dashboard."
+      question: "What is an access control system and how does it work?",
+      answer: "An access control system is a smart security solution that manages who can enter specific areas of a property and when. It replaces traditional locks with technologies such as biometric authentication, RFID cards, mobile apps, or PIN-based electronic door access, all controlled through a centralized dashboard."
     },
     {
-      question: "Why invest in Dubai or Abu Dhabi?",
-      answer: "Prevent unauthorized entry, protect sensitive areas, and comply with UAE safety standards."
+      question: "Why are access control systems important for businesses in UAE?",
+      answer: "Access control systems help businesses in UAE prevent unauthorized entry, protect sensitive areas, and maintain detailed access logs. In cities like Dubai and Abu Dhabi, they also support compliance with safety regulations and improve operational efficiency."
     },
     {
-      question: "Can these systems be managed remotely?",
-      answer: "Yes. Cloud-based systems allow property managers to grant/revoke access and monitor activity from anywhere."
+      question: "Can I manage my access control system remotely?",
+      answer: "Yes, modern smart access solutions allow remote management through cloud-based software or mobile apps. You can grant or revoke access, monitor activity in real time, and generate reports from anywhere."
     },
     {
-      question: "What is the installation time in the UAE?",
-      answer: "Typically 1–3 days depending on property size, doors, and system complexity."
+      question: "How long does it take to install an access control system in UAE?",
+      answer: "Installation typically takes 1 to 3 days depending on the size of the property, number of entry points, and system complexity. Professional providers ensure minimal disruption during installation."
     },
     {
-      question: "Are systems reliable in UAE climates?",
-      answer: "Designed for high temperatures, humidity, and dust. Hardware is durable, software encrypted."
+      question: "Are access control systems reliable in UAE weather conditions?",
+      answer: "Yes, high-quality access control systems are designed to operate in UAE conditions, including heat, humidity, and dust. Hardware is durable, and software is secure with regular updates."
     },
     {
-      question: "Is support available?",
-      answer: "Ongoing updates, on-site assistance, and expert support across all Emirates."
+      question: "What types of access control systems are available?",
+      answer: "Common types include biometric systems (fingerprint and facial recognition), RFID card-based systems, mobile-based access, and multi-factor authentication systems. Many solutions combine these for enhanced security."
     },
     {
-      question: "Can access control integrate with existing security systems?",
-      answer: "Yes — CCTV, alarms, and building management software for a unified ecosystem."
+      question: "Can access control systems integrate with CCTV and alarms?",
+      answer: "Yes, modern access control systems integrate with CCTV cameras, alarm systems, and building management systems to create a unified and automated security ecosystem."
     },
     {
-      question: "How much does it cost?",
-      answer: "Varies by property size, doors, system type, and features. Transparent quotes ensure no hidden fees."
+      question: "How much does an access control system cost in UAE?",
+      answer: "Costs vary depending on property size, number of doors, system type, and features. A basic one-door setup may start from a lower range, while enterprise-level smart access solutions with cloud integration and advanced features will cost more."
     },
     {
-      question: "Are they suitable for homes & villas?",
-      answer: "Ideal for keyless entry, visitor management, and real-time monitoring."
+      question: "Are access control systems suitable for villas and residential communities?",
+      answer: "Yes, access control systems are ideal for villas and residential communities. They provide keyless entry, visitor management, and real-time monitoring, improving both security and convenience."
     },
     {
-      question: "How to get a customized solution in Dubai/Abu Dhabi?",
-      answer: "Contact Hamed Al Attas for a free consultation and tailored installation."
+      question: "How do I choose the right access control system in UAE?",
+      answer: "The right system depends on your property size, security needs, number of users, and required features such as cloud access or biometrics. It is best to consult with a professional provider who can design a customized smart access solution."
     }
   ];
 
@@ -245,7 +245,7 @@ const AccessControlPage = () => {
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <SEO
         title="Access Control Systems in UAE | Smart Security Entry Solutions Dubai, Abu Dhabi"
-        description="Secure your property with advanced access control systems in UAE. Smart entry solutions for offices, villas & buildings in Dubai, Abu Dhabi & Sharjah. Get expert installation."
+        description="Secure your property with advanced access control systems in UAE. Smart entry solutions for offices, villas & buildings in Dubai, Abu Dhabi & Sharjah. Get expert installation, cloud access, and full security control. Book a free consultation today."
         keywords="Access Control Systems UAE, Smart Security Solutions, Biometric Authentication Dubai, RFID Door Locks Abu Dhabi, Mobile Access Systems UAE"
         url="/services/access-control"
         schemas={[
