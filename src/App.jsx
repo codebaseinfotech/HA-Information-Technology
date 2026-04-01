@@ -26,6 +26,7 @@ import WebsiteDevelopmentPage from './pages/services/WebsiteDevelopmentPage';
 import MobileAppDevelopmentDubai from './pages/services/MobileAppDevelopmentDubai';
 import ECommerceDevelopmentPage from './pages/services/eCommerceDevelopmentPage';
 import ITInfrastructurePage from './pages/services/itInfrastructurePage';
+import AccessControlPage from './pages/services/AccessControlPage';
 import SolutionsPage from './pages/SolutionsPage';
 import SolutionDetail from './pages/SolutionDetail';
 import ResourcesPage from './pages/ResourcesPage';
@@ -72,6 +73,7 @@ function App() {
           <Route path="/services/mobile-app-development-dubai" element={<MobileAppDevelopmentDubai />} />
           <Route path="/services/ecommerce" element={<ECommerceDevelopmentPage />} />
           <Route path="/services/it-infrastructure" element={<ITInfrastructurePage />} />
+          <Route path="/services/access-control" element={<AccessControlPage />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
