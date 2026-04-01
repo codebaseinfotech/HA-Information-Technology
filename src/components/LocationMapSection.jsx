@@ -190,7 +190,7 @@ const LocationMapSection = () => {
                         <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full text-[#1A3C8B]">
                           <Mail className="w-5 h-5" />
                         </div>
-                        <span className="truncate max-w-[250px] text-wrap">
+                        <span className="max-w-[300px] text-nowrap">
                           {email}
                         </span>
                       </div>
