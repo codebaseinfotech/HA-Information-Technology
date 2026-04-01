@@ -6,6 +6,7 @@ import About from './components/About';
 import TrustSection from './components/TrustSection';
 import ValuePropSection from './components/ValuePropSection';
 import CoreServicesSection from './components/CoreServicesSection';
+import WhyTrustUsSection from './components/WhyTrustUsSection';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -44,6 +45,7 @@ const HomePage = () => (
     <TrustSection />
     <ValuePropSection />
     <CoreServicesSection />
+    <WhyTrustUsSection />
     <Contact />
   </>
 );
@@ -73,10 +75,10 @@ function App() {
           <Route path="/terms-conditions" element={<TermsPage />} />
           <Route path="/privacy-policy" element={<PrivacyPage />} />
           <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-          <Route
+          {/* <Route
             path="/hire-dedicated-developers-48-hours-witarist-experts/:devType"
             element={<HireDeveloperPage />}
-          />
+          /> */}
         </Routes>
         <Footer />
         <WhatsAppWidget />
