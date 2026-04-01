@@ -60,7 +60,7 @@ const ProcessSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-3xl md:text-5xl lg:text-5xl font-extrabold mb-6 leading-tight"
+                        className="text-3xl md:text-4xl lg:text-4xl font-extrabold mb-6 leading-tight"
                     >
                         How We Turn Your Business Challenge Into a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Working Digital Solution</span>
                     </motion.h2>

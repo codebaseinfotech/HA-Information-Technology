@@ -88,7 +88,7 @@ const IndustrySection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-3xl md:text-5xl font-extrabold text-[#111827] leading-tight mb-6"
+                        className="text-3xl md:text-4xl lg:text-4xl font-extrabold text-[#111827] leading-tight mb-6"
                     >
                         Deep Industry Knowledge. <br className="hidden md:block" />
                         <span className="text-[#1A3C8B]">Precision-Engineered</span> Digital Solutions.
@@ -99,7 +99,7 @@ const IndustrySection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                        className="text-xs md:text-sm text-gray-600 leading-relaxed"
                     >
                         Every industry has unique compliance requirements, user expectations, and workflow dynamics. We do not apply generic templates to sector-specific problems — every solution we build reflects the operational reality of your industry.
                     </motion.p>

@@ -72,7 +72,7 @@ const WhyTrustUsSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                            className="text-sm md:text-lg text-gray-600 leading-relaxed"
                         >
                             We don't just deliver code; we deliver business outcomes. Unlike giant bureaucratic agencies, our lean operations allow us to provide dedicated senior engineers, absolute transparency, and a partnership model built on your actual success.
                         </motion.p>

@@ -9,6 +9,8 @@ import CoreServicesSection from './components/CoreServicesSection';
 import WhyTrustUsSection from './components/WhyTrustUsSection';
 import ProcessSection from './components/ProcessSection';
 import IndustrySection from './components/IndustrySection';
+import CaseStudySection from './components/CaseStudySection';
+import FAQSection from './components/FAQSection';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -49,6 +51,8 @@ const HomePage = () => (
     <WhyTrustUsSection />
     <ProcessSection />
     <IndustrySection />
+    <CaseStudySection />
+    <FAQSection />
     <Contact />
   </>
 );
