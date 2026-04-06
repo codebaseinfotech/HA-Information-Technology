@@ -4,6 +4,8 @@ import { getAllServices } from '../data/services';
 import solutionsData from '../data/solutions';
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp, FaYoutube, FaInstagram, FaTwitter, FaPhone, FaChevronRight } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast';
+import AE from 'country-flag-icons/react/3x2/AE';
+import IN from 'country-flag-icons/react/3x2/IN';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -105,11 +107,6 @@ const Footer = () => {
     };
 
     const services = getAllServices();
-
-    const contacts = [
-        { country: 'U.A.E.', phones: ['+971 523003423'] },
-        { country: 'India', phones: ['+91-7096859504'] },
-    ];
 
     const socialLinks = [
         { icon: FaFacebookF, href: '#', label: 'Facebook' },
@@ -274,40 +271,69 @@ const Footer = () => {
 
                     {/* Contact Us */}
                     <div>
-                        <h3 className="text-white text-lg font-semibold mb-6">Contact us</h3>
-                        <ul className="space-y-4">
-                            {contacts.map((contact, index) => (
-                                <li key={index}>
-                                    <h1 className="text-white text-sm font-medium transition-colors flex items-center">
-                                        Contact {contact.country}
-                                    </h1>
-                                    {contact.phones.length > 0 && (
-                                        <div className="mt-2 space-y-1">
-                                            {contact.phones.map((phone, pIndex) => {
-                                                const cleanPhone = phone.replace(/[^0-9]/g, '');
-                                                const whatsappLink = `https://api.whatsapp.com/send/?phone=${cleanPhone}&text&type=phone_number&app_absent=0`;
+                        {/* Global Presence */}
+                        <h3 className="text-white text-lg font-semibold mb-5">Global Presence</h3>
+                        <div className="space-y-5 mb-8">
+                            {/* UAE Office */}
+                            <div className="group">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <AE title="UAE" className="w-6 h-4 rounded-sm flex-shrink-0" />
+                                    <h4 className="text-white text-sm font-semibold">U.A.E.</h4>
+                                </div>
+                                <div className="flex items-start gap-2 text-gray-400 text-sm ml-1 mb-1.5">
+                                    <svg className="w-4 h-4 text-[#1A3C8B] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span className="leading-snug">274 Street - Dubai Investment Park - 2, Dubai - United Arab Emirates</span>
+                                </div>
+                                <div className="flex items-center gap-2 text-gray-400 text-sm ml-1 hover:text-green-400 transition-colors">
+                                    <a
+                                        href="https://api.whatsapp.com/send/?phone=971523003423&text&type=phone_number&app_absent=0"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-1.5 cursor-pointer"
+                                        title="Chat on WhatsApp"
+                                    >
+                                        <FaPhone className="w-3.5 h-3.5" />
+                                        <FaWhatsapp className="w-3.5 h-3.5" />
+                                        <span>+971 523003423</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-                                                return (
-                                                    <div key={pIndex} className="flex items-center gap-2 text-gray-400 text-sm hover:text-green-400 transition-colors">
-                                                        <a
-                                                            href={whatsappLink}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="flex items-center !cursor-pointer gap-1"
-                                                            title="Chat on WhatsApp"
-                                                        >
-                                                            <FaPhone className="w-4 h-4 cursor-pointer" />
-                                                            <FaWhatsapp className="w-4 h-4 cursor-pointer" />
-                                                            <span className="cursor-pointer">{phone}</span>
-                                                        </a>
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
+                        {/* Development Centers */}
+                        <h3 className="text-white text-lg font-semibold mb-5">Development Centers</h3>
+                        <div className="space-y-5 mb-6">
+                            {/* Surat Office */}
+                            <div className="group">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <IN title="India" className="w-6 h-4 rounded-sm flex-shrink-0" />
+                                    <h4 className="text-white text-sm font-semibold">India</h4>
+                                </div>
+                                <div className="flex items-start gap-2 text-gray-400 text-sm ml-1 mb-1.5">
+                                    <svg className="w-4 h-4 text-[#1A3C8B] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span className="leading-snug">201, Akshar Square, opp. Cancer Hospital, Dabholi, Surat, Gujarat, India - 395004</span>
+                                </div>
+                                <div className="flex items-center gap-2 text-gray-400 text-sm ml-1 hover:text-green-400 transition-colors">
+                                    <a
+                                        href="https://api.whatsapp.com/send/?phone=917096859504&text&type=phone_number&app_absent=0"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-1.5 cursor-pointer"
+                                        title="Chat on WhatsApp"
+                                    >
+                                        <FaPhone className="w-3.5 h-3.5" />
+                                        <FaWhatsapp className="w-3.5 h-3.5" />
+                                        <span>+91-7096859504</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
                         {/* Social Media Icons */}
                         <div className="flex gap-3 mt-6">
