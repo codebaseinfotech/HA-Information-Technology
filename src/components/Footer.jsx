@@ -272,7 +272,7 @@ const Footer = () => {
                     {/* Contact Us */}
                     <div>
                         {/* Global Presence */}
-                        <h3 className="text-white text-lg font-semibold mb-5">Global Presence</h3>
+                        {/* <h3 className="text-white text-lg font-semibold mb-5">Global Presence</h3> */}
                         <div className="space-y-5 mb-8">
                             {/* UAE Office */}
                             <div className="group">
@@ -285,7 +285,7 @@ const Footer = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    <span className="leading-snug">274 Street - Dubai Investment Park - 2, Dubai - United Arab Emirates</span>
+                                    <span className="leading-snug">Arjumand Building - 3rd floor - Dubai Investment Park First - Green Community Village - Dubai - Dubai</span>
                                 </div>
                                 <div className="flex items-center gap-2 text-gray-400 text-sm ml-1 hover:text-green-400 transition-colors">
                                     <a

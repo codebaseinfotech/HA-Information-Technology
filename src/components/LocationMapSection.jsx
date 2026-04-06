@@ -9,8 +9,8 @@ const locations = [
   {
     id: "dubai",
     name: "Dubai",
-    coordinates: { lat: 24.9745, lng: 55.1983 },
-    address: "274 Street - Dubai Investment Park - 2, Dubai - U.A.E.",
+    coordinates: { lat: 24.9980462, lng: 55.1708135 },
+    address: "Arjumand Building - 3rd floor - Dubai Investment Park First - Green Community Village - Dubai - Dubai",
     phones: ["+971 523003423"],
     emails: ["info@alattastech.com"],
   },
