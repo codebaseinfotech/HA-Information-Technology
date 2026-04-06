@@ -111,7 +111,7 @@ const Footer = () => {
     const socialLinks = [
         { icon: FaFacebookF, href: '#', label: 'Facebook' },
         { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },
-        { icon: FaWhatsapp, href: '#', label: 'WhatsApp' },
+        { icon: FaWhatsapp, href: 'https://wa.me/919879527272', label: 'WhatsApp' },
         { icon: FaYoutube, href: '#', label: 'YouTube' },
         { icon: FaInstagram, href: '#', label: 'Instagram' },
         { icon: FaTwitter, href: '#', label: 'Twitter' }

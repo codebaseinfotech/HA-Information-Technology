@@ -112,7 +112,7 @@ const About = () => {
                         <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-[1.02] group-hover:-rotate-1 transition-all duration-700">
                             <img
                                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Business Analytics"
+                                alt="Business Analytics Strategy - HA Information Technology"
                                 className="w-full h-[300px] md:h-[400px] lg:h-[450px] object-cover transform group-hover:scale-110 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#1A3C8B]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -224,7 +224,7 @@ const About = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#1A3C8B]/20 to-transparent group-hover:scale-105 transition-transform duration-700"></div>
                                 <img
                                     src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Team Collaboration"
+                                    alt="Team Collaboration at HA Information Technology"
                                     className="w-full h-[200px] md:h-[250px] object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                             </div>
@@ -233,7 +233,7 @@ const About = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#1A3C8B]/20 to-[#1A3C8B]/10 group-hover:scale-105 transition-transform duration-700"></div>
                                 <img
                                     src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Development Workspace"
+                                    alt="Software Development Workspace at HA Information Technology"
                                     className="w-full h-[200px] md:h-[250px] object-cover transform group-hover:scale-110 transition-transform duration-700"
                                 />
                             </div>

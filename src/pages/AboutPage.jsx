@@ -288,7 +288,7 @@ const AboutPage = () => {
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                                 <img
                                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Business Professional"
+                                    alt="HA Information Technology Team - Business Professional"
                                     className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center">
