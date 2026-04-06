@@ -272,7 +272,7 @@ const Footer = () => {
                     {/* Contact Us */}
                     <div>
                         {/* Global Presence */}
-                        {/* <h3 className="text-white text-lg font-semibold mb-5">Global Presence</h3> */}
+                        <h3 className="text-white text-lg font-semibold mb-5">Global Presence</h3>
                         <div className="space-y-5 mb-8">
                             {/* UAE Office */}
                             <div className="group">
@@ -304,7 +304,7 @@ const Footer = () => {
                         </div>
 
                         {/* Development Centers */}
-                        <h3 className="text-white text-lg font-semibold mb-5">Development Centers</h3>
+                        {/* <h3 className="text-white text-lg font-semibold mb-5">Development Centers</h3> */}
                         <div className="space-y-5 mb-6">
                             {/* Surat Office */}
                             <div className="group">
