@@ -31,7 +31,7 @@ const SolutionDetail = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEO
-                title={`${solution.title} - Software Solution | HA Information Technology`}
+                title={`${solution.title} - Software Solution | Hamed Alattas Technology`}
                 description={solution.content.introduction}
                 keywords={`${solution.title}, ${solution.title} UAE, ${solution.title} Dubai, ${solution.title} software, business software, industry software, ${solution.title} India, custom software solution`}
                 url={`/solutions/${solution.id}`}

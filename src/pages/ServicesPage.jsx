@@ -17,7 +17,7 @@ const ServicesPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEO
-                title="Our Services - IT Solutions & Software Development | HA Information Technology"
+                title="Our Services - IT Solutions & Software Development | Hamed Alattas Technology"
                 description="Explore comprehensive IT services including software development, web design, mobile app development, cloud hosting, IT infrastructure, and security solutions. Professional IT services in UAE and India."
                 keywords="IT services UAE, software development services, web development company, mobile app development, e-commerce solutions, IT infrastructure management, security solutions, cloud hosting services, IT consulting Dubai, custom software development, enterprise software solutions, digital transformation services"
                 url="/services"

@@ -40,11 +40,11 @@ export const solutions = [
     },
     {
         id: 'real-estate-software',
-        title: 'Real Estate / Property Software',
+        title: 'Property Management Software',
         icon: Building2,
         shortDescription: 'Complete property management and real estate CRM solution.',
         content: {
-            introduction: `Our Real Estate Software is a powerful platform designed for property developers, real estate agencies, and property management companies. It helps manage properties, leads, sales, rentals, and customer relationships all in one place.`,
+            introduction: `Our Property Management Software is a powerful platform designed for property developers, real estate agencies, and property management companies. It helps manage properties, leads, sales, rentals, and customer relationships all in one place.`,
             features: [
                 'Property Listing Management',
                 'Lead & Customer CRM',

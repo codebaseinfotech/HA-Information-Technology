@@ -16,7 +16,7 @@ const SolutionsPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEO
-                title="Software Solutions - Industry-Specific Applications | HA Information Technology"
+                title="Software Solutions - Industry-Specific Applications | Hamed Alattas Technology"
                 description="Discover specialized software solutions for healthcare, education, retail, real estate, and more. Medical software, HR payroll, accounting, school management, and custom business applications in UAE and India."
                 keywords="software solutions UAE, medical software Dubai, hospital management system, school management software, HR payroll software, accounting software, real estate software, pharmacy management system, retail POS software, cleaning software, time attendance software, custom business software, industry-specific software solutions"
                 url="/solutions"

@@ -32,7 +32,7 @@ export const services = [
                 {
                     type: 'text_header',
                     title: 'Our Comprehensive e-Commerce Solutions',
-                    content: `HA Information Technology, we understand that building a successful e-commerce platform involves more than just technical expertise. That's why we offer a complete e-commerce package tailored to meet your business needs, ensuring a seamless and efficient online experience for your customers. Whether you are operating in a B2B or B2C market, we have the solutions to cater to your specific requirements.`
+                    content: `Hamed Alattas Technology, we understand that building a successful e-commerce platform involves more than just technical expertise. That's why we offer a complete e-commerce package tailored to meet your business needs, ensuring a seamless and efficient online experience for your customers. Whether you are operating in a B2B or B2C market, we have the solutions to cater to your specific requirements.`
                 },
                 {
                     type: 'check_list',

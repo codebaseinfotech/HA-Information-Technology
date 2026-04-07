@@ -46,7 +46,7 @@ export default async function handler(req, res) {
 
         // Admin email
         const adminMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
             subject: `🤝 New ${partnerTypeLabel} Application - ${companyName}`,
             html: `
@@ -72,7 +72,7 @@ export default async function handler(req, res) {
                         <div class="header">
                             <div class="badge">${partnerTypeLabel.toUpperCase()} APPLICATION</div>
                             <h1 style="margin: 10px 0 0 0;">🤝 New ${partnerTypeLabel} Application</h1>
-                            <p style="margin: 10px 0 0 0; opacity: 0.9;">HA Information Technology</p>
+                            <p style="margin: 10px 0 0 0; opacity: 0.9;">Hamed Alattas Technology</p>
                         </div>
                         <div class="content">
                             <div class="section">
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
                             ` : ''}
                         </div>
                         <div class="footer">
-                            <p>This ${partnerTypeLabel.toLowerCase()} application was submitted from HA Information Technology website.</p>
+                            <p>This ${partnerTypeLabel.toLowerCase()} application was submitted from Hamed Alattas Technology website.</p>
                             <p>Received on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
                         </div>
                     </div>
@@ -151,9 +151,9 @@ export default async function handler(req, res) {
 
         // User confirmation email
         const userMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: email,
-            subject: `✅ Thank You for Your ${partnerTypeLabel} Application - HA Information Technology`,
+            subject: `✅ Thank You for Your ${partnerTypeLabel} Application - Hamed Alattas Technology`,
             html: `
                 <!DOCTYPE html>
                 <html>
@@ -183,7 +183,7 @@ export default async function handler(req, res) {
                                 Dear ${firstName} ${lastName},
                             </div>
                             <div class="message-box">
-                                <p style="margin: 0;">Thank you for your interest in becoming a <strong>${partnerTypeLabel}</strong> with <strong>HA Information Technology</strong>!</p>
+                                <p style="margin: 0;">Thank you for your interest in becoming a <strong>${partnerTypeLabel}</strong> with <strong>Hamed Alattas Technology</strong>!</p>
                                 <p style="margin: 15px 0 0 0;">We have successfully received your application for <strong>${companyName}</strong>. Our partnership team will carefully review your submission and get back to you within <strong>3-5 business days</strong>.</p>
                             </div>
                             
@@ -221,7 +221,7 @@ export default async function handler(req, res) {
                             </div>
                         </div>
                         <div class="footer">
-                            <p><strong>HA Information Technology</strong></p>
+                            <p><strong>Hamed Alattas Technology</strong></p>
                             <p>Your Trusted IT Solutions Partner</p>
                             <p style="margin-top: 15px; font-size: 11px;">
                                 This is an automated confirmation email. Please do not reply to this email.<br>

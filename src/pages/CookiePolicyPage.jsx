@@ -14,8 +14,8 @@ const CookiePolicyPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <SEO
-                title="Cookie Policy - How We Use Cookies | HA Information Technology"
-                description="Understand how HA Information Technology uses cookies to improve your experience. Learn about cookie types, third-party trackers, and how to manage your cookie preferences."
+                title="Cookie Policy - How We Use Cookies | Hamed Alattas Technology"
+                description="Understand how Hamed Alattas Technology uses cookies to improve your experience. Learn about cookie types, third-party trackers, and how to manage your cookie preferences."
                 keywords="cookie policy, cookies, tracking cookies, browser cookies, cookie management, cookie consent, third-party cookies, website cookies"
                 url="/cookie-policy"
                 robots="index, follow"
@@ -50,7 +50,7 @@ const CookiePolicyPage = () => {
                         {/* Introduction with Fade-in */}
                         <div className={`mb-10 md:mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                             <p className="text-base md:text-lg text-gray-600 leading-relaxed bg-gradient-to-r from-orange-50 to-transparent p-4 md:p-6 rounded-lg border-l-4 border-orange-500">
-                                This Cookie Policy explains how HA Information Technology uses cookies and similar tracking technologies on our website. By using our website, you consent to the use of cookies as described in this policy.
+                                This Cookie Policy explains how Hamed Alattas Technology uses cookies and similar tracking technologies on our website. By using our website, you consent to the use of cookies as described in this policy.
                             </p>
                         </div>
 
@@ -251,7 +251,7 @@ const CookiePolicyPage = () => {
                                 </p>
                                 <div className="space-y-2 text-sm md:text-base">
                                     <p className="hover:translate-x-2 transition-transform duration-200"><strong>Email:</strong> info@alattastech.com</p>
-                                    <p className="hover:translate-x-2 transition-transform duration-200"><strong>Phone:</strong> +971 523003423</p>
+                                    <p className="hover:translate-x-2 transition-transform duration-200"><strong>Phone:</strong> +971 551882023</p>
                                     <p className="hover:translate-x-2 transition-transform duration-200"><strong>Address:</strong> Dubai, UAE</p>
                                 </div>
                             </div>

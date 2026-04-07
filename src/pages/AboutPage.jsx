@@ -65,7 +65,7 @@ const MissionVisionSection = ({ qualityStandards }) => {
                     {activeTab === 'mission' ? (
                         <>
                             <h3 className="text-xl md:text-2xl font-bold text-[#1a2332] leading-tight">
-                                <span className="text-[#1A3C8B]">HA Information Technology</span> To consistently create value for our stakeholders
+                                <span className="text-[#1A3C8B]">Hamed Alattas Technology</span> To consistently create value for our stakeholders
                             </h3>
                             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
                                 by providing solutions which enable our customers to achieve excellence and sustainable competitive edge.
@@ -94,7 +94,7 @@ const MissionVisionSection = ({ qualityStandards }) => {
                                 A One Stop Professional IT Solutions Provider & Trusted Local IT Partner
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6 text-justify text-sm md:text-base">
-                                The idea behind HA Information Technology is very simple - "A One Stop Professional IT Solutions Provider & Trusted Local IT Partner". We strive to provide a wide range of Customize Software Development, Web Design, Network Solutions, Access Controls, Security Solutions, PABX Solutions, IT Infrastructure, for you, our valued client, to cover even the most demanding technical needs.
+                                The idea behind Hamed Alattas Technology is very simple - "A One Stop Professional IT Solutions Provider & Trusted Local IT Partner". We strive to provide a wide range of Customize Software Development, Web Design, Network Solutions, Access Controls, Security Solutions, PABX Solutions, IT Infrastructure, for you, our valued client, to cover even the most demanding technical needs.
                             </p>
 
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 p-4 md:p-6 rounded-xl border border-gray-100 mb-6 hover:shadow-lg transition-shadow duration-300">
@@ -229,7 +229,7 @@ const AboutPage = () => {
         {
             icon: Shield,
             title: 'INTEGRITY',
-            description: 'At HA Information Technology, the very soul of our company. This is reflected in our finances, the trusted relationship that we share with our customers and business partners, and the faith reposed in us by our stakeholders.'
+            description: 'At Hamed Alattas Technology, the very soul of our company. This is reflected in our finances, the trusted relationship that we share with our customers and business partners, and the faith reposed in us by our stakeholders.'
         }
     ];
 
@@ -258,9 +258,9 @@ const AboutPage = () => {
     return (
         <div className="min-h-screen bg-white">
             <SEO
-                title="About Us - HA Information Technology | IT Solutions Company UAE & India"
-                description="Learn about HA Information Technology, your trusted IT solutions partner in UAE and India. Discover our mission, vision, values, and commitment to delivering innovative software development and technology services."
-                keywords="IT company UAE, software development company Dubai, technology solutions India, IT consulting services, custom software development, web development company, mobile app development, about HA Information Technology, IT services provider, software company Dubai, technology partner UAE"
+                title="About Us - Hamed Alattas Technology | IT Solutions Company UAE & India"
+                description="Learn about Hamed Alattas Technology, your trusted IT solutions partner in UAE and India. Discover our mission, vision, values, and commitment to delivering innovative software development and technology services."
+                keywords="IT company UAE, software development company Dubai, technology solutions India, IT consulting services, custom software development, web development company, mobile app development, about Hamed Alattas Technology, IT services provider, software company Dubai, technology partner UAE"
                 url="/about"
                 schema={getOrganizationSchema()}
             />
@@ -288,7 +288,7 @@ const AboutPage = () => {
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                                 <img
                                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="HA Information Technology Team - Business Professional"
+                                    alt="Hamed Alattas Technology Team - Business Professional"
                                     className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -309,7 +309,7 @@ const AboutPage = () => {
                                     </span> for your Business.
                                 </h2>
                                 <p className="text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg mb-4 md:mb-6 text-justify">
-                                    HA Information Technology is a Software and Web Development Company focused on creating custom applications and laying special emphasis on the unique business needs of its corporate clients. HA Information Technology infrastructure and processes are concentrated at designing and implementing solutions for middle & large-sized companies.
+                                    Hamed Alattas Technology is a Software and Web Development Company focused on creating custom applications and laying special emphasis on the unique business needs of its corporate clients. Hamed Alattas Technology infrastructure and processes are concentrated at designing and implementing solutions for middle & large-sized companies.
                                 </p>
                             </div>
 
@@ -336,7 +336,7 @@ const AboutPage = () => {
                 </section>
 
                 <div className="text-center mb-8 md:mb-12 pt-8 md:pt-12 border-t border-gray-100">
-                    <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider inline-block mb-3 md:mb-4 uppercase bg-green-50 px-4 py-2 rounded-full">INSIDE HA Information Technology</span>
+                    <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider inline-block mb-3 md:mb-4 uppercase bg-green-50 px-4 py-2 rounded-full">INSIDE Hamed Alattas Technology</span>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight px-4">
                         The Power Of <span className="text-[#1A3C8B] relative inline-block">
                             Software
@@ -500,11 +500,11 @@ const FAQSection = () => {
 
     const faqs = [
         {
-            question: "How can I benefit from working with HA Information Technology ?",
-            answer: "HA Information Technology assures that your project will be done on time, on budget, and in accordance with the latest quality and technical standards. You can outsource to HA Information Technology your IT projects ranging from a simple utility to a total automation of your business. Our services are confidential and reliable. Copyright on the final system belongs to you. Also, custom information systems are expensive, as development requires hiring skilled professionals. By using our services, you will reduce your cost. You also achieve savings on equipment, maintenance and infrastructure required during the development. Learn additional information with our Service Technology and Development Process"
+            question: "How can I benefit from working with Hamed Alattas Technology ?",
+            answer: "Hamed Alattas Technology assures that your project will be done on time, on budget, and in accordance with the latest quality and technical standards. You can outsource to Hamed Alattas Technology your IT projects ranging from a simple utility to a total automation of your business. Our services are confidential and reliable. Copyright on the final system belongs to you. Also, custom information systems are expensive, as development requires hiring skilled professionals. By using our services, you will reduce your cost. You also achieve savings on equipment, maintenance and infrastructure required during the development. Learn additional information with our Service Technology and Development Process"
         },
         {
-            question: "What services does HA Information Technology ?",
+            question: "What services does Hamed Alattas Technology ?",
             answer: (
                 <ul className="list-disc pl-5 space-y-1">
                     <li>Development of custom software systems for Windows and Linux platforms</li>

@@ -22,7 +22,7 @@ const IndustrySection = () => {
         },
         {
             icon: Building2,
-            title: "Real Estate & Property Management",
+            title: "Property Management Software",
             description: "CRM platforms, property listing portals, tenancy lifecycle management tools, and automated payment tracking systems built for UAE's dynamic property market — with integration capability for DLD and RERA compliance requirements."
         },
         {

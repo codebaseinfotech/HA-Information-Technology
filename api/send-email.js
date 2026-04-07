@@ -33,9 +33,9 @@ export default async function handler(req, res) {
 
         // Admin email content
         const adminMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
-            subject: '🔔 New Contact Form Submission - HA Information Technology',
+            subject: '🔔 New Contact Form Submission - Hamed Alattas Technology',
             html: `
                 <!DOCTYPE html>
                 <html>
@@ -55,7 +55,7 @@ export default async function handler(req, res) {
                     <div class="container">
                         <div class="header">
                             <h1 style="margin: 0;">📧 New Contact Form Submission</h1>
-                            <p style="margin: 10px 0 0 0; opacity: 0.9;">HA Information Technology</p>
+                            <p style="margin: 10px 0 0 0; opacity: 0.9;">Hamed Alattas Technology</p>
                         </div>
                         <div class="content">
                             <div class="field">
@@ -80,7 +80,7 @@ export default async function handler(req, res) {
                             </div>
                         </div>
                         <div class="footer">
-                            <p>This email was sent from the HA Information Technology contact form.</p>
+                            <p>This email was sent from the Hamed Alattas Technology contact form.</p>
                             <p>Received on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
                         </div>
                     </div>
@@ -91,9 +91,9 @@ export default async function handler(req, res) {
 
         // User thank you email content
         const userMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: email,
-            subject: '✅ Thank You for Contacting HA Information Technology',
+            subject: '✅ Thank You for Contacting Hamed Alattas Technology',
             html: `
                 <!DOCTYPE html>
                 <html>
@@ -134,7 +134,7 @@ export default async function handler(req, res) {
                                 Dear ${name},
                             </div>
                             <div class="message-box">
-                                <p style="margin: 0;">Thank you for reaching out to <strong>HA Information Technology</strong>!</p>
+                                <p style="margin: 0;">Thank you for reaching out to <strong>Hamed Alattas Technology</strong>!</p>
                                 <p style="margin: 15px 0 0 0;">We have successfully received your inquiry regarding <strong>${service}</strong>. Our team will carefully review your message and get back to you within <strong>24-48 hours</strong>.</p>
                             </div>
                             
@@ -165,7 +165,7 @@ export default async function handler(req, res) {
                             </div>
                         </div>
                         <div class="footer">
-                            <p><strong>HA Information Technology</strong></p>
+                            <p><strong>Hamed Alattas Technology</strong></p>
                             <p>Your Trusted IT Solutions Partner</p>
                             <p style="margin-top: 15px; font-size: 11px;">
                                 This is an automated confirmation email. Please do not reply to this email.<br>

@@ -94,7 +94,7 @@ const Contact = ({ hideImage = false }) => {
         'Pharmacy Software',
         'Recruitment Software',
         'Retail(POS) Software',
-        'Real Estate / Property Software',
+        'Property Management Software',
         'School / Nursery Software',
         'Cleaning Software',
         'Time Attendance Software',
@@ -113,9 +113,9 @@ const Contact = ({ hideImage = false }) => {
     return (
         <div className="min-h-screen bg-white">
             <Toaster />
-            <section id="contact" className="py-16 md:py-24 px-4 xl:px-12 bg-gradient-to-b from-gray-50 to-white">
+            <section id="contact" className="py-16 md:py-24 !pt-10 px-4 xl:px-12 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto px-4 xl:px-12">
-                    <div className={`grid grid-cols-1 ${!hideImage ? 'lg:grid-cols-2' : ''} gap-12 lg:gap-16 items-center`}>
+                    <div className={`grid grid-cols-1 gap-12 lg:gap-16 items-center`}>
                         <div>
                             <div className="mb-8">
                                 <div className="inline-block mb-4">
@@ -228,7 +228,8 @@ const Contact = ({ hideImage = false }) => {
                         </div>
 
                         {/* Right - Image with Decoration */}
-                        {!hideImage && <div className="relative">
+                        {/* ${!hideImage ? 'lg:grid-cols-2' : ''} */}
+                        {/* {!hideImage && <div className="relative">
                             <div className="absolute -top-8 -left-8 w-64 h-64 opacity-20">
                                 <svg viewBox="0 0 100 100" className="w-full h-full">
                                     {[...Array(10)].map((_, i) => (
@@ -244,11 +245,11 @@ const Contact = ({ hideImage = false }) => {
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                 <img
                                     src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Business Growth - HA Information Technology"
+                                    alt="Business Growth - Hamed Alattas Technology"
                                     className="w-full h-[300px] md:h-[500px] object-cover"
                                 />
                             </div>
-                        </div>}
+                        </div>} */}
                     </div>
                 </div>
             </section>
@@ -267,7 +268,7 @@ const SupportSection = () => {
                         Happy Help.
                     </h2>
                     <p className="text-gray-500 text-base md:text-lg max-w-4xl mx-auto leading-relaxed text-center px-2">
-                        HA Information Technology is a Software and Web Development Company focused on creating offers 24/7 Support. Get answers to all your queries immediately.
+                        Hamed Alattas Technology is a Software and Web Development Company focused on creating offers 24/7 Support. Get answers to all your queries immediately.
                     </p>
                 </div>
 
@@ -281,7 +282,7 @@ const SupportSection = () => {
                             <div className="space-y-4">
                                 <h3 className="text-xl font-bold text-black">Contacts us</h3>
                                 <div className="space-y-3 text-gray-600 font-medium text-sm md:text-base">
-                                    {['+971 523003423', '+91-7096859504'].map((phone, idx) => {
+                                    {['+971 551882023', '+91-7096859504'].map((phone, idx) => {
                                         const cleanPhone = phone.replace(/[^0-9]/g, '');
                                         const whatsappLink = `https://api.whatsapp.com/send/?phone=${cleanPhone}&text&type=phone_number&app_absent=0`;
 

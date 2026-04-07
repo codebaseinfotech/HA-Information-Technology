@@ -31,7 +31,7 @@ const ServiceDetail = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEO
-                title={`${service.title} - IT Services | HA Information Technology`}
+                title={`${service.title} - IT Services | Hamed Alattas Technology`}
                 description={service.description}
                 keywords={`${service.title}, ${service.title} UAE, ${service.title} Dubai, IT services, technology solutions, ${service.title} India, professional IT services`}
                 url={`/services/${service.id}`}

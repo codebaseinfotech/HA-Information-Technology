@@ -14,8 +14,8 @@ const PrivacyPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <SEO
-                title="Privacy Policy - Your Data Protection | HA Information Technology"
-                description="Learn how HA Information Technology protects your privacy and handles your data. Read our comprehensive privacy policy covering data collection, usage, security, and your rights."
+                title="Privacy Policy - Your Data Protection | Hamed Alattas Technology"
+                description="Learn how Hamed Alattas Technology protects your privacy and handles your data. Read our comprehensive privacy policy covering data collection, usage, security, and your rights."
                 keywords="privacy policy, data protection, personal information, data security, privacy rights, GDPR compliance, data privacy, information security"
                 url="/privacy-policy"
                 robots="index, follow"
@@ -50,7 +50,7 @@ const PrivacyPage = () => {
                         {/* Introduction with Fade-in */}
                         <div className={`mb-10 md:mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                             <p className="text-base md:text-lg text-gray-600 leading-relaxed bg-gradient-to-r from-purple-50 to-transparent p-4 md:p-6 rounded-lg border-l-4 border-purple-500">
-                                At HA Information Technology, we respect and value both the information you share with us and your privacy. This Privacy Policy explains how we collect, use, protect, and share your personal information.
+                                At Hamed Alattas Technology, we respect and value both the information you share with us and your privacy. This Privacy Policy explains how we collect, use, protect, and share your personal information.
                             </p>
                         </div>
 
@@ -62,7 +62,7 @@ const PrivacyPage = () => {
                             </div>
                             <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
                                 <p className="text-gray-700 font-semibold m-0">
-                                    HA Information Technology respects and values both the information you share with us and your privacy. We will not sell your personal information.
+                                    Hamed Alattas Technology respects and values both the information you share with us and your privacy. We will not sell your personal information.
                                 </p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ const PrivacyPage = () => {
                                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] m-0">Scope of the Policy</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                This Privacy Policy covers all information received by HA Information Technology through:
+                                This Privacy Policy covers all information received by Hamed Alattas Technology through:
                             </p>
                             <ul className="text-gray-600 space-y-2 ml-6">
                                 <li>Online forms and contact forms on our website</li>
@@ -94,7 +94,7 @@ const PrivacyPage = () => {
                                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] m-0">How Information is Collected</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                HA Information Technology collects and maintains information through various channels:
+                                Hamed Alattas Technology collects and maintains information through various channels:
                             </p>
                             <div className="grid md:grid-cols-2 gap-6 mt-6">
                                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -131,7 +131,7 @@ const PrivacyPage = () => {
                                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] m-0">How Information is Used</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                Information received by HA Information Technology may be used for the following purposes:
+                                Information received by Hamed Alattas Technology may be used for the following purposes:
                             </p>
                             <ul className="text-gray-600 space-y-2 ml-6">
                                 <li>To respond to your inquiries and provide requested services</li>
@@ -153,7 +153,7 @@ const PrivacyPage = () => {
                                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a2332] m-0">Data Protection Principles</h2>
                             </div>
                             <p className="text-gray-600 leading-relaxed">
-                                HA Information Technology adheres to the following data protection principles:
+                                Hamed Alattas Technology adheres to the following data protection principles:
                             </p>
                             <div className="space-y-4 mt-6">
                                 <div className="flex gap-4">
@@ -240,7 +240,7 @@ const PrivacyPage = () => {
                                 </p>
                                 <div className="space-y-2 text-sm md:text-base">
                                     <p className="hover:translate-x-2 transition-transform duration-200"><strong>Email:</strong> info@alattastech.com</p>
-                                    <p className="hover:translate-x-2 transition-transform duration-200"><strong>Phone:</strong> +971 523003423</p>
+                                    <p className="hover:translate-x-2 transition-transform duration-200"><strong>Phone:</strong> +971 551882023</p>
                                     <p className="hover:translate-x-2 transition-transform duration-200"><strong>Address:</strong> Dubai, UAE</p>
                                 </div>
                             </div>

@@ -46,7 +46,7 @@ const FAQSection = () => {
     };
 
     return (
-        <section className="py-24 bg-gray-50 relative overflow-hidden">
+        <section className="!py-10 bg-gray-50 relative overflow-hidden">
             <div className="container mx-auto px-4 xl:px-12 relative z-10">
                 
                 <div className="flex flex-col lg:flex-row gap-16">

@@ -31,20 +31,20 @@ const ResourcesPage = () => {
         {
             icon: Users,
             title: "Partner with the market leader",
-            description: "Backed by industry-leading experts, HA Information Technology utilizes top-tier resources to drive continuous global expansion."
+            description: "Backed by industry-leading experts, Hamed Alattas Technology utilizes top-tier resources to drive continuous global expansion."
         }
     ];
 
     // Dynamic data for Become a Partner
     const partnerBenefits = [
         "Your clients need payroll and compliance solutions for their international team members. Partnering with us ensures they receive top-tier, reliable services.",
-        "If you manage payroll for your clients, leverage HA Information Technology's advanced platform to streamline processes, enhance accuracy, and provide exceptional service.",
+        "If you manage payroll for your clients, leverage Hamed Alattas Technology's advanced platform to streamline processes, enhance accuracy, and provide exceptional service.",
         "Assist your clients in hiring internationally in the most cost-effective manner. Our solutions offer affordable, efficient hiring processes, ensuring compliance and ease."
     ];
 
     // Dynamic data for Become an Affiliate
     const affiliateBenefits = [
-        "If you know business owners who hire internationally, introduce them to HA Information Technology's superior payroll and compliance services, helping them streamline their operations.",
+        "If you know business owners who hire internationally, introduce them to Hamed Alattas Technology's superior payroll and compliance services, helping them streamline their operations.",
         "Join our affiliate program and start earning commissions by referring friends and business contacts. Use your custom affiliate link to your referrals and earnings effortlessly.",
         "Help your network scale their businesses internationally by providing them with exclusive discounts on payroll services. Empower them to grow while benefiting from your referrals."
     ];
@@ -53,8 +53,8 @@ const ResourcesPage = () => {
     return (
         <div className="min-h-screen bg-white">
             <SEO
-                title="Our Partners - Technology Partnerships | HA Information Technology"
-                description="Meet our trusted technology partners and collaborators. Join HA Information Technology partnership program and help businesses grow with innovative IT solutions and software services."
+                title="Our Partners - Technology Partnerships | Hamed Alattas Technology"
+                description="Meet our trusted technology partners and collaborators. Join Hamed Alattas Technology partnership program and help businesses grow with innovative IT solutions and software services."
                 keywords="technology partners, IT partnerships, software partners, business collaboration, technology alliance, IT partner network, strategic partnerships, technology collaboration Dubai"
                 url="/our-partner"
             />
@@ -90,7 +90,7 @@ const ResourcesPage = () => {
                             Our Partner In <span className="text-[#1A3C8B]">Digital</span> Success
                         </h2>
                         <p className="text-gray-500 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">
-                            Becoming a HA Information Technology partner means we handle your clients. It's payments, contracts, and more all in one place.
+                            Becoming a Hamed Alattas Technology partner means we handle your clients. It's payments, contracts, and more all in one place.
                         </p>
                     </div>
 

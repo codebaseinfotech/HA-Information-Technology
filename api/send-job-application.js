@@ -115,7 +115,7 @@ export default async function handler(req, res) {
                         </div>
                     </div>
                     <div class="footer">
-                        <p>HA Information Technology - HR Automated System</p>
+                        <p>Hamed Alattas Technology - HR Automated System</p>
                     </div>
                 </div>
             </body>
@@ -157,8 +157,8 @@ export default async function handler(req, res) {
             <body>
                 <div class="container">
                     <div class="logo-container">
-                        <!-- We use a styled text logo for HA Information Technology to match the minimalist vibe -->
-                        <h2 style="margin: 0; color: #1A3C8B; font-size: 28px; letter-spacing: -0.5px;">HA Information Technology</h2>
+                        <!-- We use a styled text logo for Hamed Alattas Technology to match the minimalist vibe -->
+                        <h2 style="margin: 0; color: #1A3C8B; font-size: 28px; letter-spacing: -0.5px;">Hamed Alattas Technology</h2>
                     </div>
                     
                     <div class="title">
@@ -170,7 +170,7 @@ export default async function handler(req, res) {
                     </div>
 
                     <div class="paragraph">
-                        Thank you for applying to <span class="brand-name">HA Information Technology</span> for the role of <strong>${jobRole}</strong> through our career portal. This email is to confirm that we have received your application.
+                        Thank you for applying to <span class="brand-name">Hamed Alattas Technology</span> for the role of <strong>${jobRole}</strong> through our career portal. This email is to confirm that we have received your application.
                     </div>
 
                     <div class="paragraph">
@@ -183,7 +183,7 @@ export default async function handler(req, res) {
 
                     <div class="footer-salutation">
                         Best Regards,<br><br>
-                        <span class="brand-name">HA Information Technology</span> Hiring Team
+                        <span class="brand-name">Hamed Alattas Technology</span> Hiring Team
                     </div>
 
                     <div class="footer-bottom">
@@ -196,7 +196,7 @@ export default async function handler(req, res) {
         `;
 
         const applicantMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: `Application Received - ${jobRole}`,
             html: applicantHtml,

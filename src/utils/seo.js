@@ -53,7 +53,7 @@ export const COMPANY_INFO = {
 
 // Default SEO Configuration
 export const DEFAULT_SEO = {
-    title: "HA Information Technology - IT Solutions & Software Development",
+    title: "Hamed Alattas Technology - IT Solutions & Software Development",
     description: "Leading IT solutions and software development company in UAE and India. We provide custom software, web development, mobile apps, cloud hosting, and IT consulting services.",
     keywords: "IT solutions UAE, software development Dubai, web development company, mobile app development, IT consulting, cloud hosting, custom software development, technology solutions India",
     image: COMPANY_INFO.logo,

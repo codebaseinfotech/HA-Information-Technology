@@ -88,7 +88,7 @@ const TrustSection = () => {
                                 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#3a3a3a] leading-[1.1]"
                             >
                                 What Our <br/> Clients Have to <br/> Say About <br/>
-                                <span className="text-[#1A3C8B]">HA IT</span>
+                                <span className="text-[#1A3C8B]">Hamed Alattas Technology</span>
                             </motion.h2>
                             
                             <motion.p 
@@ -98,7 +98,7 @@ const TrustSection = () => {
                                 transition={{ duration: 0.6, delay: 0.2 }}
                                 className="text-gray-600 text-lg md:text-xl leading-relaxed"
                             >
-                                Trusted by startups & enterprises worldwide. Our clients hire faster, reduce hiring risks, and scale seamlessly with HA Information Technology.
+                                Trusted by startups & enterprises worldwide. Our clients hire faster, reduce hiring risks, and scale seamlessly with Hamed Alattas Technology.
                             </motion.p>
                             
                             <motion.div 

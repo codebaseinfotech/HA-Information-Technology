@@ -14,8 +14,8 @@ const TermsPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             <SEO
-                title="Terms & Conditions - HA Information Technology"
-                description="Read our terms and conditions for using HA Information Technology services. Learn about usage rights, intellectual property, warranties, and legal policies."
+                title="Terms & Conditions - Hamed Alattas Technology"
+                description="Read our terms and conditions for using Hamed Alattas Technology services. Learn about usage rights, intellectual property, warranties, and legal policies."
                 keywords="terms and conditions, user agreement, service terms, legal terms, website terms, IT services agreement, software terms, terms of use"
                 url="/terms-conditions"
                 robots="index, follow"
@@ -55,7 +55,7 @@ const TermsPage = () => {
                         {/* Introduction with Fade-in */}
                         <div className={`mb-10 md:mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                             <p className="text-base md:text-lg text-gray-600 leading-relaxed bg-gradient-to-r from-blue-50 to-transparent p-4 md:p-6 rounded-lg border-l-4 border-blue-500">
-                                Welcome to HA Information Technology. By accessing and using our website, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using our services.
+                                Welcome to Hamed Alattas Technology. By accessing and using our website, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using our services.
                             </p>
                         </div>
 
@@ -69,10 +69,10 @@ const TermsPage = () => {
                                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1a2332] m-0">Right to Use</h2>
                                 </div>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
-                                    HA Information Technology grants you a non-exclusive, non-transferable, limited right to access, use, and display this website and the materials thereon only for personal and informational purposes. Permission to use documents (such as white papers, case studies, and other publications) that can be downloaded from this website is granted, provided that:
+                                    Hamed Alattas Technology grants you a non-exclusive, non-transferable, limited right to access, use, and display this website and the materials thereon only for personal and informational purposes. Permission to use documents (such as white papers, case studies, and other publications) that can be downloaded from this website is granted, provided that:
                                 </p>
                                 <ul className="text-sm md:text-base text-gray-600 space-y-2 ml-4 md:ml-6">
-                                    <li className="hover:text-[#1A3C8B] transition-colors duration-200">HA Information Technology's copyright notice appears in all copies of documents</li>
+                                    <li className="hover:text-[#1A3C8B] transition-colors duration-200">Hamed Alattas Technology's copyright notice appears in all copies of documents</li>
                                     <li className="hover:text-[#1A3C8B] transition-colors duration-200">Use of such documents from this website is for informational and non-commercial use only and will not be copied or posted on any network computer or broadcast in any media</li>
                                     <li className="hover:text-[#1A3C8B] transition-colors duration-200">No modifications of any documents are made</li>
                                 </ul>
@@ -92,10 +92,10 @@ const TermsPage = () => {
                                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1a2332] m-0">Intellectual Property Rights</h2>
                                 </div>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                    This website, including its design, layout, code, and contents, and all the material present (excluding any third-party materials) is the exclusive property of HA Information Technology and protected by copyright laws. Copying, reproducing in whole or in part, or creating derivative works in any form or medium, without express written permission is prohibited.
+                                    This website, including its design, layout, code, and contents, and all the material present (excluding any third-party materials) is the exclusive property of Hamed Alattas Technology and protected by copyright laws. Copying, reproducing in whole or in part, or creating derivative works in any form or medium, without express written permission is prohibited.
                                 </p>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mt-4">
-                                    HA Information Technology does not grant any express or implied rights under any patents, trademarks, copyrights, trade secret information, or any other intellectual property rights. The HA Information Technology logo and the names of HA Information Technology products referenced herein are trademarks of HA Information Technology and protected by trademark laws.
+                                    Hamed Alattas Technology does not grant any express or implied rights under any patents, trademarks, copyrights, trade secret information, or any other intellectual property rights. The Hamed Alattas Technology logo and the names of Hamed Alattas Technology products referenced herein are trademarks of Hamed Alattas Technology and protected by trademark laws.
                                 </p>
                             </div>
                         </div>
@@ -110,10 +110,10 @@ const TermsPage = () => {
                                     <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1a2332] m-0">Third Party Content</h2>
                                 </div>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                    The website may make information or material of third parties available ("Third Party Content"). By accessing such Third Party Content, you may leave this website and be directed to an external website that is not maintained by HA Information Technology. Any access or use of such third-party website by you shall be at your own risk and responsibility.
+                                    The website may make information or material of third parties available ("Third Party Content"). By accessing such Third Party Content, you may leave this website and be directed to an external website that is not maintained by Hamed Alattas Technology. Any access or use of such third-party website by you shall be at your own risk and responsibility.
                                 </p>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mt-4">
-                                    The website may provide links to third-party sites. These linked sites are not under the control of HA Information Technology, and HA Information Technology is not responsible for the contents of any linked site or any link contained in a linked site. HA Information Technology provides links to you only for your convenience, and the inclusion of any link does not imply endorsement by HA Information Technology of the site.
+                                    The website may provide links to third-party sites. These linked sites are not under the control of Hamed Alattas Technology, and Hamed Alattas Technology is not responsible for the contents of any linked site or any link contained in a linked site. Hamed Alattas Technology provides links to you only for your convenience, and the inclusion of any link does not imply endorsement by Hamed Alattas Technology of the site.
                                 </p>
                             </div>
                         </div>
@@ -126,11 +126,11 @@ const TermsPage = () => {
                                     ALL THE INFORMATION AND MATERIAL AVAILABLE ON THIS WEBSITE IS PROVIDED ON AN "AS IS" BASIS WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES OR REPRESENTATIONS OF ANY KIND.
                                 </p>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                    HA Information Technology hereby expressly disclaims, to the fullest extent permitted by law, all express, implied, statutory, or other warranties or representations, including without limitation, the implied warranties of non-infringement, merchantability, or fitness for a particular purpose.
+                                    Hamed Alattas Technology hereby expressly disclaims, to the fullest extent permitted by law, all express, implied, statutory, or other warranties or representations, including without limitation, the implied warranties of non-infringement, merchantability, or fitness for a particular purpose.
                                 </p>
                             </div>
                             <p className="text-sm md:text-base text-gray-600 leading-relaxed mt-4">
-                                While all the documents and graphics included in the website are factual and true, HA Information Technology and/or its respective partners make no representations about the suitability of the information contained in the documents and related graphics published on this website for any purpose.
+                                While all the documents and graphics included in the website are factual and true, Hamed Alattas Technology and/or its respective partners make no representations about the suitability of the information contained in the documents and related graphics published on this website for any purpose.
                             </p>
                         </div>
 
@@ -139,10 +139,10 @@ const TermsPage = () => {
                             <div className="hover:shadow-xl transition-all duration-300 rounded-xl p-4 md:p-6 hover:bg-gray-50">
                                 <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#1a2332] mb-4">Indemnity & Limitation of Liability</h2>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                    You agree to indemnify, defend, and hold harmless HA Information Technology, its officers, directors, employees, agents, and third parties, for any losses, costs, liabilities, and expenses (including reasonable attorneys' fees) relating to or arising out of your use of or inability to use the website or services, any user postings made by you, your violation of any terms of this agreement, or your violation of any rights of a third party.
+                                    You agree to indemnify, defend, and hold harmless Hamed Alattas Technology, its officers, directors, employees, agents, and third parties, for any losses, costs, liabilities, and expenses (including reasonable attorneys' fees) relating to or arising out of your use of or inability to use the website or services, any user postings made by you, your violation of any terms of this agreement, or your violation of any rights of a third party.
                                 </p>
                                 <p className="text-sm md:text-base text-gray-600 leading-relaxed mt-4">
-                                    In no event shall HA Information Technology, its officers, directors, employees, or agents be liable to you for any direct, indirect, incidental, special, punitive, or consequential damages whatsoever resulting from any errors, mistakes, or inaccuracies of content, personal injury or property damage, or any other damages resulting from your access to and use of our website.
+                                    In no event shall Hamed Alattas Technology, its officers, directors, employees, or agents be liable to you for any direct, indirect, incidental, special, punitive, or consequential damages whatsoever resulting from any errors, mistakes, or inaccuracies of content, personal injury or property damage, or any other damages resulting from your access to and use of our website.
                                 </p>
                             </div>
                         </div>
@@ -169,7 +169,7 @@ const TermsPage = () => {
                                 </p>
                                 <div className="space-y-2 text-sm md:text-base">
                                     <p className="hover:translate-x-2 transition-transform duration-200"><strong>Email:</strong> info@alattastech.com</p>
-                                    <p className="hover:translate-x-2 transition-transform duration-200"><strong>Phone:</strong> +971 523003423</p>
+                                    <p className="hover:translate-x-2 transition-transform duration-200"><strong>Phone:</strong> +971 551882023</p>
                                     <p className="hover:translate-x-2 transition-transform duration-200"><strong>Address:</strong> Dubai, UAE</p>
                                 </div>
                             </div>

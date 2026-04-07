@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
         // Admin notification email
         const adminMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
             subject: '📰 New Newsletter Subscription',
             html: `
@@ -82,9 +82,9 @@ export default async function handler(req, res) {
 
         // User welcome email
         const userMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: email,
-            subject: '🎉 Welcome to HA Information Technology Newsletter!',
+            subject: '🎉 Welcome to Hamed Alattas Technology Newsletter!',
             html: `
                 <!DOCTYPE html>
                 <html>
@@ -112,7 +112,7 @@ export default async function handler(req, res) {
                         <div class="content">
                             <div class="welcome-box">
                                 <h2 style="margin-top: 0; color: #10B981;">Thank You for Subscribing!</h2>
-                                <p style="margin: 0;">We're excited to have you join the <strong>HA Information Technology</strong> newsletter community!</p>
+                                <p style="margin: 0;">We're excited to have you join the <strong>Hamed Alattas Technology</strong> newsletter community!</p>
                                 <p style="margin: 15px 0 0 0;">You'll now receive:</p>
                             </div>
                             
@@ -162,7 +162,7 @@ export default async function handler(req, res) {
                             </div>
                         </div>
                         <div class="footer">
-                            <p><strong>HA Information Technology</strong></p>
+                            <p><strong>Hamed Alattas Technology</strong></p>
                             <p>Dubai, UAE | India</p>
                             <p style="margin-top: 15px; font-size: 11px;">
                                 You're receiving this email because you subscribed to our newsletter.<br>

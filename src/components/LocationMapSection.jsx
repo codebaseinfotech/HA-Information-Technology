@@ -10,8 +10,8 @@ const locations = [
     id: "dubai",
     name: "Dubai",
     coordinates: { lat: 24.9980462, lng: 55.1708135 },
-    address: "Arjumand Building - 3rd floor - Dubai Investment Park First - Green Community Village - Dubai - Dubai",
-    phones: ["+971 523003423"],
+    address: "Office 306 Arjumand Building-3rd Floor Dubai investment Park 1 Dubai UAE",
+    phones: ["+971 551882023"],
     emails: ["info@alattastech.com"],
   },
   {
@@ -49,7 +49,7 @@ const LocationMapSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-10 md:py-16 bg-white">
       <style>
         {`
                     .mapboxgl-ctrl-group { display: none !important; }
@@ -72,7 +72,7 @@ const LocationMapSection = () => {
 
         <div className="flex flex-col items-center justify-center w-full">
           {/* Top - Map */}
-          <div className="w-full h-[400px] lg:h-[500px] rounded-[30px] md:rounded-[40px] overflow-hidden shadow-2xl relative border-4 border-white group/map bg-gray-100 mb-16">
+          <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-[20px] md:rounded-[40px] overflow-hidden shadow-2xl relative border-4 border-white group/map bg-gray-100 mb-8 md:mb-16">
             <Map
               ref={mapRef}
               {...viewState}
@@ -112,7 +112,7 @@ const LocationMapSection = () => {
           </div>
 
           {/* Bottom - Details Cards Side by Side */}
-          <div className="w-full max-w-6xl grid md:grid-cols-2 gap-8 lg:gap-12 relative px-2 md:px-0">
+          <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 relative px-0 md:px-0">
             {locations.map((loc, index) => {
               const isActive = selectedLocation.id === loc.id;
               
@@ -128,7 +128,7 @@ const LocationMapSection = () => {
 
               const slideClass = isVisible 
                 ? "translate-x-0 opacity-100" 
-                : (index === 0 ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0");
+                : (index === 0 ? "md:-translate-x-16 opacity-0" : "md:translate-x-16 opacity-0");
 
               // Styling for active state
               const cardStyles = isActive
@@ -143,16 +143,16 @@ const LocationMapSection = () => {
                       handleMarkerClick(loc);
                     }
                   }}
-                  className={`bg-white rounded-3xl p-8 md:p-10 border-t-[6px] transition-all duration-700 ease-out cursor-pointer flex flex-col items-center justify-between min-h-[420px] ${cardStyles} ${slideClass}`}
+                  className={`bg-white rounded-2xl md:rounded-3xl p-6 md:p-10 border-t-[6px] transition-all duration-700 ease-out cursor-pointer flex flex-col items-center justify-between min-h-0 md:min-h-[420px] ${cardStyles} ${slideClass}`}
                 >
-                  <h3 className="text-3xl md:text-4xl font-extrabold text-[#1a2332] mb-8 text-center">
+                  <h3 className="text-2xl md:text-4xl font-extrabold text-[#1a2332] mb-4 md:mb-8 text-center">
                     Location in{" "}
                     <span className="text-green-600">
                       {loc.name.split(",")[0]}
                     </span>
                   </h3>
 
-                  <div className="w-full space-y-6 flex flex-col items-center">
+                  <div className="w-full space-y-4 md:space-y-6 flex flex-col items-center">
                     {loc.phones.map((phone, idx) => {
                       const cleanPhone = phone.replace(/[^0-9]/g, "");
                       const whatsappLink = `https://api.whatsapp.com/send/?phone=${cleanPhone}&text&type=phone_number&app_absent=0`;
@@ -160,7 +160,7 @@ const LocationMapSection = () => {
                       return (
                         <div
                           key={idx}
-                          className="flex items-center gap-4 text-xl font-bold text-[#1a2332]"
+                          className="flex items-center gap-3 md:gap-4 text-base md:text-xl font-bold text-[#1a2332]"
                         >
                           <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full text-[#1A3C8B]">
                             <Phone className="w-5 h-5 transform rotate-12" />
@@ -185,19 +185,19 @@ const LocationMapSection = () => {
                     {loc.emails.map((email, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-4 text-lg font-semibold text-gray-700"
+                        className="flex items-center gap-3 md:gap-4 text-sm md:text-lg font-semibold text-gray-700"
                       >
                         <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-full text-[#1A3C8B]">
                           <Mail className="w-5 h-5" />
                         </div>
-                        <span className="max-w-[300px] text-nowrap">
+                        <span className="max-w-[200px] md:max-w-[300px] text-nowrap overflow-hidden text-ellipsis">
                           {email}
                         </span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-8 pt-6 w-full bg-[#f1f8e9] p-6 rounded-2xl text-center shadow-sm border border-[#c5e1a5]">
+                  <div className="mt-4 md:mt-8 pt-4 md:pt-6 w-full bg-[#f1f8e9] p-4 md:p-6 rounded-xl md:rounded-2xl text-center shadow-sm border border-[#c5e1a5]">
                     <p className="text-[#1a2332] font-semibold text-sm md:text-base leading-relaxed">
                       {loc.address}
                     </p>

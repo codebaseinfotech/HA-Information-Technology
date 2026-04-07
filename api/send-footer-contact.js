@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
         // Admin email content
         const adminMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
             subject: '📬 New Footer Contact Form Submission',
             html: `
@@ -89,7 +89,7 @@ export default async function handler(req, res) {
 
         // User thank you email content
         const userMailOptions = {
-            from: `"HA Information Technology" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: '✅ Thank You for Getting in Touch!',
             html: `
@@ -118,13 +118,13 @@ export default async function handler(req, res) {
                                 Dear ${name},
                             </div>
                             <div class="message-box">
-                                <p style="margin: 0;">Thank you for reaching out to <strong>HA Information Technology</strong>!</p>
+                                <p style="margin: 0;">Thank you for reaching out to <strong>Hamed Alattas Technology</strong>!</p>
                                 <p style="margin: 15px 0 0 0;">We have successfully received your message. Our team will carefully review it and get back to you within <strong>24-48 hours</strong>.</p>
                             </div>
                             
                             <div class="contact-info">
                                 <h3 style="margin-top: 0; color: #1A3C8B;">📞 Need Immediate Assistance?</h3>
-                                <p style="margin: 10px 0;"><strong>UAE:</strong> +971 523003423</p>
+                                <p style="margin: 10px 0;"><strong>UAE:</strong> +971 551882023</p>
                                 <p style="margin: 10px 0;"><strong>India:</strong> +91-7096859504</p>
                                 <p style="margin: 10px 0;"><strong>Email:</strong> info@alattastech.com</p>
                             </div>
@@ -134,7 +134,7 @@ export default async function handler(req, res) {
                             </div>
                         </div>
                         <div class="footer">
-                            <p><strong>HA Information Technology</strong></p>
+                            <p><strong>Hamed Alattas Technology</strong></p>
                             <p>Your Trusted IT Solutions Partner</p>
                             <p style="margin-top: 15px; font-size: 11px;">
                                 This is an automated confirmation email. Please do not reply to this email.<br>

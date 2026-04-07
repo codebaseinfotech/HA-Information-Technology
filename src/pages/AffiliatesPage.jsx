@@ -16,12 +16,12 @@ const AffiliatesPage = () => {
         {
             icon: Code,
             title: "Start in seconds",
-            description: "Click the button below, fill in a few details, and you'll be a registered HA Information Technology Affiliate in no time. We'll send your referral link straight to your inbox."
+            description: "Click the button below, fill in a few details, and you'll be a registered Hamed Alattas Technology Affiliate in no time. We'll send your referral link straight to your inbox."
         },
         {
             icon: Share2,
             title: "Spread the word",
-            description: "Share your referral link with your network and friends via email and social media. Let them know how HA Information Technology can help them scale globally."
+            description: "Share your referral link with your network and friends via email and social media. Let them know how Hamed Alattas Technology can help them scale globally."
         },
         {
             icon: DollarSign,
@@ -33,8 +33,8 @@ const AffiliatesPage = () => {
     return (
         <div className="min-h-screen bg-white">
             <SEO
-                title="Become a Partner - Affiliate Program | HA Information Technology"
-                description="Join HA Information Technology affiliate program and earn 30% commission for every referral. Partner with us and help businesses grow with our IT solutions and software services."
+                title="Become a Partner - Affiliate Program | Hamed Alattas Technology"
+                description="Join Hamed Alattas Technology affiliate program and earn 30% commission for every referral. Partner with us and help businesses grow with our IT solutions and software services."
                 keywords="IT affiliate program, technology partner program, software referral program, IT partnership opportunities, earn commission IT services, become technology partner, affiliate marketing IT, partnership program Dubai"
                 url="/affiliates"
             />
@@ -70,7 +70,7 @@ const AffiliatesPage = () => {
                             Become an affiliate. Use your<span className="text-blue-600">network</span>
                         </h2>
                         <p className="text-gray-500 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">
-                            Help your network discover how HA Information Technology makes hiring and paying global teams stress-free while earning rewards along the way.
+                            Help your network discover how Hamed Alattas Technology makes hiring and paying global teams stress-free while earning rewards along the way.
                         </p>
                     </div>
 

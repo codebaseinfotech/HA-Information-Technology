@@ -16,9 +16,9 @@ const ContactPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <SEO
-                title="Contact Us - HA Information Technology | Get in Touch"
-                description="Contact HA Information Technology for IT solutions and software development services. Reach us in UAE (+971 523003423) or India (+91-7096859504). Email: info@alattastech.com"
-                keywords="contact IT company UAE, software development inquiry Dubai, IT support contact, technology consultation UAE, contact HA Information Technology, IT services inquiry, get quote software development, contact web development company, IT company Dubai contact, software company contact India"
+                title="Contact Us - Hamed Alattas Technology | Get in Touch"
+                description="Contact Hamed Alattas Technology for IT solutions and software development services. Reach us in UAE (+971 551882023) or India (+91-7096859504). Email: info@alattastech.com"
+                keywords="contact IT company UAE, software development inquiry Dubai, IT support contact, technology consultation UAE, contact Hamed Alattas Technology, IT services inquiry, get quote software development, contact web development company, IT company Dubai contact, software company contact India"
                 url="/contact"
                 schema={getLocalBusinessSchema()}
             />

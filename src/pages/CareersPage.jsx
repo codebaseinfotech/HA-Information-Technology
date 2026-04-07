@@ -15,8 +15,8 @@ const CareersPage = () => {
     return (
         <div className="min-h-screen bg-white">
             <SEO
-                title="Careers - Join Our Team | HA Information Technology"
-                description="Explore career opportunities at HA Information Technology. Join our innovative team of IT professionals and grow your career in software development, web development, and technology services."
+                title="Careers - Join Our Team | Hamed Alattas Technology"
+                description="Explore career opportunities at Hamed Alattas Technology. Join our innovative team of IT professionals and grow your career in software development, web development, and technology services."
                 keywords="IT jobs UAE, software developer jobs Dubai, web developer careers, IT careers India, technology jobs, software engineer positions, join IT company, careers in technology, IT job opportunities Dubai"
                 url="/careers"
             />
@@ -49,7 +49,7 @@ const CareersPage = () => {
                     <div className="text-center mb-12">
                         <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-4">CAREERS</span>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a2332] mb-6">
-                            Careers at <span className="text-blue-600">HA Information Technology</span>
+                            Careers at <span className="text-blue-600">Hamed Alattas Technology</span>
                         </h2>
                     </div>
 
@@ -58,7 +58,7 @@ const CareersPage = () => {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                             <img
                                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Careers at HA Information Technology"
+                                alt="Careers at Hamed Alattas Technology"
                                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

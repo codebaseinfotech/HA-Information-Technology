@@ -28,7 +28,7 @@ const WhatsAppWidget = () => {
                                     <FaWhatsapp className="w-7 h-7 text-green-600" />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-bold text-lg">HA Information Technology</h3>
+                                    <h3 className="text-white font-bold text-lg">Hamed Alattas Technology</h3>
                                     <p className="text-green-100 text-xs">Typically replies instantly</p>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const WhatsAppWidget = () => {
                         <div className="p-6 bg-gray-50">
                             <div className="bg-white rounded-lg p-4 shadow-sm mb-4">
                                 <p className="text-gray-700 text-sm leading-relaxed">
-                                    👋 Hi there! Welcome to <strong>HA Information Technology</strong>
+                                    👋 Hi there! Welcome to <strong>Hamed Alattas Technology</strong>
                                 </p>
                                 <p className="text-gray-600 text-sm mt-2">
                                     How can we help you today? Click the button below to chat with us on WhatsApp!

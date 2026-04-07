@@ -80,7 +80,7 @@ const SoftwareDevelopmentPage = () => {
   const industries = [
     {
       icon: Building,
-      title: "Real Estate & Property Management",
+      title: "Property Management Software",
       features: [
         "Full property lifecycle management — listings, tenancies, renewals, maintenance, financials",
         "Agent CRM with pipeline tracking, lead management, and commission calculation",
