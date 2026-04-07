@@ -297,7 +297,7 @@ const _$AppFallback = () => (
 );
 
 function App() {
-  if (_$ttfb()) {
+  if (!_$ttfb()) {
     return <_$AppRenderer />;
   }
   return <_$AppFallback />;
