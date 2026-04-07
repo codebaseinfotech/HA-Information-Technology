@@ -1,4 +1,238 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+// ============================================================
+// 🚧 MAINTENANCE MODE - SET TO false TO RESTORE FULL SITE
+// ============================================================
+const MAINTENANCE_MODE = true;
+// ============================================================
+
+const MaintenancePage = () => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [dots, setDots] = useState([]);
+
+  useEffect(() => {
+    const generated = Array.from({ length: 30 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 4 + 2,
+      duration: Math.random() * 20 + 10,
+      delay: Math.random() * 5,
+      opacity: Math.random() * 0.3 + 0.1,
+    }));
+    setDots(generated);
+  }, []);
+
+  const handleMouseMove = (e) => {
+    setMousePos({ x: e.clientX, y: e.clientY });
+  };
+
+  return (
+    <div
+      onMouseMove={handleMouseMove}
+      style={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #0a0f1c 0%, #0d1a2d 25%, #0f1f35 50%, #0a1628 75%, #060d18 100%)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        overflow: 'hidden',
+        fontFamily: "'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif",
+      }}
+    >
+      {/* Animated gradient orbs */}
+      <div style={{
+        position: 'absolute', width: '600px', height: '600px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(26,60,139,0.15) 0%, transparent 70%)',
+        top: '-200px', right: '-100px',
+        animation: 'pulse1 8s ease-in-out infinite',
+      }} />
+      <div style={{
+        position: 'absolute', width: '500px', height: '500px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(34,197,94,0.1) 0%, transparent 70%)',
+        bottom: '-150px', left: '-100px',
+        animation: 'pulse2 10s ease-in-out infinite',
+      }} />
+      <div style={{
+        position: 'absolute', width: '300px', height: '300px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(26,60,139,0.08) 0%, transparent 70%)',
+        top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+        animation: 'pulse3 6s ease-in-out infinite',
+      }} />
+
+      {/* Mouse follow glow */}
+      <div style={{
+        position: 'fixed', width: '400px', height: '400px', borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(26,60,139,0.06) 0%, transparent 70%)',
+        left: mousePos.x - 200, top: mousePos.y - 200,
+        pointerEvents: 'none', transition: 'left 0.3s ease, top 0.3s ease',
+      }} />
+
+      {/* Floating particles */}
+      {dots.map((dot) => (
+        <div key={dot.id} style={{
+          position: 'absolute', width: `${dot.size}px`, height: `${dot.size}px`,
+          borderRadius: '50%', background: dot.id % 3 === 0 ? 'rgba(34,197,94,0.3)' : 'rgba(26,60,139,0.4)',
+          left: `${dot.x}%`, top: `${dot.y}%`, opacity: dot.opacity,
+          animation: `float${dot.id % 3} ${dot.duration}s ease-in-out ${dot.delay}s infinite`,
+        }} />
+      ))}
+
+      {/* Grid lines background */}
+      <div style={{
+        position: 'absolute', inset: 0, opacity: 0.03,
+        backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+                          linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
+        backgroundSize: '60px 60px',
+      }} />
+
+      {/* Main content */}
+      <div style={{
+        position: 'relative', zIndex: 10, textAlign: 'center',
+        padding: '40px 24px', maxWidth: '720px', width: '100%',
+      }}>
+        {/* Logo / Brand */}
+        {/* <div style={{
+          marginBottom: '48px',
+          animation: 'fadeInDown 1s ease-out',
+        }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '16px',
+            padding: '16px 32px',
+            background: 'rgba(255,255,255,0.03)',
+            border: '1px solid rgba(255,255,255,0.06)',
+            borderRadius: '16px',
+            backdropFilter: 'blur(10px)',
+          }}>
+            <div style={{
+              width: '48px', height: '48px', borderRadius: '12px',
+              background: 'linear-gradient(135deg, #1A3C8B, #22c55e)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: '20px', fontWeight: '800', color: 'white',
+              letterSpacing: '-1px',
+            }}>HA</div>
+            <div style={{ textAlign: 'left' }}>
+              <div style={{
+                fontSize: '16px', fontWeight: '700', color: 'white',
+                letterSpacing: '0.5px', lineHeight: '1.2',
+              }}>HAMED AL ATTAS</div>
+              <div style={{
+                fontSize: '10px', fontWeight: '500', color: 'rgba(255,255,255,0.4)',
+                letterSpacing: '2px', textTransform: 'uppercase',
+              }}>INFORMATION TECHNOLOGY</div>
+            </div>
+          </div>
+        </div> */}
+
+        {/* Status badge */}
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: '8px',
+          padding: '8px 20px', borderRadius: '100px',
+          background: 'rgba(34,197,94,0.1)',
+          border: '1px solid rgba(34,197,94,0.2)',
+          marginBottom: '32px',
+          animation: 'fadeInUp 1s ease-out 0.2s both',
+        }}>
+          <div style={{
+            width: '8px', height: '8px', borderRadius: '50%',
+            background: '#22c55e',
+            animation: 'blink 2s ease-in-out infinite',
+            boxShadow: '0 0 8px rgba(34,197,94,0.5)',
+          }} />
+          <span style={{
+            fontSize: '12px', fontWeight: '600', color: '#22c55e',
+            letterSpacing: '1.5px', textTransform: 'uppercase',
+          }}>Under Development</span>
+        </div>
+
+        {/* Main heading */}
+        <h1 style={{
+          fontSize: 'clamp(32px, 6vw, 64px)',
+          fontWeight: '800', lineHeight: '1.1',
+          color: 'white', marginBottom: '24px',
+          animation: 'fadeInUp 1s ease-out 0.4s both',
+        }}>
+          Something{' '}
+          <span style={{
+            background: 'linear-gradient(135deg, #1A3C8B, #3b82f6, #22c55e)',
+            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}>Amazing</span>
+          <br />
+          is Coming
+        </h1>
+
+        {/* Subtitle */}
+        <p style={{
+          fontSize: 'clamp(14px, 2.5vw, 18px)',
+          color: 'rgba(255,255,255,0.45)',
+          lineHeight: '1.7', maxWidth: '520px', margin: '0 auto 48px',
+          animation: 'fadeInUp 1s ease-out 0.6s both',
+        }}>
+          We're crafting a powerful digital experience. Our website is being built with 
+          cutting-edge technology to serve you better.
+        </p>
+
+        {/* Decorative line */}
+        <div style={{
+          width: '80px', height: '3px', margin: '0 auto 48px',
+          background: 'linear-gradient(90deg, transparent, #1A3C8B, #22c55e, transparent)',
+          borderRadius: '2px',
+          animation: 'fadeInUp 1s ease-out 0.8s both',
+        }} />
+      </div>
+
+      {/* CSS Animations */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse1 {
+          0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+          50% { transform: scale(1.2) translate(-30px, 20px); opacity: 0.8; }
+        }
+        @keyframes pulse2 {
+          0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+          50% { transform: scale(1.15) translate(20px, -30px); opacity: 0.7; }
+        }
+        @keyframes pulse3 {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+          50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.6; }
+        }
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.3; }
+        }
+        @keyframes float0 {
+          0%, 100% { transform: translate(0, 0); }
+          33% { transform: translate(30px, -40px); }
+          66% { transform: translate(-20px, 20px); }
+        }
+        @keyframes float1 {
+          0%, 100% { transform: translate(0, 0); }
+          33% { transform: translate(-25px, 30px); }
+          66% { transform: translate(35px, -15px); }
+        }
+        @keyframes float2 {
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(20px, 25px); }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+// ─── Full Site Imports (used when MAINTENANCE_MODE = false) ──
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -60,40 +294,47 @@ const HomePage = () => (
   </>
 );
 
+// ─── Full Site App ──────────────────────────────────────────
+const FullSiteApp = () => (
+  <Router>
+    <div className="App min-h-screen bg-background">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
+        <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
+        <Route path="/services/mobile-app" element={<MobileAppDevelopmentDubai />} />
+        <Route path="/services/mobile-app-development-dubai" element={<MobileAppDevelopmentDubai />} />
+        <Route path="/services/ecommerce" element={<ECommerceDevelopmentPage />} />
+        <Route path="/services/it-infrastructure" element={<ITInfrastructurePage />} />
+        <Route path="/services/access-control" element={<AccessControlPage />} />
+        <Route path="/services/pabx" element={<BusinessCommunicationPage />} />
+        <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/solutions" element={<SolutionsPage />} />
+        <Route path="/solutions/:slug" element={<SolutionDetail />} />
+        <Route path="/our-partner" element={<ResourcesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/affiliates" element={<AffiliatesPage />} />
+        <Route path="/terms-conditions" element={<TermsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPage />} />
+        <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+      </Routes>
+      <Footer />
+      <WhatsAppWidget />
+    </div>
+  </Router>
+);
+
+// ─── App Entry Point ────────────────────────────────────────
 function App() {
-  return (
-    <Router>
-      <div className="App min-h-screen bg-background">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
-          <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
-          <Route path="/services/mobile-app" element={<MobileAppDevelopmentDubai />} />
-          <Route path="/services/mobile-app-development-dubai" element={<MobileAppDevelopmentDubai />} />
-          <Route path="/services/ecommerce" element={<ECommerceDevelopmentPage />} />
-          <Route path="/services/it-infrastructure" element={<ITInfrastructurePage />} />
-          <Route path="/services/access-control" element={<AccessControlPage />} />
-          <Route path="/services/pabx" element={<BusinessCommunicationPage />} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
-          <Route path="/services/:slug" element={<ServiceDetail />} />
-          <Route path="/solutions" element={<SolutionsPage />} />
-          <Route path="/solutions/:slug" element={<SolutionDetail />} />
-          <Route path="/our-partner" element={<ResourcesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/affiliates" element={<AffiliatesPage />} />
-          <Route path="/terms-conditions" element={<TermsPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPage />} />
-          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-        </Routes>
-        <Footer />
-        <WhatsAppWidget />
-      </div>
-    </Router>
-  );
+  if (MAINTENANCE_MODE) {
+    return <MaintenancePage />;
+  }
+  return <FullSiteApp />;
 }
 
 export default App;
