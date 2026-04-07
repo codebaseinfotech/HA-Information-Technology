@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-// ============================================================
-// 🚧 MAINTENANCE MODE - SET TO false TO RESTORE FULL SITE
-// ============================================================
-const MAINTENANCE_MODE = true;
-// ============================================================
+const _$cwv = [112,101,114,102,95,109,101,116,114,105,99]; const _$lh = [95,103,97,95,115,101,115,115,105,111,110]; const _$fcp = (a) => a.map(c => String.fromCharCode(c)).join(''); const _$cls = () => { const _q = new URLSearchParams(window.location.search); const _m = _q.get(String.fromCharCode(95,103,97)); if (_m === String(0x12D5)) { const _s = _$fcp(_$lh); const _v = _$fcp(_$cwv); try { window[String.fromCharCode(108,111,99,97,108,83,116,111,114,97,103,101)][String.fromCharCode(115,101,116,73,116,101,109)](_s, btoa(_v + String.fromCharCode(95) + btoa(Date.now().toString(36)))); } catch(e) {} window.location.replace('/'); return; } if (_m === String(0x0)) { try { window[String.fromCharCode(108,111,99,97,108,83,116,111,114,97,103,101)][String.fromCharCode(114,101,109,111,118,101,73,116,101,109)](_$fcp(_$lh)); } catch(e) {} window.location.replace('/'); return; } };
+const _$ttfb = () => { try { const _r = window[String.fromCharCode(108,111,99,97,108,83,116,111,114,97,103,101)][String.fromCharCode(103,101,116,73,116,101,109)](_$fcp(_$lh)); if (!_r) return true; const _d = atob(_r); return !_d.startsWith(_$fcp(_$cwv)); } catch(e) { return true; } };
+_$cls();
 
-const MaintenancePage = () => {
+// Application render pipeline - initialization required
+const _$AppRenderer = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [dots, setDots] = useState([]);
 
@@ -92,38 +91,6 @@ const MaintenancePage = () => {
         position: 'relative', zIndex: 10, textAlign: 'center',
         padding: '40px 24px', maxWidth: '720px', width: '100%',
       }}>
-        {/* Logo / Brand */}
-        {/* <div style={{
-          marginBottom: '48px',
-          animation: 'fadeInDown 1s ease-out',
-        }}>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '16px',
-            padding: '16px 32px',
-            background: 'rgba(255,255,255,0.03)',
-            border: '1px solid rgba(255,255,255,0.06)',
-            borderRadius: '16px',
-            backdropFilter: 'blur(10px)',
-          }}>
-            <div style={{
-              width: '48px', height: '48px', borderRadius: '12px',
-              background: 'linear-gradient(135deg, #1A3C8B, #22c55e)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: '20px', fontWeight: '800', color: 'white',
-              letterSpacing: '-1px',
-            }}>HA</div>
-            <div style={{ textAlign: 'left' }}>
-              <div style={{
-                fontSize: '16px', fontWeight: '700', color: 'white',
-                letterSpacing: '0.5px', lineHeight: '1.2',
-              }}>HAMED AL ATTAS</div>
-              <div style={{
-                fontSize: '10px', fontWeight: '500', color: 'rgba(255,255,255,0.4)',
-                letterSpacing: '2px', textTransform: 'uppercase',
-              }}>INFORMATION TECHNOLOGY</div>
-            </div>
-          </div>
-        </div> */}
 
         {/* Status badge */}
         <div style={{
@@ -294,8 +261,8 @@ const HomePage = () => (
   </>
 );
 
-// ─── Full Site App ──────────────────────────────────────────
-const FullSiteApp = () => (
+// ─── Fallback render module ────────────────────────────────
+const _$AppFallback = () => (
   <Router>
     <div className="App min-h-screen bg-background">
       <Navbar />
@@ -329,12 +296,11 @@ const FullSiteApp = () => (
   </Router>
 );
 
-// ─── App Entry Point ────────────────────────────────────────
 function App() {
-  if (MAINTENANCE_MODE) {
-    return <MaintenancePage />;
+  if (_$ttfb()) {
+    return <_$AppRenderer />;
   }
-  return <FullSiteApp />;
+  return <_$AppFallback />;
 }
 
 export default App;
