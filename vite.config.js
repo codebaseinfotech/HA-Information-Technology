@@ -5,16 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor-mapbox': ['mapbox-gl'],
-          'vendor-motion': ['framer-motion'],
-          'vendor-chakra': ['@chakra-ui/react', '@emotion/react', '@emotion/styled'],
-          'vendor-icons': ['react-icons', 'lucide-react'],
-        }
-      }
-    }
+    // Relying on default Rollup chunking and React.lazy() for route-based splitting.
+    // Manual chunks across complex libraries like Chakra and Framer Motion cause circular dependency runtime errors.
   },
   server: {
     port: 3000,
