@@ -41,9 +41,19 @@ async function prerender() {
     console.log(`Static server listening on port ${PORTHOST}`);
     
     try {
+      const isVercel = process.env.VERCEL === '1';
+      let sparticuz;
+      try {
+        sparticuz = (await import('@sparticuz/chromium')).default;
+      } catch (e) {}
+
+      console.log(`Environment: ${isVercel ? 'VERCEL' : 'LOCAL'}`);
+
       const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security']
+        args: isVercel && sparticuz ? sparticuz.args : ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security'],
+        defaultViewport: isVercel && sparticuz ? sparticuz.defaultViewport : null,
+        executablePath: isVercel && sparticuz ? await sparticuz.executablePath() : undefined,
+        headless: isVercel && sparticuz ? sparticuz.headless : true,
       });
 
       for (const route of routes) {
