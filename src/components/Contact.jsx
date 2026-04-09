@@ -169,6 +169,7 @@ const Contact = ({ hideImage = false }) => {
                                         name="service"
                                         value={formData.service}
                                         onChange={handleChange}
+                                        aria-label="Select a product or service"
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors text-gray-600"
                                         required
                                         disabled={isSubmitting}

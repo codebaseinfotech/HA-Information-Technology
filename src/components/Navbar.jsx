@@ -42,7 +42,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex gap-3 items-center">
                         <Link to="/">
-                            <img src={logo} alt="HA IT Logo" className=" w-56 lg:w-72 h-auto object-contain cursor-pointer" />
+                            <img src={logo} alt="Hamed Alattas Technology Logo" width="288" height="60" className=" w-56 lg:w-72 h-auto object-contain cursor-pointer" />
                         </Link>
                     </div>
 
@@ -94,6 +94,7 @@ const Navbar = () => {
                                 <button
                                     onClick={handleMobileClose}
                                     className="text-[#1A3C8B] hover:text-[#1A3C8B]/80 transition-colors"
+                                    aria-label="Close menu"
                                 >
                                     <X size={28} />
                                 </button>

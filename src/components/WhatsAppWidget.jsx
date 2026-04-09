@@ -35,6 +35,7 @@ const WhatsAppWidget = () => {
                             <button
                                 onClick={() => setIsOpen(false)}
                                 className="text-white hover:bg-white/20 rounded-full p-1 transition-colors"
+                                aria-label="Close chat"
                             >
                                 <X className="w-5 h-5" />
                             </button>

@@ -156,6 +156,9 @@ const TrustSection = () => {
                                                 <img 
                                                     src={testi.authorAvatar} 
                                                     alt={testi.authorName} 
+                                                    width="64"
+                                                    height="64"
+                                                    loading="lazy"
                                                     className="w-16 h-16 rounded-full object-cover border-4 border-gray-50 mb-2" 
                                                 />
                                                 <p className="font-bold text-gray-900">{testi.authorName}, {testi.authorCompany}</p>

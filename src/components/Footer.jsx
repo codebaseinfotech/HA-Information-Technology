@@ -212,6 +212,7 @@ const Footer = () => {
                                     <button
                                         type="submit"
                                         disabled={isNewsletterSubmitting}
+                                        aria-label="Subscribe to newsletter"
                                         className="bg-[#1A3C8B] absolute right-0 top-0 bottom-0 hover:bg-[#1A3C8B]/80 text-white px-4 py-2.5 rounded-r-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isNewsletterSubmitting ? (

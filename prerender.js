@@ -110,11 +110,16 @@ async function prerender() {
         });
 
         // Load the page and wait for the root div to have content
-        await page.goto(`http://localhost:${PORTHOST}${route}`, { waitUntil: 'networkidle0', timeout: 30000 });
+        await page.goto(`http://localhost:${PORTHOST}${route}`, { waitUntil: 'networkidle0', timeout: 60000 });
         
-        // Wait for React to mount and helmet to update
-        await page.waitForFunction('document.getElementById("root").hasChildNodes()');
-        await new Promise(r => setTimeout(r, 1000));
+        // Wait for React to mount (with lazy loading, content may take longer)
+        try {
+          await page.waitForFunction('document.getElementById("root").hasChildNodes()', { timeout: 15000 });
+        } catch (e) {
+          console.log(`  Warning: root may not have children for ${route}, continuing...`);
+        }
+        // Extra time for lazy chunks + helmet meta tags to load
+        await new Promise(r => setTimeout(r, 3000));
         
         // Extract HTML
         const html = await page.content();
