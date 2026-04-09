@@ -404,7 +404,7 @@ const WebsiteDevelopmentPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <SEO
-        title="Custom Web Development Company in Dubai UAE | Hamed AL Attas Tech"
+        title="Custom Web Development Company in Dubai UAE | Hamed Alattas Technology"
         description="Top-rated web development company in Dubai, UAE. We've built 100+ websites using React, Laravel & Node.js for businesses across the UAE. Get a free consultation today. AED 5,000 – AED 100,000+."
         keywords="Web Development Company, custom website development Dubai, ecommerce development UAE, React Laravel web development services"
         url="/services/website-development"
@@ -536,7 +536,7 @@ const WebsiteDevelopmentPage = () => {
               </h2>
               <div className="space-y-6 text-gray-600 text-base leading-relaxed">
                 <p>
-                  At Hamed AL Attas Information Technology, we're a 35-person
+                  At Hamed Alattas Technology, we're a 35-person
                   team of developers, designers, and project managers based
                   right here in the UAE. We've worked with government entities,
                   banks, universities, and retail brands since 2017 — meaning we
@@ -780,13 +780,13 @@ const WebsiteDevelopmentPage = () => {
                 name: "Khalid Al Ansari",
                 title: "CEO, Ansari Properties — Dubai",
                 quote:
-                  "Hamed AL Attas Tech built our entire property portal from scratch. Pages load in under 2 seconds and the lead capture system has tripled our monthly inquiries. They also trained our team so we can manage content ourselves.",
+                  "Hamed Alattas Technology built our entire property portal from scratch. Pages load in under 2 seconds and the lead capture system has tripled our monthly inquiries. They also trained our team so we can manage content ourselves.",
               },
               {
                 name: "Noura Al Mazrouei",
                 title: "Digital Director, Government Entity — Abu Dhabi",
                 quote:
-                  "We'd worked with three agencies before Hamed AL Attas Tech. None of them understood government-facing platform requirements. These guys knew about UAE Pass, accessibility standards, and bilingual CMS needs from the first meeting.",
+                  "We'd worked with three agencies before Hamed Alattas Technology. None of them understood government-facing platform requirements. These guys knew about UAE Pass, accessibility standards, and bilingual CMS needs from the first meeting.",
               },
               {
                 name: "Sara Rahimi",
@@ -860,7 +860,7 @@ const WebsiteDevelopmentPage = () => {
               </span>
             </h2>
             <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Join 1,500+ UAE businesses that trust Hamed AL Attas Tech to
+              Join 1,500+ UAE businesses that trust Hamed Alattas Technology to
               build, maintain, and grow their digital presence.
             </p>
           </div>

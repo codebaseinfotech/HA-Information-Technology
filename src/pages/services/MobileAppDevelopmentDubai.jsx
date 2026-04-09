@@ -158,8 +158,8 @@ const MobileAppDevelopmentDubai = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <SEO
-        title="Top Ranked Mobile App Development in UAE | Hamed Al Attas IT Dubai"
-        description="Build fast, secure, and user-friendly Android & iOS apps with Hamed Al Attas IT. Trusted by 1500+ clients in Dubai, Abu Dhabi & Sharjah. Get your free strategy session!"
+        title="Top Ranked Mobile App Development in UAE | Hamed Alattas Technology Dubai"
+        description="Build fast, secure, and user-friendly Android & iOS apps with Hamed Alattas Technology. Trusted by 1500+ clients in Dubai, Abu Dhabi & Sharjah. Get your free strategy session!"
         keywords="Mobile App Development UAE, Android App Development Dubai, iOS App Dubai, Custom Mobile Apps, Flutter App UAE"
         url="/services/mobile-app"
         schemas={[
@@ -229,7 +229,7 @@ const MobileAppDevelopmentDubai = () => {
               Bring your brand to life on every smartphone. We design and
               develop iOS and Android apps that digitalize operations, engage
               real users, and drive measurable growth. Over 07 years,
-              <strong> Hamed Al Attas a </strong>{" "}
+              <strong> Hamed Alattas Technology a </strong>{" "}
               <Link
                 to="https://ha-information-technology.vercel.app/"
                 className="hover:text-[#10B981]/80 transition-colors text-[#10B981]"
@@ -538,7 +538,7 @@ const MobileAppDevelopmentDubai = () => {
         <div className="container mx-auto px-4 xl:px-12 max-w-[1400px]">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#1a2332] mb-6">
-              Why Choose Hamed Al Attas IT in UAE?
+              Why Choose Hamed Alattas Technology in UAE?
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               We’ve spent the last <strong>7+ years</strong> helping brands turn
@@ -592,7 +592,7 @@ const MobileAppDevelopmentDubai = () => {
               {
                 t: "Innovation That Keeps You Ahead",
                 d: "We don’t follow trends blindly — we use the right ideas and technologies to help your app stand out and stay competitive in the market.",
-                e: "At the end of the day, brands choose Hamed Al Attas because we keep things real — clear communication, solid work, and apps that actually make a difference.",
+                e: "At the end of the day, brands choose Hamed Alattas Technology because we keep things real — clear communication, solid work, and apps that actually make a difference.",
               },
             ].map((reason, i) => (
               <div
@@ -706,7 +706,7 @@ const MobileAppDevelopmentDubai = () => {
                 {[
                   {
                     quote:
-                      "Hamed Al Attas IT delivered our Dubai taxi app in under 8 weeks — on budget and with zero critical bugs at launch.",
+                      "Hamed Alattas Technology delivered our Dubai taxi app in under 8 weeks — on budget and with zero critical bugs at launch.",
                     author: "CEO, Al Noor Transport — Dubai",
                   },
                   {
@@ -825,7 +825,7 @@ const MobileAppDevelopmentDubai = () => {
                 Ready to Build Your App in Dubai?
               </h2>
               <p className="text-xl text-blue-100/80 mb-10 leading-relaxed max-w-2xl">
-                Join 200+ UAE businesses who trusted Hamed Al Attas IT. Your free strategy session includes a project estimate, technology recommendation, and timeline.
+                Join 200+ UAE businesses who trusted Hamed Alattas Technology. Your free strategy session includes a project estimate, technology recommendation, and timeline.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-16 w-full justify-center">

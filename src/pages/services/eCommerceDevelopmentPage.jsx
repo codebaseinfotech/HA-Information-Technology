@@ -359,7 +359,7 @@ const ECommerceDevelopmentPage = () => {
                 to="https://ha-information-technology.vercel.app/"
                 className="hover:text-[#10B981]/80 transition-colors text-[#10B981]"
               >
-                Hamed Al Attas IT
+                Hamed Alattas Technology
               </Link>{" "}
               builds stores that actually sell.
             </p>

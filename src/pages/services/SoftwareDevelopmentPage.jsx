@@ -258,7 +258,7 @@ const SoftwareDevelopmentPage = () => {
               Dhabi to Sharjah — this frustration is surprisingly common.
             </p>
             <p className="text-xl text-gray-300 font-semibold leading-relaxed mb-4 max-w-3xl">
-              Hamed Al Attas Information Technology builds custom software that
+              Hamed Alattas Technology builds custom software that
               removes those limitations, giving your business the systems it
               needs to operate smoothly, scale confidently, and grow without
               technical barriers.
@@ -344,7 +344,7 @@ const SoftwareDevelopmentPage = () => {
                     <div className="w-1.5 h-48 bg-gradient-to-b from-[#1A3C8B] to-[#10B981] rounded-full"></div>
                     <span>
                       <strong className="text-[#1A3C8B] text-base">
-                        Hamed Al Attas Information Technology
+                        Hamed Alattas Technology
                       </strong>{" "}
                       is a leading{" "}
                       <a
@@ -1051,7 +1051,7 @@ const SoftwareDevelopmentPage = () => {
 
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 mb-12 pb-10 border-b border-white/10 w-full justify-center">
               <h4 className="text-xl  font-extrabold text-white tracking-wide">
-                Hamed Al Attas Information Technology — Custom Software Development Supporting Businesses Across Dubai, the UAE, and International Markets.
+                Hamed Alattas Technology — Custom Software Development Supporting Businesses Across Dubai, the UAE, and International Markets.
               </h4>
             </div>
 

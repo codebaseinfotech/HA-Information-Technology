@@ -28,7 +28,7 @@ const getDigitalSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Hamed Al Attas",
+    "name": "Hamed Alattas Technology",
     "image": "https://alattastech.com/logo.png",
     "@id": "https://alattastech.com/services/digital-marketing",
     "url": "https://alattastech.com/services/digital-marketing",
@@ -51,7 +51,7 @@ const getDigitalSchema = () => {
       "@type": "Country",
       "name": "UAE"
     },
-    "description": "Hamed Al Attas provides full-service digital marketing in UAE including SEO, social media marketing, PPC, content marketing, and local business growth solutions tailored for real estate, fashion, pest control, and other local businesses.",
+    "description": "Hamed Alattas Technology provides full-service digital marketing in UAE including SEO, social media marketing, PPC, content marketing, and local business growth solutions tailored for real estate, fashion, pest control, and other local businesses.",
     "serviceType": [
       "Digital Marketing",
       "SEO Services",
@@ -152,7 +152,7 @@ const DigitalMarketingPage = () => {
     <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
       <SEO
         title="Digital Marketing Services UAE | SEO, Social Media & PPC"
-        description="Grow your UAE business with Hamed Al Attas Digital Marketing. SEO, social media, PPC, and content strategies for real estate, fashion, pest control, and local businesses — organic growth, lower costs, measurable results."
+        description="Grow your UAE business with Hamed Alattas Technology Digital Marketing. SEO, social media, PPC, and content strategies for real estate, fashion, pest control, and local businesses — organic growth, lower costs, measurable results."
         keywords="Digital Marketing UAE, SEO Services Dubai, Social Media Marketing Abu Dhabi, PPC Management UAE, Content Marketing Dubai"
         url="/services/digital-marketing"
         schemas={[getDigitalSchema()]}
@@ -196,7 +196,7 @@ const DigitalMarketingPage = () => {
               transition={{ delay: 0.4 }}
               className="text-base text-gray-300 leading-relaxed mb-8 max-w-3xl"
             >
-              At Hamed Al Attas, our strategies focus on sustainable growth, high-quality leads, and measurable ROI across the UAE.
+              At Hamed Alattas Technology, our strategies focus on sustainable growth, high-quality leads, and measurable ROI across the UAE.
             </motion.p>
             
             <motion.div 
@@ -340,7 +340,7 @@ const DigitalMarketingPage = () => {
               className="bg-gradient-to-br from-[#1a2332] to-[#1A3C8B] rounded-[3rem] p-10 md:p-14 text-white relative overflow-hidden shadow-2xl"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl"></div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">Benefits of Choosing Hamed Al Attas</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 relative z-10">Benefits of Choosing Hamed Alattas Technology</h2>
               <ul className="space-y-6 relative z-10">
                 {benefits.map((benefit, i) => (
                   <motion.li 
@@ -401,7 +401,7 @@ const DigitalMarketingPage = () => {
              <div className="absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-[#1A3C8B] to-[#10B981]"></div>
              <h2 className="text-3xl md:text-5xl font-bold text-[#1a2332] mb-6 leading-tight">Grow Your Business Organically in UAE</h2>
              <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-               Whether you run a real estate company, clothing brand, pest control service, or any local business, Hamed Al Attas Digital Marketing Services can help you reach the right audience, reduce costs, and grow sustainably.
+               Whether you run a real estate company, clothing brand, pest control service, or any local business, Hamed Alattas Technology Digital Marketing Services can help you reach the right audience, reduce costs, and grow sustainably.
              </p>
              <Link to="/contact" className="inline-flex items-center gap-3 bg-[#1A3C8B] hover:bg-blue-800 text-white font-bold px-10 py-5 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-900/30">
                 Start Your Organic Growth Journey <ArrowRight size={24} />

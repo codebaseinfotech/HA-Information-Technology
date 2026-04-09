@@ -69,7 +69,7 @@ const CoreServicesSection = () => {
     {
       title: "IT Infrastructure",
       description:
-        "Every business faces unique operational challenges—manual processes, disconnected systems, compliance risks, and inefficiencies that slow growth. At Hamed Al Attas, we build custom IT infrastructure solutions that solve these problems. Our platforms automate workflows, secure sensitive data, integrate disparate systems, and provide real-time insights—helping your team work smarter, reduce errors, and scale faster. With solutions designed to fit your exact operational needs, you gain speed, reliability, and measurable performance improvements across your organization.",
+        "Every business faces unique operational challenges—manual processes, disconnected systems, compliance risks, and inefficiencies that slow growth. At Hamed Alattas Technology, we build custom IT infrastructure solutions that solve these problems. Our platforms automate workflows, secure sensitive data, integrate disparate systems, and provide real-time insights—helping your team work smarter, reduce errors, and scale faster. With solutions designed to fit your exact operational needs, you gain speed, reliability, and measurable performance improvements across your organization.",
       icon: Server,
     },
     {

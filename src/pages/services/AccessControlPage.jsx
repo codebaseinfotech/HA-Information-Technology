@@ -281,7 +281,7 @@ const AccessControlPage = () => {
             <p className="text-base text-gray-300 leading-relaxed mb-6 max-w-3xl">
               In today's world, securing your property requires more than just traditional locks. 
               Whether it's an office, residential complex, school, or warehouse, unrestricted access and outdated entry systems expose your premises to serious risks. 
-              At <Link to="/" className="text-white font-bold hover:text-[#10B981] transition-colors">Hamed Al Attas</Link>, we provide advanced access control systems that deliver full control over who enters your property.
+              At <Link to="/" className="text-white font-bold hover:text-[#10B981] transition-colors">Hamed Alattas Technology</Link>, we provide advanced access control systems that deliver full control over who enters your property.
             </p>
             
             {/* Badges */}
@@ -716,7 +716,7 @@ const AccessControlPage = () => {
               to="/contact"
               className="inline-flex items-center justify-center gap-2 bg-[#10B981] text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-emerald-500/20 text-lg"
             >
-              Contact Hamed Al Attas <ArrowRight size={20} />
+              Contact Hamed Alattas Technology <ArrowRight size={20} />
             </Link>
           </div>
         </div>

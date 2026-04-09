@@ -275,8 +275,8 @@ const BusinessCommunicationPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <SEO
-        title="PABX & VoIP Business Communication Systems in UAE | Hamed Al Attas IT"
-        description="Simplify and strengthen your business communication with Hamed Al Attas IT. IP PABX, VoIP, and unified systems designed for Dubai, Abu Dhabi, and across UAE. Reduce costs and improve response time."
+        title="PABX & VoIP Business Communication Systems in UAE | Hamed Alattas Technology"
+        description="Simplify and strengthen your business communication with Hamed Alattas Technology. IP PABX, VoIP, and unified systems designed for Dubai, Abu Dhabi, and across UAE. Reduce costs and improve response time."
         keywords="PABX Systems UAE, VoIP Dubai, Cloud PABX Abu Dhabi, Business Communication Systems UAE, IP PABX Setup"
         url="/services/pabx"
         schemas={[
@@ -284,7 +284,7 @@ const BusinessCommunicationPage = () => {
             serviceType:
               "Business Communication System, IP PABX, VoIP, Cloud PABX, Unified Communication",
             description:
-              "Hamed Al Attas Information Technology provides IP PABX, VoIP, cloud PABX, and unified communication systems across the UAE. We offer installation, configuration, CRM integration, and ongoing support.",
+              "Hamed Alattas Technology provides IP PABX, VoIP, cloud PABX, and unified communication systems across the UAE. We offer installation, configuration, CRM integration, and ongoing support.",
             minPrice: "1000",
             maxPrice: "30000",
           }),
@@ -316,8 +316,7 @@ const BusinessCommunicationPage = () => {
             <p className="text-base text-gray-300 leading-relaxed mb-6 max-w-3xl">
               Yet many companies still deal with scattered communication —
               missed calls, slow responses, and rising telecom costs that
-              quietly affect performance. At Hamed Al Attas Information
-              Technology, we make business communication simple and reliable.
+              quietly affect performance. At Hamed Alattas Technology, we make business communication simple and reliable.
               Our IP PABX and VoIP systems are built around how your team
               actually works.
             </p>
@@ -763,7 +762,7 @@ const BusinessCommunicationPage = () => {
         <div className="container mx-auto px-4 xl:px-12 max-w-[1400px]">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a2332] mb-6">
-              Why Choose Hamed Al Attas for Your Business Communication Needs?
+              Why Choose Hamed Alattas Technology for Your Business Communication Needs?
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               When it comes to business communication in the UAE, you need more

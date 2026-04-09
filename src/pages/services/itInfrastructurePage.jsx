@@ -309,7 +309,7 @@ const ITInfrastructurePage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <SEO
-        title="IT Infrastructure Services in Dubai & UAE | Hamed Al Attas IT"
+        title="IT Infrastructure Services in Dubai & UAE | Hamed Alattas Technology"
         description="Complete IT infrastructure solutions in Dubai, Abu Dhabi & UAE. Network, servers, cloud, security, 24/7 support. 35+ certified engineers. 99.9% uptime guarantee. Free assessment."
         keywords="IT Infrastructure Dubai, Network Setup UAE, Cloud Migration Dubai, Managed IT Services, Cybersecurity UAE, Server Installation Dubai, IT Support UAE"
         url="/services/it-infrastructure"
@@ -368,7 +368,7 @@ const ITInfrastructurePage = () => {
             </p>
             <p className="text-base text-gray-300 leading-relaxed mb-6 max-w-3xl">
               From startups to large enterprises,{" "}
-              <strong className="text-white">Hamed Al Attas IT</strong> delivers
+              <strong className="text-white">Hamed Alattas Technology</strong> delivers
               complete{" "}
               <strong className="text-white">
                 IT infrastructure services in Dubai
@@ -504,7 +504,7 @@ const ITInfrastructurePage = () => {
               ))}
             </div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              At <strong>Hamed Al Attas IT</strong>, we design, build, and
+              At <strong>Hamed Alattas Technology</strong>, we design, build, and
               manage complete IT ecosystems — so your business runs smoothly,
               securely, and without interruption.
             </p>
@@ -666,7 +666,7 @@ const ITInfrastructurePage = () => {
         <div className="container mx-auto px-4 xl:px-12 max-w-[1400px]">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-[#1a2332] mb-6">
-              Why Businesses Choose Hamed Al Attas IT
+              Why Businesses Choose Hamed Alattas Technology
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               We are not just another IT service provider in Dubai — we are your
@@ -984,7 +984,7 @@ const ITInfrastructurePage = () => {
                   expose you to security risks, or frustrate employees and
                   customers.{" "}
                   <strong className="text-white">
-                    Hamed Al Attas Information Technology
+                    Hamed Alattas Technology
                   </strong>{" "}
                   transforms IT infrastructure from liability into strategic
                   asset powering success across Dubai, Abu Dhabi, and UAE.
@@ -1177,7 +1177,7 @@ const ITInfrastructurePage = () => {
               {/* Company Footer */}
               <div className="text-center pt-8 border-t border-white/10">
                 <h4 className="text-xl font-bold text-white mb-1">
-                  Hamed Al Attas Information Technology
+                  Hamed Alattas Technology
                 </h4>
                 <p className="text-gray-400 italic text-sm">
                   Your Trusted IT Infrastructure Partner in Dubai & UAE

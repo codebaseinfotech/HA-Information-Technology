@@ -11,8 +11,8 @@ export const getSiteUrl = () => {
 
 // Company Information
 export const COMPANY_INFO = {
-    name: "Hamed AL Attas Information Technology",
-    fullName: "Hamed AL Attas Information Technology - IT Solutions & Software Development",
+    name: "Hamed Alattas Technology",
+    fullName: "Hamed Alattas Technology - IT Solutions & Software Development",
     logo: "/logo.png",
     image: "/office.jpg",
     description: "Leading IT solutions and software development company in UAE and India. We provide custom software, web development, mobile apps, and IT consulting services.",

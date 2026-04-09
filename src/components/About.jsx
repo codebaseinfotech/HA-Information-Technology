@@ -126,7 +126,7 @@ const About = () => {
                             <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider uppercase bg-green-50 px-4 py-2 rounded-full">WHO WE ARE ?</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
-                            Hamed Al Attas — UAE's Trusted Partner for <br className="hidden md:block" />
+                            Hamed Alattas Technology — UAE's Trusted Partner for <br className="hidden md:block" />
                             <span className="text-[#1A3C8B] relative inline-block">
                                 Custom Software,
                                 <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#1A3C8B] to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
