@@ -45,17 +45,9 @@
     "express": "^5.2.1",
     "globals": "^15.6.0",
     "postcss": "^8.5.6",
-    "puppeteer": "^24.40.0",
-    "react-snap": "^1.23.0",
+    "puppeteer-core": "^24.40.0",
     "tailwindcss": "^3.4.19",
     "vite": "^5.3.1",
     "vite-plugin-api-routes": "^1.2.6"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ]
   }
 }

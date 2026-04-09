@@ -1,8 +1,10 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +30,28 @@ const routes = [
   '/affiliates'
 ];
 
+// Find Chrome executable on local machine
+function getLocalChromePath() {
+  const paths = [
+    // Windows
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+    process.env.LOCALAPPDATA + '\\Google\\Chrome\\Application\\chrome.exe',
+    // macOS
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    // Linux
+    '/usr/bin/google-chrome',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+  ];
+  for (const p of paths) {
+    try {
+      if (fs.existsSync(p)) return p;
+    } catch (e) {}
+  }
+  return null;
+}
+
 async function prerender() {
   const app = express();
   app.use(express.static(path.join(__dirname, 'dist')));
@@ -41,19 +65,34 @@ async function prerender() {
     console.log(`Static server listening on port ${PORTHOST}`);
     
     try {
-      const isVercel = process.env.VERCEL === '1';
-      let sparticuz;
-      try {
-        sparticuz = (await import('@sparticuz/chromium')).default;
-      } catch (e) {}
+      const isVercel = process.env.VERCEL === '1' || process.env.CI === 'true';
+      console.log(`Environment: ${isVercel ? 'CI/VERCEL' : 'LOCAL'}`);
 
-      console.log(`Environment: ${isVercel ? 'VERCEL' : 'LOCAL'}`);
+      let executablePath;
+      let launchArgs;
+
+      if (isVercel) {
+        // On Vercel/CI: use @sparticuz/chromium which bundles its own binary
+        executablePath = await chromium.executablePath();
+        launchArgs = chromium.args;
+        console.log(`Using @sparticuz/chromium at: ${executablePath}`);
+      } else {
+        // On local machine: use the installed Chrome browser
+        executablePath = getLocalChromePath();
+        launchArgs = ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security'];
+        console.log(`Using local Chrome at: ${executablePath}`);
+      }
+
+      if (!executablePath) {
+        console.error('No Chrome/Chromium executable found! Skipping prerender.');
+        server.close();
+        process.exit(0);
+      }
 
       const browser = await puppeteer.launch({
-        args: isVercel && sparticuz ? sparticuz.args : ['--no-sandbox', '--disable-setuid-sandbox', '--disable-web-security'],
-        defaultViewport: isVercel && sparticuz ? sparticuz.defaultViewport : null,
-        executablePath: isVercel && sparticuz ? await sparticuz.executablePath() : undefined,
-        headless: isVercel && sparticuz ? sparticuz.headless : true,
+        args: launchArgs,
+        executablePath: executablePath,
+        headless: isVercel ? chromium.headless : true,
       });
 
       for (const route of routes) {
@@ -70,12 +109,12 @@ async function prerender() {
           }
         });
 
-        // Load the page and wait for the root div to have content (or network idle)
+        // Load the page and wait for the root div to have content
         await page.goto(`http://localhost:${PORTHOST}${route}`, { waitUntil: 'networkidle0', timeout: 30000 });
         
-        // Wait specifically for React to mount and helmet to update
+        // Wait for React to mount and helmet to update
         await page.waitForFunction('document.getElementById("root").hasChildNodes()');
-        await new Promise(r => setTimeout(r, 1000)); // give 1 extra second for helmet tags
+        await new Promise(r => setTimeout(r, 1000));
         
         // Extract HTML
         const html = await page.content();
@@ -92,7 +131,7 @@ async function prerender() {
       }
 
       await browser.close();
-      console.log('Prerendering completed.');
+      console.log('Prerendering completed successfully!');
     } catch (error) {
       console.error('Error during prerendering:', error);
       server.close();
