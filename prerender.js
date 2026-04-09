@@ -85,6 +85,8 @@ async function prerender() {
       console.log('Prerendering completed.');
     } catch (error) {
       console.error('Error during prerendering:', error);
+      server.close();
+      process.exit(1);
     } finally {
       server.close();
       process.exit(0);
