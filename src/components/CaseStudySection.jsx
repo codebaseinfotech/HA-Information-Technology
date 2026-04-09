@@ -52,7 +52,7 @@ const CaseStudySection = () => {
                 title: "Managing Director",
                 company: "Prime Logistics LLC",
                 city: "Abu Dhabi, UAE",
-                image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop"
+                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop"
             }
         }
     ];

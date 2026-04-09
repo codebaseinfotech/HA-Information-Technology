@@ -52,7 +52,7 @@ const MissionVisionSection = ({ qualityStandards }) => {
                     <div className="relative h-full rounded-2xl md:rounded-3xl overflow-hidden">
                         <img
                             src={activeTab === 'mission'
-                                ? "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                ? "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 : "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
                             alt={activeTab === 'mission' ? "Our Mission" : "Our Vision"}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -265,7 +265,7 @@ const AboutPage = () => {
                 schema={getOrganizationSchema()}
             />
             <section className="relative h-[300px] md:h-[400px] bg-cover bg-center overflow-hidden" style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
+                backgroundImage: 'url(https://images.unsplash.com/photo-1531538512162-2cd225ba315e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
             }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 animate-fade-in"></div>
                 <div className="absolute inset-0 bg-[#1A3C8B]/10"></div>
@@ -287,7 +287,7 @@ const AboutPage = () => {
                         <div className="relative group">
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                                 <img
-                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                     alt="Hamed Alattas Technology Team - Business Professional"
                                     className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
                                 />

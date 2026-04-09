@@ -245,8 +245,8 @@ const Contact = ({ hideImage = false }) => {
 
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                 <img
-                                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Business Growth - Hamed Alattas Technology"
+                                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="Client Support - Hamed Alattas Technology"
                                     className="w-full h-[300px] md:h-[500px] object-cover"
                                 />
                             </div>
