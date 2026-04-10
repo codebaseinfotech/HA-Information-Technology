@@ -36,7 +36,7 @@ const ValuePropSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-gray-50 overflow-hidden relative">
+        <section className="py-12 bg-gray-50 overflow-hidden relative">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#1A3C8B] opacity-[0.02] blur-[120px] rounded-full"></div>
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-400 opacity-[0.03] blur-[100px] rounded-full"></div>

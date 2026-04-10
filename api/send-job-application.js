@@ -123,7 +123,7 @@ export default async function handler(req, res) {
         `;
 
         const adminMailOptions = {
-            from: `"HA IT Careers" <${process.env.EMAIL_USER}>`,
+            from: `"Hamed Alattas Technology Careers" <${process.env.EMAIL_USER}>`,
             to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
             subject: `🔔 New Job Application: ${fullName} - ${jobRole}`,
             html: adminHtml,
@@ -188,7 +188,7 @@ export default async function handler(req, res) {
 
                     <div class="footer-bottom">
                         <span class="powered-by">Powered by </span>
-                        <strong style="color: #6366f1; margin-left: 5px; font-size: 16px;">HA IT ATS</strong>
+                        <strong style="color: #6366f1; margin-left: 5px; font-size: 16px;">Hamed Alattas Technology ATS</strong>
                     </div>
                 </div>
             </body>

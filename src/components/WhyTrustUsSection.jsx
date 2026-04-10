@@ -62,7 +62,7 @@ const WhyTrustUsSection = () => {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-3xl md:text-5xl font-extrabold text-[#111827] leading-tight"
                         >
-                            Why Choose <span className="text-[#1A3C8B]">HA IT</span> Over Larger Agencies
+                            Why Choose <span className="text-[#1A3C8B]">Hamed Alattas Technology</span> Over Larger Agencies
                         </motion.h2>
                     </div>
 

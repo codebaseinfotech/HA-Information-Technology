@@ -125,7 +125,7 @@ const JobApplicationForm = () => {
     return (
         <section className="bg-[#1a1a2e] py-16 text-white" id="application-form">
             <div className="container mx-auto px-4 xl:px-12 max-w-[1200px]">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">Start your career with HA IT!</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">Start your career with Hamed Alattas Technology!</h2>
                 <p className="text-gray-400 mb-12">Submit your details and CV below, and our HR team will reach out to you.</p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-10">

@@ -67,7 +67,7 @@ const AffiliatesPage = () => {
                     <div className="text-center mb-12 md:mb-16">
                         <span className="text-green-600 font-bold uppercase tracking-wider text-sm block mb-4">AFFILIATES</span>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a2332] mb-6">
-                            Become an affiliate. Use your<span className="text-blue-600">network</span>
+                            Become an affiliate. Use your <span className="text-blue-600">network</span>
                         </h2>
                         <p className="text-gray-500 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">
                             Help your network discover how Hamed Alattas Technology makes hiring and paying global teams stress-free while earning rewards along the way.

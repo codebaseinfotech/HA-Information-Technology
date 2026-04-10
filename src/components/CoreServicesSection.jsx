@@ -83,7 +83,7 @@ const CoreServicesSection = () => {
   return (
     <section
       id="services"
-      className="py-24 bg-gray-50 relative overflow-hidden"
+      className="py-12 bg-gray-50 relative overflow-hidden"
     >
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-100 opacity-30 blur-[120px] rounded-full pointer-events-none"></div>

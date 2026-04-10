@@ -9,7 +9,7 @@ const locations = [
   {
     id: "dubai",
     name: "Dubai",
-    coordinates: { lat: 24.9980462, lng: 55.1708135 },
+    coordinates: { lat: 25.00321978754885, lng: 55.165549849775516 },
     address: "Office 306 Arjumand Building-3rd Floor Dubai investment Park 1 Dubai UAE",
     phones: ["+971 551882023"],
     emails: ["info@alattastech.com"],
