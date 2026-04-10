@@ -265,12 +265,15 @@ const AboutPage = () => {
                 url="/about"
                 schema={getOrganizationSchema()}
             />
-            <section className="relative h-[300px] md:h-[400px] bg-cover bg-center overflow-hidden" style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1531538512162-2cd225ba315e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)'
-            }}>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 animate-fade-in"></div>
-                <div className="absolute inset-0 bg-[#1A3C8B]/10"></div>
-                <div className={`relative container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center items-start transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <section className="relative h-[300px] md:h-[400px] bg-[#1a2332] overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute inset-0" style={{
+                        backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                        backgroundSize: '40px 40px'
+                    }}></div>
+                </div>
+             
+                <div className={`container mx-auto px-4 xl:px-12 h-full flex flex-col justify-center relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     <h1 className="text-4xl md:text-5xl font-bold text-white mt-14 mb-3 animate-fade-in-up">
                         About Us
                     </h1>
@@ -280,6 +283,7 @@ const AboutPage = () => {
                         <span className="text-[#10B981] font-medium">About Us</span>
                     </div>
                 </div>
+                <div className="absolute -right-20 -bottom-40 w-96 h-96 bg-green-600/20 rounded-full blur-3xl pointer-events-none"></div>
             </section>
 
             <div className="container mx-auto px-4 xl:px-12">
