@@ -231,6 +231,12 @@ const ITInfrastructurePage = lazy(() => import('./pages/services/itInfrastructur
 const AccessControlPage = lazy(() => import('./pages/services/AccessControlPage'));
 const BusinessCommunicationPage = lazy(() => import('./pages/services/BusinessCommunicationPage'));
 const DigitalMarketingPage = lazy(() => import('./pages/services/DigitalMarketingPage'));
+const WebHostingPage = lazy(() => import('./pages/services/WebHostingPage'));
+const DomainRegistrationPage = lazy(() => import('./pages/services/DomainRegistrationPage'));
+const MaintenancePage = lazy(() => import('./pages/services/MaintenancePage'));
+const SecuritySolutionsPage = lazy(() => import('./pages/services/SecuritySolutionsPage'));
+const WhatsAppMarketingPage = lazy(() => import('./pages/services/WhatsAppMarketingPage'));
+const CloudHostingPage = lazy(() => import('./pages/services/CloudHostingPage'));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage'));
 const SolutionDetail = lazy(() => import('./pages/SolutionDetail'));
 const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
@@ -289,6 +295,12 @@ const _$AppFallback = () => (
           <Route path="/services/access-control" element={<AccessControlPage />} />
           <Route path="/services/pabx" element={<BusinessCommunicationPage />} />
           <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+          <Route path="/services/web-hosting" element={<WebHostingPage />} />
+          <Route path="/services/domain-registration" element={<DomainRegistrationPage />} />
+          <Route path="/services/maintenance" element={<MaintenancePage />} />
+          <Route path="/services/security" element={<SecuritySolutionsPage />} />
+          <Route path="/services/whatsapp-marketing" element={<WhatsAppMarketingPage />} />
+          <Route path="/services/cloud-hosting" element={<CloudHostingPage />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/solutions" element={<SolutionsPage />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
