@@ -4,6 +4,8 @@ import { Play, Lightbulb, Users, Target, Eye, Shield, ArrowRight, CheckCircle2, 
 import aboutHero from '../assets/about_hero.png';
 import SEO from '../components/SEO';
 import { getOrganizationSchema } from '../utils/seo';
+import about1 from '../assets/images/unsplash/about-1.jpg';
+import about2 from '../assets/images/unsplash/about-2.jpg';
 
 const MissionVisionSection = ({ qualityStandards }) => {
     const [activeTab, setActiveTab] = useState('mission');
@@ -52,9 +54,7 @@ const MissionVisionSection = ({ qualityStandards }) => {
 
                     <div className="relative h-full rounded-2xl md:rounded-3xl overflow-hidden">
                         <img
-                            src={activeTab === 'mission'
-                                ? "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                : "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
+                            src={activeTab === 'mission' ? about1 : about2}
                             alt={activeTab === 'mission' ? "Our Mission" : "Our Vision"}
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />

@@ -1,4 +1,7 @@
 import React from 'react';
+import caseStudy1 from '../assets/images/unsplash/case-study-1.jpg';
+import caseStudy2 from '../assets/images/unsplash/case-study-2.jpg';
+import caseStudy3 from '../assets/images/unsplash/case-study-3.jpg';
 import { motion } from 'framer-motion';
 import { TrendingUp, Clock, BarChart3, Quote, Star } from 'lucide-react';
 
@@ -18,7 +21,7 @@ const CaseStudySection = () => {
                 title: "Operations Director",
                 company: "Fix Auto Parts",
                 city: "Sharjah, UAE",
-                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"
+                image: caseStudy1
             }
         },
         {
@@ -35,7 +38,7 @@ const CaseStudySection = () => {
                 title: "Marketing Head",
                 company: "Toretto Recovery",
                 city: "Dubai, UAE",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"
+                image: caseStudy2
             }
         },
         {
@@ -52,7 +55,7 @@ const CaseStudySection = () => {
                 title: "Managing Director",
                 company: "Prime Logistics LLC",
                 city: "Abu Dhabi, UAE",
-                image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop"
+                image: caseStudy3
             }
         }
     ];

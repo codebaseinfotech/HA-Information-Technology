@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import JobApplicationForm from '../components/JobApplicationForm';
+import careersBg from '../assets/images/unsplash/careers.jpg';
 
 const CareersPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -57,7 +58,7 @@ const CareersPage = () => {
                         {/* Left - Image */}
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                             <img
-                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={careersBg}
                                 alt="Careers at Hamed Alattas Technology"
                                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-500"
                             />

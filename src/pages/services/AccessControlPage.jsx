@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import SEO from "../../components/SEO";
 import { getServiceSchema, getFAQSchema } from "../../utils/seo";
+import accessControlBg from '../../assets/images/unsplash/access-control-bg.jpg';
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
@@ -705,7 +706,7 @@ const AccessControlPage = () => {
 
       {/* CTA Final Block */}
       <section className="py-20 bg-gradient-to-br from-[#1A3C8B] to-blue-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000&auto=format&fit=crop')] mix-blend-overlay opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 mix-blend-overlay opacity-10 bg-cover bg-center" style={{ backgroundImage: `url(${accessControlBg})` }}></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6">Start Securing Your Space Today</h2>
           <p className="text-blue-100 text-lg mb-10 leading-relaxed font-medium">

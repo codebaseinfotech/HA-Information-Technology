@@ -1,28 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import hero1 from '../assets/images/unsplash/hero-1.jpg';
+import hero2 from '../assets/images/unsplash/hero-2.jpg';
+import hero3 from '../assets/images/unsplash/hero-3.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
-
 const Hero = () => {
     const slides = [
         {
             title: "Designed to provide.Top-notch Apperance",
             description: "Our experience ensures that your projects will be done right and with the upmost professionalism.",
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            image: hero1
         },
         {
             title: "Transforming Businesses Through Software Innovation",
             description: "Creating cutting-edge solutions that drive growth and deliver exceptional results for your business.",
-            image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            image: hero2
         },
         {
             title: "It's all about User experience that boost your Business",
             description: "We deliver innovative technology solutions that transform your vision into reality.",
-            image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            image: hero3
         }
     ];
 

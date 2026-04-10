@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
+import aboutMain1 from '../assets/images/unsplash/about-main-1.jpg';
+import aboutMain2 from '../assets/images/unsplash/about-main-2.jpg';
+import aboutMain3 from '../assets/images/unsplash/about-main-3.jpg';
 
 const About = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -111,7 +114,7 @@ const About = () => {
 
                         <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-[1.02] group-hover:-rotate-1 transition-all duration-700">
                             <img
-                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                src={aboutMain1}
                                 alt="Business Analytics Strategy - Hamed Alattas Technology"
                                 width="800"
                                 height="450"
@@ -226,7 +229,7 @@ const About = () => {
                             <div className="col-span-2 relative group overflow-hidden rounded-2xl md:rounded-3xl shadow-xl transform hover:scale-[1.02] transition-all duration-500">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#1A3C8B]/20 to-transparent group-hover:scale-105 transition-transform duration-700"></div>
                                 <img
-                                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={aboutMain2}
                                     alt="Team Collaboration at Hamed Alattas Technology"
                                     width="800"
                                     height="250"
@@ -238,7 +241,7 @@ const About = () => {
                             <div className="col-span-2 relative group overflow-hidden rounded-2xl md:rounded-3xl shadow-xl transform hover:scale-[1.02] transition-all duration-500 delay-100">
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#1A3C8B]/20 to-[#1A3C8B]/10 group-hover:scale-105 transition-transform duration-700"></div>
                                 <img
-                                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={aboutMain3}
                                     alt="Software Development Workspace at Hamed Alattas Technology"
                                     width="800"
                                     height="250"

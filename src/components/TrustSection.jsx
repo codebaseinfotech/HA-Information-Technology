@@ -1,4 +1,7 @@
 import React from 'react';
+import trustAvatar1 from '../assets/images/unsplash/trust-avatar-1.jpg';
+import trustAvatar2 from '../assets/images/unsplash/trust-avatar-2.jpg';
+import trustAvatar3 from '../assets/images/unsplash/trust-avatar-3.jpg';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -46,7 +49,7 @@ const TrustSection = () => {
             brandIcon: Code,
             brandName: "bind AI",
             quote: "Saved a Critical Project in 48 Hours",
-            authorAvatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+            authorAvatar: trustAvatar1,
             authorName: "Sam",
             authorCompany: "Bind AI"
         },
@@ -54,7 +57,7 @@ const TrustSection = () => {
             brandIcon: Terminal,
             brandName: "Tez Wealth",
             quote: "Hired a React.js Developer seamlessly",
-            authorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+            authorAvatar: trustAvatar2,
             authorName: "Pranoy",
             authorCompany: "Tez Wealth"
         },
@@ -62,7 +65,7 @@ const TrustSection = () => {
             brandIcon: Cpu,
             brandName: "TechFlow",
             quote: "Delivered scalable infrastructure on time",
-            authorAvatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
+            authorAvatar: trustAvatar3,
             authorName: "Alex",
             authorCompany: "TechFlow"
         }

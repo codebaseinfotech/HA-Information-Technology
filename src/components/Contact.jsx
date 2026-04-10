@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, Send } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaWhatsapp } from 'react-icons/fa';
+import contactBg from '../assets/images/unsplash/contact-bg.jpg';
 
 const Contact = ({ hideImage = false }) => {
     const [formData, setFormData] = useState({
@@ -245,7 +246,7 @@ const Contact = ({ hideImage = false }) => {
 
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                 <img
-                                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={contactBg}
                                     alt="Client Support - Hamed Alattas Technology"
                                     className="w-full h-[300px] md:h-[500px] object-cover"
                                 />
