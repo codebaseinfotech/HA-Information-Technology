@@ -6,7 +6,7 @@ const WhatsAppWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     // WhatsApp business number (UAE)
-    const whatsappNumber = '971523003423';
+    const whatsappNumber = '971551882023';
     const defaultMessage = 'Hello! I would like to know more about your services.';
 
     const openWhatsApp = () => {

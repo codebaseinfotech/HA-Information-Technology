@@ -290,7 +290,7 @@ const Footer = () => {
                                 </div>
                                 <div className="flex items-center gap-2 text-gray-400 text-sm ml-1 hover:text-green-400 transition-colors">
                                     <a
-                                        href="https://api.whatsapp.com/send/?phone=971523003423&text&type=phone_number&app_absent=0"
+                                        href="https://api.whatsapp.com/send/?phone=971551882023&text&type=phone_number&app_absent=0"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-1.5 cursor-pointer"

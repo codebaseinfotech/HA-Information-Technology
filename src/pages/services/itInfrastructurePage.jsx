@@ -421,13 +421,13 @@ const ITInfrastructurePage = () => {
                 Get Free IT Infrastructure Assessment
               </Link>
               <a
-                href="tel:+971523003423"
+                href="tel:+971551882023"
                 className="inline-flex items-center justify-center text-sm gap-2 bg-white/10 text-white border border-white/20 backdrop-blur-sm px-7 py-3.5 rounded-full font-semibold hover:bg-white/20 transition-all duration-300"
               >
-                📞 Call +971-523003423
+                📞 Call +971-551882023
               </a>
               <a
-                href="https://wa.me/971523003423"
+                href="https://wa.me/971551882023"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center text-sm gap-2 bg-white text-[#1a2332] px-7 py-3.5 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-white/10"
@@ -1084,10 +1084,10 @@ const ITInfrastructurePage = () => {
                       📞 Call for Immediate Consultation
                     </h4>
                     <a
-                      href="tel:+971523003423"
+                      href="tel:+971551882023"
                       className="text-[#10B981] font-semibold text-lg hover:underline"
                     >
-                      +971-523003423
+                      +971-551882023
                     </a>
                     <p className="text-gray-400 text-xs mt-1">Available 24/7</p>
                   </div>
@@ -1142,7 +1142,7 @@ const ITInfrastructurePage = () => {
                       💬 WhatsApp Direct
                     </h4>
                     <a
-                      href="https://wa.me/971523003423"
+                      href="https://wa.me/971551882023"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-emerald-400 font-semibold hover:underline text-sm"
