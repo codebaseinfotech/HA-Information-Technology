@@ -25,9 +25,18 @@ const routes = [
   '/services/access-control',
   '/services/pabx',
   '/services/digital-marketing',
+  '/services/web-hosting',
+  '/services/domain-registration',
+  '/services/maintenance',
+  '/services/security',
+  '/services/whatsapp-marketing',
+  '/services/cloud-hosting',
   '/careers',
   '/our-partner',
-  '/affiliates'
+  '/affiliates',
+  '/terms-conditions',
+  '/privacy-policy',
+  '/cookie-policy',
 ];
 
 // Find Chrome executable on local machine
