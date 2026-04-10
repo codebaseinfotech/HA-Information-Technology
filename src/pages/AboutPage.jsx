@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Lightbulb, Users, Target, Eye, Shield, ArrowRight, CheckCircle2, Plus } from 'lucide-react';
+import { Play, Lightbulb, Users, Target, Eye, Shield, ArrowRight, CheckCircle2, Plus, Zap, Rocket } from 'lucide-react';
+import aboutHero from '../assets/about_hero.png';
 import SEO from '../components/SEO';
 import { getOrganizationSchema } from '../utils/seo';
 
@@ -285,48 +286,65 @@ const AboutPage = () => {
                 <section className="py-16 md:py-20" ref={sectionRef}>
                     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <div className="relative group">
-                            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                            <div className="relative rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(26,60,139,0.15)] border-[12px] border-white transition-all duration-500 group-hover:shadow-[0_40px_80px_rgba(26,60,139,0.25)]">
+                                <div className="absolute inset-0 bg-gradient-to-tr from-[#1A3C8B]/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                                 <img
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Hamed Alattas Technology Team - Business Professional"
-                                    className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                                    src={aboutHero}
+                                    alt="Hamed Alattas Technology - Advanced Business Innovation"
+                                    className="w-full h-[500px] lg:h-[600px] object-cover hover:scale-110 transition-transform duration-[2000ms] ease-out scale-105"
                                 />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <button className="w-20 h-20 bg-[#1A3C8B] hover:bg-[#1A3C8B]/80 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-2xl animate-pulse">
-                                        <Play className="w-8 h-8 text-white ml-1" fill="white" />
-                                    </button>
+                                <div className="absolute bottom-6 left-6 right-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+                                    <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl flex items-center gap-4">
+                                        <div className="w-12 h-12 bg-[#10B981] rounded-xl flex items-center justify-center text-white shadow-lg">
+                                            <Zap className="w-6 h-6 animate-pulse" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[#1a2332] font-bold text-sm">Innovation First</p>
+                                            <p className="text-gray-500 text-xs">Driving Digital Transformation</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            {/* Decorative element */}
+                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#1A3C8B]/5 rounded-full blur-3xl -z-10 group-hover:bg-[#1A3C8B]/10 transition-colors"></div>
                         </div>
 
-                        <div className="space-y-6 md:space-y-8">
+                        <div className="space-y-8 md:space-y-10">
                             <div>
-                                <span className="text-green-600 font-bold text-xs md:text-sm tracking-wider inline-block mb-3 md:mb-4 uppercase bg-green-50 px-3 py-1.5 rounded-full">About Us</span>
-                                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#1a2332] leading-tight mb-4 md:mb-6">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <span className="h-[2px] w-12 bg-[#10B981]"></span>
+                                    <span className="text-green-600 font-bold text-xs md:text-sm tracking-[0.2em] uppercase">About Our Vision</span>
+                                </div>
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#1a2332] leading-[1.1] mb-6 tracking-tight">
                                     Simple and the <span className="text-[#1A3C8B] relative inline-block">
                                         Fast
-                                        <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#1A3C8B] to-blue-400 opacity-30"></span>
+                                        <svg className="absolute -bottom-2 left-0 w-full h-3 text-[#10B981]/30" viewBox="0 0 100 12" preserveAspectRatio="none">
+                                            <path d="M0,10 Q50,0 100,10" fill="none" stroke="currentColor" strokeWidth="8" />
+                                        </svg>
                                     </span> for your Business.
                                 </h2>
-                                <p className="text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg mb-4 md:mb-6 text-justify">
-                                    Hamed Alattas Technology is a Software and Web Development Company focused on creating custom applications and laying special emphasis on the unique business needs of its corporate clients. Hamed Alattas Technology infrastructure and processes are concentrated at designing and implementing solutions for middle & large-sized companies.
+                                <p className="text-gray-600 leading-relaxed text-base md:text-lg lg:text-xl mb-8 text-justify font-medium opacity-90">
+                                    Hamed Alattas Technology is a Software and Web Development Company focused on creating custom applications and laying special emphasis on the unique business needs of its corporate clients.
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                                 {features.map((feature, index) => {
                                     const Icon = feature.icon;
                                     return (
                                         <div
                                             key={index}
-                                            className="bg-gradient-to-br from-gray-50 to-blue-50/20 p-4 md:p-6 rounded-xl border border-gray-100 hover:border-[#1A3C8B]/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
+                                            className="relative p-6 md:p-8 rounded-[1.5rem] bg-white border border-gray-100 hover:border-[#1A3C8B]/20 shadow-sm hover:shadow-xl transition-all duration-500 group/feature overflow-hidden"
                                             style={{ animationDelay: `${index * 150}ms` }}
                                         >
-                                            <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg flex items-center justify-center mb-3 md:mb-4 shadow-sm text-[#1A3C8B] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                                <Icon className="w-5 h-5 md:w-6 md:h-6" />
+                                            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#1A3C8B]/5 to-transparent rounded-bl-full -z-0 group-hover/feature:translate-x-2 group-hover/feature:-translate-y-2 transition-transform duration-500"></div>
+                                            <div className="relative z-10">
+                                                <div className="w-14 h-14 bg-gradient-to-br from-[#1A3C8B] to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg text-white group-hover/feature:scale-110 group-hover/feature:rotate-6 transition-all duration-500">
+                                                    <Icon className="w-7 h-7" />
+                                                </div>
+                                                <h3 className="text-lg md:text-xl font-bold text-black mb-3 group-hover/feature:text-[#1A3C8B] transition-colors">{feature.title}</h3>
+                                                <p className="text-gray-500 text-sm md:text-base leading-relaxed">{feature.description}</p>
                                             </div>
-                                            <h3 className="text-base md:text-lg font-bold text-black mb-2 group-hover:text-[#1A3C8B] transition-colors">{feature.title}</h3>
-                                            <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{feature.description}</p>
                                         </div>
                                     );
                                 })}
