@@ -231,7 +231,7 @@ const MobileAppDevelopmentDubai = () => {
               real users, and drive measurable growth. Over 07 years,
               <strong> Hamed Alattas Technology a </strong>{" "}
               <Link
-                to="https://ha-information-technology.vercel.app/"
+                to="https://alattastech.com"
                 className="hover:text-[#10B981]/80 transition-colors text-[#10B981]"
               >
                 leading mobile app development Company in UAE
@@ -851,10 +851,10 @@ const MobileAppDevelopmentDubai = () => {
                   </div>
                   <h5 className="text-white font-bold text-lg mb-1">Email Us</h5>
                   <a
-                    href="mailto:info@ha-information-technology.com"
+                    href="mailto:info@alattastech.com"
                     className="text-gray-400 hover:text-[#10B981] transition-colors"
                   >
-                    info@ha-information-technology.com
+                    info@alattastech.com
                   </a>
                 </div>
                 <div className="flex flex-col items-center">

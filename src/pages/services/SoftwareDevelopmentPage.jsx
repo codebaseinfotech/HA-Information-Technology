@@ -183,7 +183,7 @@ const SoftwareDevelopmentPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       <SEO
-        title="Custom Software Development | Validated MVP & Scalable SaaS | HA InfoTech"
+        title="Custom Software Development | Validated MVP & Scalable SaaS | Hamed Alattas Technology"
         description="Custom software development company serving healthcare, logistics, finance, retail, and real estate. Fixed-price projects, full code ownership, global delivery."
         keywords="Custom Software Development, MVP Development, Healthcare Software, Logistics Software, Fintech Development, Real Estate Software, SaaS Development"
         url="/services/software-development"
@@ -348,7 +348,7 @@ const SoftwareDevelopmentPage = () => {
                       </strong>{" "}
                       is a leading{" "}
                       <a
-                        href="https://ha-information-technology.vercel.app/"
+                        href="https://alattastech.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#1A3C8B] hover:underline"
@@ -1082,13 +1082,13 @@ const SoftwareDevelopmentPage = () => {
 
             <div className="mt-12 pt-8 border-t border-white/10 w-full text-center">
               <a
-                href="https://ha-information-technology.vercel.app"
+                href="https://alattastech.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors font-medium text-lg"
               >
                 <Globe size={20} className="text-blue-400" />{" "}
-                ha-information-technology.vercel.app
+                alattastech.com
               </a>
             </div>
           </div>

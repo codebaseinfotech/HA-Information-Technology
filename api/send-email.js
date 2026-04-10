@@ -161,7 +161,7 @@ export default async function handler(req, res) {
                             </div>
 
                             <div class="cta">
-                                <a href="https://ha-information-technology.vercel.app/" style="display: inline-block; background-color: #1A3C8B; color: #ffffff; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold;"><span style="color: #ffffff;">Visit Our Website</span></a>
+                                <a href="https://alattastech.com" style="display: inline-block; background-color: #1A3C8B; color: #ffffff; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold;"><span style="color: #ffffff;">Visit Our Website</span></a>
                             </div>
                         </div>
                         <div class="footer">

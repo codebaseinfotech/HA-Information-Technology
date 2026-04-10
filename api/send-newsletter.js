@@ -150,7 +150,7 @@ export default async function handler(req, res) {
                             <div style="background: linear-gradient(135deg, #1A3C8B 0%, #2563eb 100%); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0;">
                                 <h3 style="margin: 0 0 10px 0;">Explore Our Solutions</h3>
                                 <p style="margin: 0 0 20px 0; opacity: 0.9;">Discover how we can help transform your business</p>
-                                <a href="https://ha-information-technology.vercel.app/solutions" style="display: inline-block; background-color: white; color: #1A3C8B; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold;">View Solutions</a>
+                                <a href="https://alattastech.com/solutions" style="display: inline-block; background-color: white; color: #1A3C8B; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold;">View Solutions</a>
                             </div>
 
                             <div class="social-links">

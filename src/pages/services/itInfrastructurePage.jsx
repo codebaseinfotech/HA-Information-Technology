@@ -1114,10 +1114,10 @@ const ITInfrastructurePage = () => {
                       📧 Email Our Team
                     </h4>
                     <a
-                      href="mailto:info@ha-information-technology.com"
+                      href="mailto:info@alattastech.com"
                       className="text-blue-400 font-semibold hover:underline text-sm break-all"
                     >
-                      info@ha-information-technology.com
+                      info@alattastech.com
                     </a>
                   </div>
 

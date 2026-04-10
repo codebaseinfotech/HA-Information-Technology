@@ -356,7 +356,7 @@ const ECommerceDevelopmentPage = () => {
               <strong>7+ years</strong> of experience and{" "}
               <strong>200+ ecommerce projects</strong> delivered,{" "}
               <Link
-                to="https://ha-information-technology.vercel.app/"
+                to="https://alattastech.com"
                 className="hover:text-[#10B981]/80 transition-colors text-[#10B981]"
               >
                 Hamed Alattas Technology
@@ -1228,10 +1228,10 @@ const ECommerceDevelopmentPage = () => {
                     Email Us
                   </h5>
                   <a
-                    href="mailto:info@ha-information-technology.com"
+                    href="mailto:info@alattastech.com"
                     className="text-gray-400 hover:text-[#10B981] transition-colors"
                   >
-                    info@ha-information-technology.com
+                    info@alattastech.com
                   </a>
                 </div>
                 <div className="flex flex-col items-center">
