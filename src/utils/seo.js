@@ -23,11 +23,11 @@ export const COMPANY_INFO = {
         india: "+91-709-685-9504"
     },
     address: {
-        streetAddress: "274 Street – Dubai Investment Park – 2",
+        streetAddress: "306 Arjumand Building-3rd Floor Dubai investment Park 1 Dubai UAE",
         addressLocality: "Dubai",
         addressRegion: "Dubai",
         postalCode: "00000",
-        addressCountry: "AE"
+        addressCountry: "UAE"
     },
     contactType: "customer service",
     social: {

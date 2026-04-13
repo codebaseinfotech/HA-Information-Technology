@@ -890,7 +890,7 @@ const WebsiteDevelopmentPage = () => {
                   📍 Office
                 </p>
                 <p className="text-white">
-                  274 Street – Dubai Investment Park – 2, Dubai, U.A.E.
+                  306 Arjumand Building-3rd Floor Dubai investment Park 1 Dubai UAE
                 </p>
               </div>
               <div className="p-6 bg-white/5 rounded-2xl border border-white/10 flex flex-col justify-center">
