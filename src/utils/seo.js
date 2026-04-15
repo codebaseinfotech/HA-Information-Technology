@@ -1,12 +1,12 @@
 // Get the canonical URL for a given pathname
 export const getCanonicalUrl = (pathname) => {
-    const base = typeof window !== "undefined" ? window.location.origin : "https://alattastech.com";
+    const base = "https://alattastech.com";
     return `${base}${pathname}`;
 };
 
 // Get the site URL
 export const getSiteUrl = () => {
-    return typeof window !== "undefined" ? window.location.origin : "https://alattastech.com";
+    return "https://alattastech.com";
 };
 
 // Company Information
